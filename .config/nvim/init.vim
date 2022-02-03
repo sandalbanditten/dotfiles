@@ -1,14 +1,5 @@
-" Attempt to determine the type of a file based on its name and possibly its
-" contents. Use this to allow intelligent auto-indenting for each filetype,
-" and for plugins that are filetype specific.
-if has('filetype')
-	filetype indent plugin on
-endif
-
-" Enable syntax highlighting
-if has('syntax')
-	syntax on
-endif
+filetype indent plugin on
+syntax on
 
 " vim-plug:
 call plug#begin()
@@ -105,9 +96,6 @@ set showbreak=->
 set list
 set listchars=tab:··,lead:·,trail:·,extends:»,precedes:«,nbsp:*
 
-" set C filetype on header files
-let c_syntax_for_h=1
-
 " spell checking on english and danish:
 map <leader>l :setlocal spell! spelllang=en_us<CR>
 map <leader>L :setlocal spell! spelllang=da_dk<CR>
@@ -138,12 +126,6 @@ set backspace=indent,eol,start
 " the same indent as the line you're currently on. Useful for READMEs, etc.
 set autoindent
 
-" Haskell stuff
-let g:haskell_indent_case = 5
-
-autocmd filetype haskell set expandtab
-autocmd filetype haskell nnoremap <leader>p :%!stylish-haskell<CR>
-
 " Stop certain movements from always going to the first character of a line.
 " While this behaviour deviates from that of Vi, it does what most users
 " coming from other editors would expect.
@@ -157,9 +139,7 @@ set confirm
 set visualbell
 
 " Enable use of the mouse for all modes
-if has('mouse')
-	set mouse=a
-endif
+set mouse=a
 
 " Set the command window height to 2 lines, to avoid many cases of having to
 " "press <Enter> to continue"
@@ -176,24 +156,17 @@ autocmd filetype tex set shiftwidth=2
 autocmd filetype tex set tabstop=2
 autocmd filetype c set shiftwidth=2
 autocmd filetype c set tabstop=2
-autocmd filetype haskell set shiftwidth=2
-autocmd filetype haskell set tabstop=2
 
 " Useful mappings
-
-" Code minimap
-
-highlight minimapCursor ctermbg=0   ctermfg=7
-highlight minimapRange  ctermbg=256 ctermfg=7
-
-let g:minimap_width = 32
-let g:minimap_highlight_range = 1
-map <leader>c :MinimapToggle<CR>:MinimapUpdateHighlight<CR>
 
 " better underline
 highlight Underlined cterm=underline ctermfg=257
 
-" automatic brackets:
+" C stuff
+" set C filetype on header files
+let c_syntax_for_h=1
+
+" automatic curly brackets:
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
@@ -220,6 +193,8 @@ autocmd filetype tex map <leader>W :VimtexCountLetters<CR>
 autocmd BufWritePre *.tex :%s/\s\+$//e
 let g:vimtex_view_method = 'zathura'
 
+""" Mappings
+
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy
 map Y y$
 
@@ -231,8 +206,10 @@ nnoremap <C-H> <C-W>h
 nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
-"
+
 " Code minimap
+highlight minimapCursor ctermbg=0   ctermfg=7
+highlight minimapRange  ctermbg=256 ctermfg=7
 
 let g:minimap_width = 32
 let g:minimap_highlight_range = 1
