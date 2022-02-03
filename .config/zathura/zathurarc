@@ -1,0 +1,46 @@
+# Font
+set font 'Fira Code 16'
+
+# Colors
+set default-bg '#2e3440'
+set default-fg '#eceff4'
+
+set inputbar-bg '#2e3440'
+set inputbar-fg '#eceff4'
+
+set statusbar-bg '#2e3440'
+set statusbar-fg '#eceff4'
+
+set notification-bg '#2e3440'
+set notification-fg '#eceff4'
+
+set notification-error-bg '#2e3440'
+set notification-error-fg '#bf616a'
+
+set notification-warning-bg '#2e3440'
+set notification-warning-fg '#ebcb8b'
+
+set recolor-darkcolor '#eceff4'
+set recolor-lightcolor '#2e3440'
+
+set highlight-color '#88c0d0'
+set highlight-active-color '#5e81ac'
+set highlight-transparency 0.7
+
+set render-loading-bg '#2e3440'
+set render-loading-fg '#eceff4'
+
+# Page padding
+set page-padding 6
+
+# Dark mode
+set recolor true
+
+# Filenames
+set statusbar-basename true
+set statusbar-home-tilde true
+
+# Size adjustment
+set adjust-open 'best-fit'
+
+set window-title-basename true

@@ -1,0 +1,167 @@
+#
+# Personal scripts
+#
+
+super + {_,control,shift} + v
+	/home/notroot/Code/Scripts/{vids,picdir,pics}
+
+super + a
+	/home/notroot/Code/Scripts/scripts
+
+super + shift + a
+	/home/notroot/Code/Scripts/off
+
+super + o
+	/home/notroot/Code/Scripts/audio
+
+#
+# Clipboard
+#
+
+super + x
+	clipmenu -l 16 -p "Copy:"
+
+super + shift + u
+	cat /home/notroot/Code/Scripts/gmail | xclip -selection clipboard
+
+super + control + shift + u
+	cat /home/notroot/Code/Scripts/notamail | xclip -selection clipboard
+
+#
+# Audio
+#
+
+super + {_,shift} + {q,e}
+	amixer -c 1 set Master {2,5}%{-,+}
+
+super + 0
+	amixer -c 1 set Master 0%
+
+#
+# Personal run-bins
+#
+
+super + {_,shift} + {c,d,f,s}
+	{_,killall -I} {oneko, discord, firefox, flameshot}
+
+#
+# Screenshot
+#
+
+super + control + s
+	flameshot gui
+
+#
+# wm independent hotkeys
+#
+
+# terminal emulator
+super + Return
+	st
+
+# floating terminal
+super + shift + Return
+	bspc rule -a \* -o state=floating && st
+
+# python terminal
+super + control + Return
+	st -- bc -lq
+
+# floating python terminal
+super + control + shift + Return
+	bspc rule -a \* -o state=floating && st -- bc -lq
+
+# program launcher
+super + r
+	dmenu_run -l 16 -p "Run:"
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+#
+# bspwm hotkeys
+#
+
+# close and kill
+super + {_,shift + }w
+	bspc node -{c,k}
+
+# alternate between the tiled and monocle layout
+super + m
+	bspc desktop -l next
+
+#
+# state/flags
+#
+
+# set the window state
+super + {t,u,y}
+	bspc node -t {tiled,floating,fullscreen}
+
+super + shift + t
+	bspc node -t pseudo_tiled
+
+# set the window to be sticky
+super + ctrl + y
+	bspc node -g sticky
+
+#
+# focus/swap
+#
+
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus the next/previous window in the current desktop
+super + {_,shift + }Tab
+	bspc node -f {next,prev}.local.!hidden.window
+
+# focus the next/previous desktop in the current monitor
+super + bracket{left,right}
+	bspc desktop -f {prev,next}.local
+
+# focus the last node/desktop
+super + grave
+	bspc desktop -f last
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9}
+	bspc {desktop -f,node -d} '{1-9}'
+
+#
+# preselect
+#
+
+# preselect the direction
+super + alt + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# preselect the ratio
+super + alt + {1-9}
+	bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused node
+super + alt + space
+	bspc node -p cancel
+
+# cancel the preselection for the focused desktop
+super + alt + shift + space
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+#
+# move/resize
+#
+
+# expand a window by moving one of its side outward
+super + ctrl + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its side inward
+super + ctrl + shift + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}

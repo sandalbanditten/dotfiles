@@ -1,0 +1,20 @@
+[Default Applications]
+application/pdf=org.pwmt.zathura.desktop
+application/pdf=zathura.desktop
+image/jpg=imv.desktop;
+image/jpeg=imv.desktop;
+image/png=imv.desktop;
+image/gif=imv.desktop;
+text/plain=nvim.desktop
+text/english=nvim.desktop
+text/x-tex=nvim.desktop
+text/x-makefile=nvim.desktop
+text/x-csrc=nvim.desktop
+text/x-chdr=nvim.desktop
+application/x-shellscript=nvim.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-6R4FG1.desktop
+
+[Added Associations]
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
+text/markdown=visual-studio-code.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-6R4FG1.desktop;
