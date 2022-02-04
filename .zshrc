@@ -141,7 +141,6 @@ bindkey '^[L'   end-of-line
 bindkey '^[^?'  backward-kill-word
 bindkey '^[l'   forward-word
 bindkey '^[u'   down-case-word
-bindkey -s '^Y' 'reset^M'
 bindkey -s '^N' 'cd ..^Mexa --icons^M'
 bindkey -r '^[f'
 
