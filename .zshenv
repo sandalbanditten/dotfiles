@@ -12,3 +12,4 @@ export NNN_USE_EDITOR=1
 export EXA_COLORS="*.png=33:*.jpg=33:*.jpeg=33:*.wav=33:*.gif=33:*.mp3=33:*.mkv=33:*.ogg=33:*.mp4=33:*.webm=33:*.o=32;4:*.odt=37;1:*.tex=37;1:*.pdf=37;1:*.zip=38;5;5:*.gz=38;5;5:*.7z=38;5;5:*.iso=4;32:*.hi=38;5;5"
 export XCURSOR_SIZE=16
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
+export WORDCHARS="$WORDCHARS:\"\'|"
