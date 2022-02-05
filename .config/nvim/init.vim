@@ -13,7 +13,6 @@ Plug 'karb94/neoscroll.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'wfxr/minimap.vim'
-Plug 'neovimhaskell/haskell-vim'
 call plug#end()
 
 " how not to include a script:
