@@ -15,7 +15,7 @@ super + o
 	/home/notroot/Code/Scripts/audio
 
 super + control + a
-	bspc rule -a \* -o state=floating && st -- passmenu -l 16 -p "Password:"
+	passmenu -l 16 -p "Password:"
 
 #
 # Clipboard
