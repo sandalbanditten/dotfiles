@@ -14,6 +14,9 @@ super + shift + a
 super + o
 	/home/notroot/Code/Scripts/audio
 
+super + control + a
+	bspc rule -a \* -o state=floating && st -- passmenu -l 16 -p "Password:"
+
 #
 # Clipboard
 #
@@ -63,11 +66,11 @@ super + Return
 super + shift + Return
 	bspc rule -a \* -o state=floating && st
 
-# python terminal
+# calc terminal
 super + control + Return
 	st -- bc -lq
 
-# floating python terminal
+# floating calc terminal
 super + control + shift + Return
 	bspc rule -a \* -o state=floating && st -- bc -lq
 
