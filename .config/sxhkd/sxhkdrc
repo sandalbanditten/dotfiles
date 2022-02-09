@@ -11,11 +11,14 @@ super + a
 super + shift + a
 	/home/notroot/Code/Scripts/off
 
-super + o
-	/home/notroot/Code/Scripts/audio
-
 super + control + a
 	passmenu -l 16 -p "Password:"
+
+super + shift + control + a
+	/home/notroot/Code/Scripts/skill
+
+super + o
+	/home/notroot/Code/Scripts/audio
 
 #
 # Clipboard
