@@ -35,6 +35,7 @@ truncation_symbol = ".../"
 truncation_length = 2
 format = "[$read_only]($read_only_style)[$path]($style) "
 style = "bold blue"
+read_only = " 🔒"
 
 [jobs]
 format = "$symbol"
