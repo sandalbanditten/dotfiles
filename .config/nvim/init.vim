@@ -13,6 +13,8 @@ Plug 'karb94/neoscroll.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'wfxr/minimap.vim'
+Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " how not to include a script:
@@ -196,6 +198,11 @@ let g:vimtex_view_method = 'zathura'
 
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy
 map Y y$
+
+nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>N :NERDTreeMirror<CR>:NERDTreeFocus<CR>
+
+nnoremap <leader>t :W<CR>
 
 " Map <C-L> (redraw screen) to also turn off search highlighting until the next search
 nnoremap <C-E> :nohl<CR><C-L>
