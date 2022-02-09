@@ -33,6 +33,9 @@ super + shift + u
 super + control + shift + u
 	cat /home/notroot/Code/Scripts/notamail | xclip -selection clipboard
 
+super + control + u
+	cat /home/notroot/Code/Scripts/schoolmail | xclip -selection clipboard
+
 #
 # Audio
 #
