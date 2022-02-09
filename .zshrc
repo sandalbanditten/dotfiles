@@ -140,6 +140,7 @@ bindkey '^E'    clear-screen
 bindkey '^[H'   beginning-of-line
 bindkey '^[L'   end-of-line
 bindkey '^[^?'  backward-kill-word
+bindkey '^[^H'  kill-whole-line
 bindkey '^[l'   forward-word
 bindkey '^[u'   down-case-word
 bindkey -s '^N' 'cd ..^Mexa --icons^M'
