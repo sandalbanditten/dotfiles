@@ -8,7 +8,7 @@ clipmenud &
 discord &
 
 # Monitors
-export MONCOUNT="$(xrandr | rg " connected " | wc -l)"
+export MONCOUNT="$(xrandr | grep " connected " | wc -l)"
 
 # One monitor - Should always be run
 xrandr --output DP-4 --primary --mode 2560x1600 --rate 165

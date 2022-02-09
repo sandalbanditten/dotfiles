@@ -5,7 +5,7 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 killall polybar
 xsetroot -solid "#2e3440"
 
-export MONCOUNT="$(xrandr | rg " connected " | wc -l)"
+export MONCOUNT="$(xrandr | grep " connected " | wc -l)"
 
 # Workspaces
 
