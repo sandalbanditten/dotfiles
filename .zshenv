@@ -1,3 +1,4 @@
+#!/bin/zsh
 # for reading man pages with nvim
 export PATH="$PATH:$HOME/.config/nvim/plugged/vim-superman/bin"
 export PATH="$PATH:$HOME/.local/bin"
