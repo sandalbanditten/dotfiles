@@ -15,6 +15,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'wfxr/minimap.vim'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 " how not to include a script:
@@ -173,26 +174,22 @@ inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
 " For LaTeX
-autocmd filetype tex inoremap \( \left (  \right )<Left><Left><Left><Left><Left><Left><Left><Left><Left>
-autocmd filetype tex inoremap \\| \left \|  \right \|<Left><Left><Left><Left><Left><Left><Left><Left><Left>
-autocmd filetype tex inoremap \> \overrightarrow{}<ESC>i
-autocmd filetype tex inoremap \< \rightarrow &&<ESC>a
+autocmd filetype tex inoremap \( \left (  \right )<ESC>8hi
+autocmd filetype tex inoremap \> \rightarrow && <ESC>a
 autocmd filetype tex inoremap \,u \| \text{} \\<ESC>F}i
 autocmd filetype tex inoremap \,U  Indsætter værdier:<ESC>
 autocmd filetype tex inoremap \,b \textbf{}<Left>
 autocmd filetype tex inoremap \,B \underline{\underline{}}<Left><Left>
 autocmd filetype tex map <leader>i i\begin{align*}<ESC>o\end{align*}<ESC><<O
-autocmd filetype tex map <leader>I i \begin{pmatrix}  \end{pmatrix}<ESC>4bhi
 autocmd filetype tex map <leader>o i\begin{center}<ESC>o\fbox{\includegraphics[width=0.975\textwidth,keepaspectratio]{pics/}}<ESC>o\end{center}<ESC><<kf/a
 autocmd filetype tex map <leader>O o<ESC>o\newpage<ESC>o<ESC>o
-autocmd filetype tex map <leader>p i \overrightarrow{}<ESC>i
-autocmd filetype tex map <leader>P i \rightarrow &&<ESC>a
-autocmd filetype tex map <leader>b i \textbf{}<ESC>i
-autocmd filetype tex map <leader>B i \underline{\underline{}}<ESC>hi
 autocmd filetype tex map <leader>w :VimtexCountWords<CR>
 autocmd filetype tex map <leader>W :VimtexCountLetters<CR>
 autocmd BufWritePre *.tex :%s/\s\+$//e
 let g:vimtex_view_method = 'zathura'
+
+" rust
+autocmd filetype rust map <leader>w :RustFmt<CR>
 
 """ Mappings
 
