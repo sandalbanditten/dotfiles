@@ -146,7 +146,8 @@ bindkey '^[^?'  backward-kill-word
 bindkey '^[^H'  kill-whole-line
 bindkey '^[l'   forward-word
 bindkey '^[u'   down-case-word
-bindkey -s '^N' 'cd ..^Mexa --icons^M'
+bindkey -s '^N' '^[^Hcd ..^Mexa --icons^M'
+bindkey -s '^[e' '^[Hc ; ^[L'
 bindkey -r '^[f'
 
 # PS1 - PS1
