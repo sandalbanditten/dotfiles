@@ -124,8 +124,8 @@ alias ytdl="youtube-dl"
 alias za="zathura"
 
 # Suggestions and syntax highlighting
-source ~/Code/Software/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/Code/Software/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # Binding some keys
