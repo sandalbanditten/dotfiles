@@ -49,7 +49,7 @@ let g:lightline = {
 			\ },
 			\ 'inactive': {
 			\ 'left': [ [ 'filename' ] ],
-			\ 'right': [ [ 'percent' ], [ 'lineinfo' ] ],
+			\ 'right': [ [ 'lineinfo' ], [ 'percent' ] ],
 			\ },
 			\ }
 
@@ -67,6 +67,11 @@ let g:nord_cursor_line_number_background = 1
 
 " Colorscheme:
 colorscheme nord
+
+" Highlight only the current line with the number
+highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE
+highlight CursorLineNr cterm=NONE ctermbg=NONE ctermfg=white
+set cursorline
 
 " nice highlight colors
 highlight Search ctermfg=white ctermbg=blue
@@ -86,9 +91,6 @@ set number relativenumber
 
 " opens splits below or to the right
 set splitbelow splitright
-
-" sets the current line to be highlighted
-set cursorline
 
 " wrapping and showing wrapping
 set wrap linebreak
