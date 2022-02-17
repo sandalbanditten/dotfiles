@@ -30,7 +30,7 @@ I will make a YouTube and an Odysee channel at some point.
 
 ## Contributing
 
-No contributing to my personal configs.
+No contributing to my personal configs, unless it is for bugs or security.
 
 ## License
 
