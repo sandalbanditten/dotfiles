@@ -42,7 +42,6 @@ alias clip="xclip -selection clipboard"
 alias cnf="clear && neofetch"
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias cp="cp -vi"
-alias ct="rm $HOME/.local/share/Trash/files/*"
 alias df="df -h"
 alias ds="doas"
 alias e="nvim -p"
@@ -111,21 +110,45 @@ alias rfmt="rustfmt --color=always"
 alias sl="doas cp config.def.h config.h && doas make clean install"
 alias t="nvim $HOME/Documents/TODO.md"
 alias tcl="rm *.toc ; rm *.out ; rm *.fls ; rm *.log ; rm *.aux ; rm *.synctex.gz ; rm *.fdb_latexmk ; return 0"
-alias tx="exa --icons $HOME/.local/share/Trash/files"
 alias u="unarch"
-alias x="exa --icons"
+alias -g x="exa --icons"
 alias xa="exa --icons --tree --level=1 --all"
 alias xal="exa --icons --tree --level=1 --all --long"
 alias xl="exa --icons --tree --level=1 --long"
 alias xla="exa --icons --tree --level=1 --all --long"
 alias xr="exa --icons -R"
 alias xt="exa --icons --tree --level=1"
-alias ytdl="youtube-dl"
 alias za="zathura"
 
 # Suggestions and syntax highlighting
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+### For automatic alias expansion
+globalias() {
+   # Get last word to the left of the cursor:
+   # (z) splits into words using shell parsing
+   # (A) makes it an array even if there's only one element
+   local word=${${(Az)LBUFFER}[-1]}
+   if [[ $GLOBALIAS_FILTER_VALUES[(Ie)$word] -eq 0 ]]; then
+      zle _expand_alias
+      zle expand-word
+   fi
+   zle self-insert
+}
+zle -N globalias
+
+# space expands all aliases, including global
+bindkey -M emacs " " globalias
+bindkey -M viins " " globalias
+
+# control-space to make a normal space
+bindkey -M emacs "^ " magic-space
+bindkey -M viins "^ " magic-space
+
+# normal space during searches
+bindkey -M isearch " " magic-space
+###
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # Binding some keys
