@@ -23,7 +23,7 @@ set notification-warning-fg '#ebcb8b'
 set recolor-darkcolor '#eceff4'
 set recolor-lightcolor '#2e3440'
 
-set highlight-color '#88c0d0'
+set highlight-color '#81a1c1'
 set highlight-active-color '#5e81ac'
 set highlight-transparency 0.7
 
