@@ -5,7 +5,6 @@ flameshot &
 unclutter --timeout 5 --start-hidden --jitter 25 --ignore-scrolling &
 dunst &
 clipmenud &
-discord &
 
 # Monitors
 export MONCOUNT="$(xrandr | grep " connected " | wc -l)"
