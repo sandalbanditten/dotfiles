@@ -85,6 +85,7 @@ highlight Todo cterm=bold
 highlight Number ctermfg=yellow
 highlight Float ctermfg=yellow
 highlight Link ctermfg=white cterm=underline
+highlight Pmenu ctermbg=257 ctermfg=white
 
 " relative line numbers
 set number relativenumber
@@ -242,6 +243,11 @@ inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float
 inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
 vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
 vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+
+let g:coc_start_at_startup = v:false
+
+autocmd filetype rust CocStart
+autocmd filetype rust nnoremap <leader>e :CocCommand rust-analyzer.explainError<CR>
 
 " Code minimap
 highlight minimapCursor ctermbg=0   ctermfg=7
