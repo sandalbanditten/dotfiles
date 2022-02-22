@@ -17,9 +17,7 @@ Most of these will change daily.
 My suckless software:
 * [st](https://github.com/sandalbanditten/st)
 * [dmenu](https://github.com/sandalbanditten/dmenu)
-* [dwm](https://github.com/sandalbanditten/dwm)
 * [slock](https://github.com/sandalbanditten/slock)
-* [slstatus](https://github.com/sandalbanditten/slstatus)
 
 My scripts:
 * [scripts](https://github.com/sandalbanditten/scripts)
