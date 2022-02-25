@@ -247,7 +247,9 @@ vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(
 let g:coc_start_at_startup = v:false
 
 autocmd filetype rust CocStart
+autocmd filetype rust CocCommand rust-analyzer.toggleInlayHints
 autocmd filetype rust nnoremap <leader>e :CocCommand rust-analyzer.explainError<CR>
+autocmd filetype rust nnoremap <leader>E :CocCommand rust-analyzer.toggleInlayHints<CR>
 
 " Code minimap
 highlight minimapCursor ctermbg=0   ctermfg=7
