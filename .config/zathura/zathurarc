@@ -2,33 +2,33 @@
 set font 'Fira Code 16'
 
 # Colors
-set default-bg '#2e3440'
-set default-fg '#eceff4'
+set default-bg '#282828'
+set default-fg '#ebdbb2'
 
-set inputbar-bg '#2e3440'
-set inputbar-fg '#eceff4'
+set inputbar-bg '#282828'
+set inputbar-fg '#ebdbb2'
 
-set statusbar-bg '#2e3440'
-set statusbar-fg '#eceff4'
+set statusbar-bg '#282828'
+set statusbar-fg '#ebdbb2'
 
-set notification-bg '#2e3440'
-set notification-fg '#eceff4'
+set notification-bg '#282828'
+set notification-fg '#ebdbb2'
 
-set notification-error-bg '#2e3440'
-set notification-error-fg '#bf616a'
+set notification-error-bg '#282828'
+set notification-error-fg '#cc241d'
 
-set notification-warning-bg '#2e3440'
-set notification-warning-fg '#ebcb8b'
+set notification-warning-bg '#282828'
+set notification-warning-fg '#d79921'
 
-set recolor-darkcolor '#eceff4'
-set recolor-lightcolor '#2e3440'
+set recolor-darkcolor '#ebdbb2'
+set recolor-lightcolor '#282828'
 
-set highlight-color '#81a1c1'
-set highlight-active-color '#5e81ac'
+set highlight-color '#d65d0e'
+set highlight-active-color '#fe8019'
 set highlight-transparency 0.7
 
-set render-loading-bg '#2e3440'
-set render-loading-fg '#eceff4'
+set render-loading-bg '#282828'
+set render-loading-fg '#ebdbb2'
 
 # Page padding
 set page-padding 6
