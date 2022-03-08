@@ -7,14 +7,8 @@ setopt autocd
 setopt HIST_IGNORE_ALL_DUPS
 bindkey -e
 # End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename "/home/notroot/.zshrc"
 
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
-
-# Personal addition (completions):
+# Completions
 source ~/.zshcompletion
 
 # Use nvim to read man pages
@@ -31,7 +25,6 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source ~/.fzf.zsh
 
 # Binding some keys
-# Use 'showkey -a' and 'bindkey | rg "\^M"'
 bindkey '^[[H'  beginning-of-line # Home
 bindkey '^[[4~' end-of-line       # End
 bindkey '^[h'   backward-word     # Alt + h
@@ -48,8 +41,9 @@ bindkey '^[^?'  backward-kill-word
 bindkey '^[^H'  kill-whole-line
 bindkey '^[l'   forward-word
 bindkey '^[u'   down-case-word
-bindkey -s '^N' '^[^Hcd ..^Mexa --icons^M'
+bindkey -s '^N' '^[^Hcd .. && exa --icons^M'
 bindkey -s '^[e' '^[Hc ; ^[L'
+bindkey -s '^[v' 'cd^M^V'
 bindkey -r '^[f'
 
 # PS1

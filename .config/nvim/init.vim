@@ -3,14 +3,18 @@ syntax on
 
 " vim-plug:
 call plug#begin()
+" Plug 'morhetz/gruvbox'
+Plug 'lifepillar/vim-gruvbox8'
+Plug 'jiangmiao/auto-pairs'
 Plug 'itchyny/lightline.vim'
+Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'jez/vim-superman'
-Plug 'arcticicestudio/nord-vim'
 Plug 'bfrg/vim-cpp-modern'
 Plug 'lervag/vimtex'
 Plug 'sudar/vim-arduino-syntax'
 Plug 'karb94/neoscroll.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'justinmk/vim-sneak'
 Plug 'junegunn/fzf.vim'
 Plug 'wfxr/minimap.vim'
 Plug 'preservim/nerdtree'
@@ -19,28 +23,29 @@ Plug 'rust-lang/rust.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
-" how not to include a script:
-source ~/.config/nvim/autoclose.vim
-
 " smooth scrolling??
 lua require('neoscroll').setup()
 
 " makes space for code diagnostics
 set signcolumn=number
 
-" better looking lightline
 set noshowmode
 
 " mapping <leader>
 let mapleader = " "
 
-" For lightline:
+" Colorscheme:
+let g:gruvbox_plugin_hi_groups = 0
+let g:gruvbox_italicize_strings = 0
+colorscheme gruvbox8
+
+-" For lightline:
 let g:lightline = {
 			\ 'component_function': {
 			\   'readonly': 'LightlineReadonly',
 			\   'filetype': 'LightlineFiletype',
 			\ },
-			\ 'colorscheme': 'nord',
+			\ 'colorscheme': 'gruvbox',
 			\ 'active': {
 			\   'left': [ [ 'mode', 'paste' ],
 			\             [ 'readonly', 'filename', 'modified' ] ],
@@ -62,30 +67,22 @@ function! LightlineFiletype()
 	return winwidth(0) > 70 ? &filetype : ''
 endfunction
 
-" Nord vim stuff
-let g:nord_uniform_diff_background = 1
-
-" Colorscheme:
-colorscheme nord
-
 " Highlight only the current line with the number
 highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE
 highlight CursorLineNr cterm=NONE ctermbg=NONE ctermfg=white
 set cursorline
 
 " nice highlight colors
-highlight Search ctermfg=white ctermbg=blue
+highlight Normal ctermbg=0 ctermfg=15
 highlight SpellBad cterm=undercurl ctermfg=white
 highlight SpellRare cterm=undercurl ctermfg=white
 highlight SpellCap cterm=undercurl ctermfg=white
 highlight SpellLocal cterm=undercurl ctermfg=white
-highlight Function cterm=bold
-highlight Identifier ctermfg=7
-highlight Todo cterm=bold
-highlight Number ctermfg=yellow
-highlight Float ctermfg=yellow
-highlight Link ctermfg=white cterm=underline
-highlight Pmenu ctermbg=257 ctermfg=white
+highlight Todo ctermfg=3 cterm=bold
+highlight Number ctermfg=3
+highlight Link cterm=underline
+highlight Pmenu ctermbg=0 ctermfg=15
+highlight Search cterm=none ctermfg=5 ctermbg=15
 
 " relative line numbers
 set number relativenumber
@@ -165,16 +162,11 @@ autocmd filetype c set tabstop=2
 " Useful mappings
 
 " better underline
-highlight Underlined cterm=underline ctermfg=257
+highlight Underlined cterm=underline
 
 " C stuff
 " set C filetype on header files
 let c_syntax_for_h=1
-
-" automatic curly brackets:
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
 
 " For LaTeX
 autocmd filetype tex inoremap \( \left (  \right )<ESC>8hi
@@ -246,21 +238,19 @@ vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(
 
 let g:coc_start_at_startup = v:false
 
+autocmd filetype toml CocStart
+
 autocmd filetype rust CocStart
 autocmd filetype rust CocCommand rust-analyzer.toggleInlayHints
 autocmd filetype rust nnoremap <leader>e :CocCommand rust-analyzer.explainError<CR>
 autocmd filetype rust nnoremap <leader>E :CocCommand rust-analyzer.toggleInlayHints<CR>
-
-" Code minimap
-highlight minimapCursor ctermbg=0   ctermfg=7
-highlight minimapRange  ctermbg=256 ctermfg=7
 
 let g:minimap_width = 32
 let g:minimap_highlight_range = 1
 map <leader>c :MinimapToggle<CR>:MinimapUpdateHighlight<CR>
 
 " needs to be done after the buffer is read, for some reason??
-autocmd BufReadPost *
-			\ highlight minimapCursor ctermbg=0   ctermfg=7 |
-			\ highlight minimapRange  ctermbg=256 ctermfg=7 |
+autocmd BufReadPost * 
+			\ highlight minimapCursor ctermbg=0 ctermfg=15 |
+			\ highlight minimapRange  ctermbg=0 ctermfg=8 |
 			\ let g:minimap_base_highlight = 'NonText'
