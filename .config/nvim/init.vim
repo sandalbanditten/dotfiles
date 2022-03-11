@@ -11,11 +11,10 @@ Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'jez/vim-superman'
 Plug 'bfrg/vim-cpp-modern'
 Plug 'lervag/vimtex'
-Plug 'sudar/vim-arduino-syntax'
 Plug 'karb94/neoscroll.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'justinmk/vim-sneak'
 Plug 'junegunn/fzf.vim'
+Plug 'justinmk/vim-sneak'
 Plug 'wfxr/minimap.vim'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
@@ -68,21 +67,28 @@ function! LightlineFiletype()
 endfunction
 
 " Highlight only the current line with the number
-highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE
-highlight CursorLineNr cterm=NONE ctermbg=NONE ctermfg=white
+highlight CursorLine cterm=none ctermbg=none ctermfg=none
+highlight CursorLineNr cterm=none ctermbg=none ctermfg=15
 set cursorline
 
 " nice highlight colors
 highlight Normal ctermbg=0 ctermfg=15
-highlight SpellBad cterm=undercurl ctermfg=white
-highlight SpellRare cterm=undercurl ctermfg=white
-highlight SpellCap cterm=undercurl ctermfg=white
-highlight SpellLocal cterm=undercurl ctermfg=white
+highlight SpellBad cterm=undercurl ctermfg=15
+highlight SpellRare cterm=undercurl ctermfg=15
+highlight SpellCap cterm=undercurl ctermfg=15
+highlight SpellLocal cterm=undercurl ctermfg=15
 highlight Todo ctermfg=3 cterm=bold
 highlight Number ctermfg=3
 highlight Link cterm=underline
 highlight Pmenu ctermbg=0 ctermfg=15
 highlight Search cterm=none ctermfg=5 ctermbg=15
+highlight MatchParen cterm=bold ctermbg=0
+highlight texTitleArg cterm=bold ctermfg=15
+highlight Sneak ctermfg=5 ctermbg=15
+highlight SneakScope ctermfg=5 ctermbg=15
+highlight Function ctermfg=12 ctermbg=0
+
+let g:sneak#prompt = '> '
 
 " relative line numbers
 set number relativenumber
@@ -96,6 +102,7 @@ set showbreak=->
 
 " shows tabs, trailing whitespace etc.
 set list
+" set listchars=tab:··,lead:·,trail:·,extends:»,precedes:«,nbsp:*
 set listchars=tab:··,lead:·,trail:·,extends:»,precedes:«,nbsp:*
 
 " spell checking on english and danish:
@@ -245,6 +252,7 @@ autocmd filetype rust CocCommand rust-analyzer.toggleInlayHints
 autocmd filetype rust nnoremap <leader>e :CocCommand rust-analyzer.explainError<CR>
 autocmd filetype rust nnoremap <leader>E :CocCommand rust-analyzer.toggleInlayHints<CR>
 
+" Code minimap
 let g:minimap_width = 32
 let g:minimap_highlight_range = 1
 map <leader>c :MinimapToggle<CR>:MinimapUpdateHighlight<CR>
