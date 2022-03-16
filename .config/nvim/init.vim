@@ -73,10 +73,10 @@ set cursorline
 
 " nice highlight colors
 highlight Normal ctermbg=0 ctermfg=15
-highlight SpellBad cterm=undercurl ctermfg=15
-highlight SpellRare cterm=undercurl ctermfg=15
-highlight SpellCap cterm=undercurl ctermfg=15
-highlight SpellLocal cterm=undercurl ctermfg=15
+highlight SpellBad cterm=undercurl
+highlight SpellRare cterm=undercurl
+highlight SpellCap cterm=undercurl
+highlight SpellLocal cterm=undercurl
 highlight Todo ctermfg=3 cterm=bold
 highlight Number ctermfg=3
 highlight Link cterm=underline
@@ -102,7 +102,6 @@ set showbreak=->
 
 " shows tabs, trailing whitespace etc.
 set list
-" set listchars=tab:··,lead:·,trail:·,extends:»,precedes:«,nbsp:*
 set listchars=tab:··,lead:·,trail:·,extends:»,precedes:«,nbsp:*
 
 " spell checking on english and danish:
