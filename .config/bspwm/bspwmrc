@@ -2,7 +2,7 @@
 
 # Autostart
 pgrep -x sxhkd > /dev/null || sxhkd &
-killall polybar
+killall polybar -q
 xsetroot -solid "#282828"
 
 export MONCOUNT="$(xrandr | grep " connected " | wc -l)"
