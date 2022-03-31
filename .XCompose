@@ -11,8 +11,7 @@
 <Multi_key> <5> <h>                  : "♥♥♥♥♥"   U2665
 <Multi_key> <6> <h>                  : "♥♥♥♥♥♥"   U2665
 <Multi_key> <r> <l>                  : "👉👈"   pwease # POINTING
-<Multi_key> <c>                      : "🦀"   CRAB # POINTING
-<Multi_key> <c> <c>                  : "🦀"   CRAB # POINTING
+<Multi_key> <c> <c>                  : "🦀"   CRAB # CRAB
 <dead_tilde> <space>             	: "~"   asciitilde # TILDE
 <dead_tilde> <dead_tilde>        	: "~"   asciitilde # TILDE
 <dead_acute> <space>             	: "'"   apostrophe # APOSTROPHE
