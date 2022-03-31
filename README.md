@@ -22,9 +22,13 @@ My suckless software:
 My scripts:
 * [scripts](https://github.com/sandalbanditten/scripts)
 
+My personal software:
+* [epoch-get](https://github.com/sandalbanditten/epoch-get)
+* [boids-rs](https://github.com/sandalbanditten/boids-rs)
+
 ## My other links
 
-I will make a YouTube and an Odysee channel at some point.
+I might make a YouTube and/or an Odysee channel at some point.
 
 ## Contributing
 
