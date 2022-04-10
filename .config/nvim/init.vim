@@ -247,7 +247,6 @@ let g:coc_start_at_startup = v:false
 autocmd filetype toml CocStart
 
 autocmd filetype rust CocStart
-autocmd filetype rust CocCommand rust-analyzer.toggleInlayHints
 autocmd filetype rust nnoremap <leader>e :CocCommand rust-analyzer.explainError<CR>
 autocmd filetype rust nnoremap <leader>E :CocCommand rust-analyzer.toggleInlayHints<CR>
 
