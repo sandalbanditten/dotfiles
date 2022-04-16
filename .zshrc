@@ -46,5 +46,7 @@ bindkey -s '^[e' '^[Hc ; ^[L'
 bindkey -s '^[v' 'cd^M^V'
 bindkey -r '^[f'
 
+exa --icons
+
 # PS1
 eval "$(starship init zsh)"
