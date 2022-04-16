@@ -160,12 +160,6 @@ set notimeout ttimeout ttimeoutlen=200
 " two characters wide.
 set shiftwidth=4
 set tabstop=4
-autocmd filetype tex set shiftwidth=2
-autocmd filetype tex set tabstop=2
-autocmd filetype c set shiftwidth=2
-autocmd filetype c set tabstop=2
-
-" Useful mappings
 
 " better underline
 highlight Underlined cterm=underline
@@ -188,9 +182,6 @@ autocmd filetype tex map <leader>w :VimtexCountWords<CR>
 autocmd filetype tex map <leader>W :VimtexCountLetters<CR>
 autocmd BufWritePre *.tex :%s/\s\+$//e
 let g:vimtex_view_method = 'zathura'
-
-" rust
-autocmd filetype rust map <leader>w :RustFmt<CR>
 
 """ Mappings
 
@@ -242,13 +233,10 @@ inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float
 vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
 vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 
-let g:coc_start_at_startup = v:false
-
-autocmd filetype toml CocStart
-
-autocmd filetype rust CocStart
 autocmd filetype rust nnoremap <leader>e :CocCommand rust-analyzer.explainError<CR>
 autocmd filetype rust nnoremap <leader>E :CocCommand rust-analyzer.toggleInlayHints<CR>
+autocmd filetype rust map <leader>w :RustFmt<CR>
+autocmd fileType rust let b:AutoPairs = AutoPairsDefine({'\w\zs<': '>'})
 
 " Code minimap
 let g:minimap_width = 32
@@ -256,7 +244,7 @@ let g:minimap_highlight_range = 1
 map <leader>c :MinimapToggle<CR>:MinimapUpdateHighlight<CR>
 
 " needs to be done after the buffer is read, for some reason??
-autocmd BufReadPost * 
+autocmd BufReadPost *
 			\ highlight minimapCursor ctermbg=0 ctermfg=15 |
 			\ highlight minimapRange  ctermbg=0 ctermfg=8 |
 			\ let g:minimap_base_highlight = 'NonText'

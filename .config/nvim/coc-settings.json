@@ -1,8 +1,5 @@
 {
 	"diagnostic.checkCurrentLine": true,
-	"coc.source.around.enable": false,
-	"coc.source.buffer.enable": false,
-	"coc.source.file.enable": false,
 	"suggest.maxCompleteItemCount": 10,
 	"hover.floatConfig": {
 		"border": true
@@ -16,6 +13,5 @@
 	"signature.floatConfig": {
 		"border": true
 	},
-	"diagnostic.warningSign": ">>",
-	"rust-analyzer.inlayHints.refreshOnInsertMode": true
+	"diagnostic.warningSign": ">>"
 }
