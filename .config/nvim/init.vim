@@ -3,7 +3,6 @@ syntax on
 
 " vim-plug:
 call plug#begin()
-" Plug 'morhetz/gruvbox'
 Plug 'lifepillar/vim-gruvbox8'
 Plug 'jiangmiao/auto-pairs'
 Plug 'itchyny/lightline.vim'
@@ -12,6 +11,7 @@ Plug 'jez/vim-superman'
 Plug 'bfrg/vim-cpp-modern'
 Plug 'lervag/vimtex'
 Plug 'karb94/neoscroll.nvim'
+Plug 'airblade/vim-rooter'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-sneak'
@@ -109,6 +109,9 @@ map <leader>l :setlocal spell! spelllang=en_us<CR>
 map <leader>L :setlocal spell! spelllang=da_dk<CR>
 set spellsuggest=best,9
 
+" Start scrolling a couple of lines above the end of the view
+set scrolloff=4
+
 " yeahhhh
 set hidden
 
@@ -161,10 +164,13 @@ set notimeout ttimeout ttimeoutlen=200
 set shiftwidth=4
 set tabstop=4
 
+" set permanent undo
+set undodir=~/.config/nvim/undo/
+set undofile
+
 " better underline
 highlight Underlined cterm=underline
 
-" C stuff
 " set C filetype on header files
 let c_syntax_for_h=1
 
@@ -185,13 +191,20 @@ let g:vimtex_view_method = 'zathura'
 
 """ Mappings
 
+" Open buffers/windows with fzf
+nmap <leader>; :Buffers<CR>
+nmap <leader>' :Windows<CR>
+nmap <leader>[ :Files<CR>
+nmap <leader>] :Rg<CR>
+
+" quick save and quit
+nmap <leader>w :w<CR>
+
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy
 map Y y$
 
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>N :NERDTreeMirror<CR>:NERDTreeFocus<CR>
-
-nnoremap <leader>t :W<CR>
 
 " Map <C-L> (redraw screen) to also turn off search highlighting until the next search
 nnoremap <C-E> :nohl<CR><C-L>
@@ -233,9 +246,9 @@ inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float
 vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
 vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 
-autocmd filetype rust nnoremap <leader>e :CocCommand rust-analyzer.explainError<CR>
 autocmd filetype rust nnoremap <leader>E :CocCommand rust-analyzer.toggleInlayHints<CR>
-autocmd filetype rust map <leader>w :RustFmt<CR>
+autocmd filetype rust nmap <leader>d :call CocActionAsync('jumpDefinition')<CR>
+autocmd filetype rust map <leader>e :RustFmt<CR>
 autocmd fileType rust let b:AutoPairs = AutoPairsDefine({'\w\zs<': '>'})
 
 " Code minimap
