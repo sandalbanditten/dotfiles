@@ -16,4 +16,6 @@ export EXA_COLORS="*.docx=37;1:*.png=33:*.jpg=33:*.jpeg=33:*.wav=33:*.gif=33:*.m
 export XCURSOR_SIZE=16
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export WORDCHARS="$WORDCHARS:\"\'|"
+# Will remove / from the wordchars
+export WORDCHARS="${WORDCHARS//\/}"
 export RUSTC_FORCE_INCREMENTAL=1
