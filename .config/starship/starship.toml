@@ -44,6 +44,7 @@ symbol = "⚙️ "
 [python]
 format = "[$symbol]($style) "
 symbol = "🐍"
+disabled = true
 
 [git_status]
 conflicted = "!="
