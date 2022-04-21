@@ -1,5 +1,5 @@
 # Aliases
-alias -g x="exa --icons"
+alias x="exa --icons"
 alias :q="exit"
 alias acc="arduino-cli compile --fqbn arduino:avr:uno"
 alias anew="arduino-cli sketch new"
