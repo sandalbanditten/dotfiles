@@ -184,8 +184,8 @@ autocmd filetype tex inoremap \,B \underline{\underline{}}<Left><Left>
 autocmd filetype tex map <leader>i i\begin{align*}<ESC>o\end{align*}<ESC><<O
 autocmd filetype tex map <leader>o i\begin{center}<ESC>o\fbox{\includegraphics[width=0.975\textwidth,keepaspectratio]{pics/}}<ESC>o\end{center}<ESC><<kf/a
 autocmd filetype tex map <leader>O o<ESC>o\newpage<ESC>o<ESC>o
-autocmd filetype tex map <leader>w :VimtexCountWords<CR>
-autocmd filetype tex map <leader>W :VimtexCountLetters<CR>
+autocmd filetype tex map <leader>q :VimtexCountWords<CR>
+autocmd filetype tex map <leader>Q :VimtexCountLetters<CR>
 autocmd BufWritePre *.tex :%s/\s\+$//e
 let g:vimtex_view_method = 'zathura'
 
