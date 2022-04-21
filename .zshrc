@@ -25,26 +25,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source ~/.fzf.zsh
 
 # Binding some keys
-bindkey '^[[H'  beginning-of-line # Home
-bindkey '^[[4~' end-of-line       # End
-bindkey '^[h'   backward-word     # Alt + h
-bindkey '^[[P'  delete-char       # Delete
-bindkey '^V'    fzf-cd-widget
-bindkey '^H'    backward-char
-bindkey '^J'    down-line-or-history
-bindkey '^K'    up-line-or-history
-bindkey '^L'    forward-char
-bindkey '^E'    clear-screen
-bindkey '^[H'   beginning-of-line
-bindkey '^[L'   end-of-line
-bindkey '^[^?'  backward-kill-word
-bindkey '^[^H'  kill-whole-line
-bindkey '^[l'   forward-word
-bindkey '^[u'   down-case-word
-bindkey -s '^N' '^[^Hcd .. && exa --icons^M'
-bindkey -s '^[e' '^[Hc ; ^[L'
-bindkey -s '^[v' 'cd^M^V'
-bindkey -r '^[f'
+source ~/.zshbinds
 
 exa --icons
 
