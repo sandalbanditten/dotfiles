@@ -19,3 +19,4 @@ export WORDCHARS="$WORDCHARS:\"\'|"
 # Will remove / from the wordchars
 export WORDCHARS="${WORDCHARS//\/}"
 export RUSTC_FORCE_INCREMENTAL=1
+. "$HOME/.cargo/env"
