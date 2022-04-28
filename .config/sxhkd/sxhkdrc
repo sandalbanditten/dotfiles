@@ -74,11 +74,11 @@ super + shift + Return
 
 # calc terminal
 super + control + Return
-	st -- bc -lq
+	st -- kalker
 
 # floating calc terminal
 super + control + shift + Return
-	bspc rule -a \* -o state=floating && st -- bc -lq
+	bspc rule -a \* -o state=floating && st -- kalker
 
 # program launcher
 super + r
