@@ -13,5 +13,12 @@
 	"signature.floatConfig": {
 		"border": true
 	},
-	"diagnostic.warningSign": ">>"
+	"rust-analyzer.diagnostics.enable": true,
+	"rust-analyzer.inlayHints.enable": true,
+	"rust-analyzer.inlayHints.chainingHints": true,
+	"rust-analyzer.inlayHints.lifetimeElisionHints.useParameterNames": true,
+	"rust-analyzer.inlayHints.typeHints": true,
+	"rust-analyzer.inlayHints.reborrowHints": true,
+	"rust-analyzer.inlayHints.lifetimeElisionHints.enable": "always",
+	"rust-analyzer.inlayHints.closureReturnTypeHints": true
 }

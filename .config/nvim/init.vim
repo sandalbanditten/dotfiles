@@ -1,34 +1,56 @@
-filetype indent plugin on
-syntax on
-
 " vim-plug:
 call plug#begin()
+Plug 'luukvbaal/stabilize.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'lifepillar/vim-gruvbox8'
 Plug 'jiangmiao/auto-pairs'
 Plug 'itchyny/lightline.vim'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'jez/vim-superman'
-Plug 'bfrg/vim-cpp-modern'
 Plug 'lervag/vimtex'
 Plug 'karb94/neoscroll.nvim'
 Plug 'airblade/vim-rooter'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-sneak'
-Plug 'wfxr/minimap.vim'
 Plug 'preservim/nerdtree'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'ryanoasis/vim-devicons'
 Plug 'rust-lang/rust.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
-" smooth scrolling??
-lua require('neoscroll').setup()
+syntax on
+filetype indent plugin on
+
+lua <<EOF
+-- smooth scrolling??
+require('neoscroll').setup()
+
+-- listchars
+vim.opt.list = true
+vim.opt.listchars:append("trail:·")
+vim.opt.listchars:append("extends:»")
+vim.opt.listchars:append("precedes:«")
+vim.opt.listchars:append("nbsp:+")
+
+-- blankline indentation showing
+require("indent_blankline").setup {
+    -- for example, context is off by default, use this to turn it on
+    show_current_context = false,
+    show_current_context_start = false,
+}
+
+-- stabilizes buffer if a new one is opened
+require("stabilize").setup()
+EOF
 
 " makes space for code diagnostics
 set signcolumn=number
 
 set noshowmode
+
+set laststatus=3
 
 " mapping <leader>
 let mapleader = " "
@@ -38,12 +60,8 @@ let g:gruvbox_plugin_hi_groups = 0
 let g:gruvbox_italicize_strings = 0
 colorscheme gruvbox8
 
--" For lightline:
+" For lightline:
 let g:lightline = {
-			\ 'component_function': {
-			\   'readonly': 'LightlineReadonly',
-			\   'filetype': 'LightlineFiletype',
-			\ },
 			\ 'colorscheme': 'gruvbox',
 			\ 'active': {
 			\   'left': [ [ 'mode', 'paste' ],
@@ -52,19 +70,7 @@ let g:lightline = {
 			\              [ 'percent' ],
 			\              [ 'filetype' ] ],
 			\ },
-			\ 'inactive': {
-			\ 'left': [ [ 'filename' ] ],
-			\ 'right': [ [ 'lineinfo' ], [ 'percent' ] ],
-			\ },
 			\ }
-
-function! LightlineReadonly()
-	return &readonly && &filetype !~# '\v(help|minimap)' ? 'RO' : ''
-endfunction
-
-function! LightlineFiletype()
-	return winwidth(0) > 70 ? &filetype : ''
-endfunction
 
 " Highlight only the current line with the number
 highlight CursorLine cterm=none ctermbg=none ctermfg=none
@@ -73,6 +79,7 @@ set cursorline
 
 " nice highlight colors
 highlight Normal ctermbg=0 ctermfg=15
+highlight SignColumn ctermbg=0 ctermfg=15
 highlight SpellBad cterm=undercurl
 highlight SpellRare cterm=undercurl
 highlight SpellCap cterm=undercurl
@@ -99,10 +106,6 @@ set splitbelow splitright
 " wrapping and showing wrapping
 set wrap linebreak
 set showbreak=->
-
-" shows tabs, trailing whitespace etc.
-set list
-set listchars=tab:··,lead:·,trail:·,extends:»,precedes:«,nbsp:*
 
 " spell checking on english and danish:
 map <leader>l :setlocal spell! spelllang=en_us<CR>
@@ -160,9 +163,13 @@ set cmdheight=2
 set notimeout ttimeout ttimeoutlen=200
 
 " Indentation settings for using hard tabs for indent. Display tabs as
-" two characters wide.
+" four characters wide.
 set shiftwidth=4
 set tabstop=4
+
+autocmd filetype javascript set shiftwidth=2
+autocmd filetype javascript set tabstop=2
+autocmd filetype javascript set expandtab
 
 " set permanent undo
 set undodir=~/.config/nvim/undo/
@@ -184,8 +191,9 @@ autocmd filetype tex inoremap \,B \underline{\underline{}}<Left><Left>
 autocmd filetype tex map <leader>i i\begin{align*}<ESC>o\end{align*}<ESC><<O
 autocmd filetype tex map <leader>o i\begin{center}<ESC>o\fbox{\includegraphics[width=0.975\textwidth,keepaspectratio]{pics/}}<ESC>o\end{center}<ESC><<kf/a
 autocmd filetype tex map <leader>O o<ESC>o\newpage<ESC>o<ESC>o
-autocmd filetype tex map <leader>q :VimtexCountWords<CR>
-autocmd filetype tex map <leader>Q :VimtexCountLetters<CR>
+autocmd filetype tex map <leader>c :VimtexCountWords<CR>
+autocmd filetype tex map <leader>C :VimtexCountLetters<CR>
+autocmd filetype tex map <leader>r :VimtexCompileSS<CR>
 autocmd BufWritePre *.tex :%s/\s\+$//e
 let g:vimtex_view_method = 'zathura'
 
@@ -200,9 +208,6 @@ nmap <leader>] :Rg<CR>
 " quick save and quit
 nmap <leader>w :w<CR>
 
-" Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy
-map Y y$
-
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>N :NERDTreeMirror<CR>:NERDTreeFocus<CR>
 
@@ -214,6 +219,10 @@ nnoremap <C-H> <C-W>h
 nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
+
+" rust remap
+autocmd filetype rust map <leader>e :RustFmt<CR>
+autocmd fileType rust let b:AutoPairs = AutoPairsDefine({'\w\zs<': '>'})
 
 " coc.nvim
 set nobackup
@@ -234,6 +243,9 @@ function! s:check_back_space() abort
 	return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
+inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
 " navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
@@ -246,18 +258,20 @@ inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float
 vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
 vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 
-autocmd filetype rust nnoremap <leader>E :CocCommand rust-analyzer.toggleInlayHints<CR>
-autocmd filetype rust nmap <leader>d :call CocActionAsync('jumpDefinition')<CR>
-autocmd filetype rust map <leader>e :RustFmt<CR>
-autocmd fileType rust let b:AutoPairs = AutoPairsDefine({'\w\zs<': '>'})
+" mapping gotos
+" autocmd filetype rust nmap <leader>d :call CocActionAsync('jumpDefinition')<CR>
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> <leader>a :CocAction<CR>
 
-" Code minimap
-let g:minimap_width = 32
-let g:minimap_highlight_range = 1
-map <leader>c :MinimapToggle<CR>:MinimapUpdateHighlight<CR>
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
 
-" needs to be done after the buffer is read, for some reason??
-autocmd BufReadPost *
-			\ highlight minimapCursor ctermbg=0 ctermfg=15 |
-			\ highlight minimapRange  ctermbg=0 ctermfg=8 |
-			\ let g:minimap_base_highlight = 'NonText'
+function! s:show_documentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+endfunction
