@@ -21,5 +21,8 @@ xsetroot -solid "#282828" -cursor_name left_ptr
 setxkbmap -layout us -option compose:caps
 xset b off
 
+# pulseaudio
+pulseaudio --start
+
 # Window manager
 exec bspwm
