@@ -40,11 +40,18 @@ super + control + u
 # Audio
 #
 
-super + {_,shift} + {q,e}
-	amixer -c 1 set Master {2,5}%{-,+}
+super + {q,e} + {_,shift}
+	pamixer {--decrease,--increase} {2,5}
+
+# super + {_,shift} + {q,e}
+# amixer -c 1 set Master {2,5}%{-,+}
 
 super + 0
-	amixer -c 1 set Master 0%
+	pamixer --set-volume 0
+
+super + shift + 0
+	pamixer --toggle-mute
+# amixer -c 1 set Master 0%
 
 #
 # Personal run-bins
