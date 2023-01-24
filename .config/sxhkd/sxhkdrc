@@ -17,8 +17,11 @@ super + control + a
 super + shift + control + a
 	/home/notroot/Code/Scripts/skill
 
-super + o
+super + p						
 	/home/notroot/Code/Scripts/audio
+
+super + shift + p
+	/home/notroot/Code/Scripts/letters
 
 #
 # Clipboard
@@ -35,6 +38,13 @@ super + control + shift + u
 
 super + control + u
 	cat /home/notroot/Code/Scripts/schoolmail | xclip -selection clipboard
+
+#
+# Obsidian
+#
+
+super + o
+	obsidian
 
 #
 # Audio
@@ -87,6 +97,14 @@ super + control + Return
 super + control + shift + Return
 	bspc rule -a \* -o state=floating && st -- kalker
 
+# R terminal
+super + shift + r
+	st -- radian
+
+# R calc terminal
+super + control + r
+	bspc rule -a \* -o state=floating && st -- radian
+
 # program launcher
 super + r
 	dmenu_run -l 16 -p "Run:"
@@ -100,8 +118,8 @@ super + Escape
 #
 
 # close and kill
-super + {_,shift + }w
-	bspc node -{c,k}
+super + control + shift + w
+	bspc node -c
 
 # alternate between the tiled and monocle layout
 super + m

@@ -20,8 +20,8 @@ set notification-error-fg '#cc241d'
 set notification-warning-bg '#282828'
 set notification-warning-fg '#d79921'
 
-set recolor-darkcolor '#ebdbb2'
 set recolor-lightcolor '#282828'
+set recolor-darkcolor '#ebdbb2'
 
 set highlight-color '#d65d0e'
 set highlight-active-color '#fe8019'

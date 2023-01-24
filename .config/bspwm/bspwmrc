@@ -2,10 +2,11 @@
 
 # Autostart
 pgrep -x sxhkd > /dev/null || sxhkd &
+
 killall polybar -q
 xsetroot -solid "#282828"
 
-export MONCOUNT="$(xrandr | grep " connected " | wc -l)"
+export MONCOUNT="$(xrandr | rg " connected " | wc -l)"
 
 # Workspaces
 

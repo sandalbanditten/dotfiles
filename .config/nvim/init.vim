@@ -72,6 +72,10 @@ let g:lightline = {
 			\ },
 			\ }
 
+let g:lightline.tabline = {
+			\ 'left': [ [ 'tabs' ] ],
+			\ 'right': [ [] ] }
+
 " Highlight only the current line with the number
 highlight CursorLine cterm=none ctermbg=none ctermfg=none
 highlight CursorLineNr cterm=none ctermbg=none ctermfg=15
@@ -183,11 +187,13 @@ let c_syntax_for_h=1
 
 " For LaTeX
 autocmd filetype tex inoremap \( \left (  \right )<ESC>8hi
-autocmd filetype tex inoremap \> \rightarrow && <ESC>a
+autocmd filetype tex inoremap \| left \|  \right \|<ESC>8hi
+autocmd filetype tex inoremap \{ \begin{pmatrix} \end{pmatrix}<ESC>12hi
+autocmd filetype tex inoremap \> \ra && <ESC>a
 autocmd filetype tex inoremap \,u \| \text{} \\<ESC>F}i
 autocmd filetype tex inoremap \,U  Indsætter værdier:<ESC>
 autocmd filetype tex inoremap \,b \textbf{}<Left>
-autocmd filetype tex inoremap \,B \underline{\underline{}}<Left><Left>
+autocmd filetype tex inoremap \,B \ul{\ul{}}<Left><Left>
 autocmd filetype tex map <leader>i i\begin{align*}<ESC>o\end{align*}<ESC><<O
 autocmd filetype tex map <leader>o i\begin{center}<ESC>o\fbox{\includegraphics[width=0.975\textwidth,keepaspectratio]{pics/}}<ESC>o\end{center}<ESC><<kf/a
 autocmd filetype tex map <leader>O o<ESC>o\newpage<ESC>o<ESC>o
@@ -196,6 +202,7 @@ autocmd filetype tex map <leader>C :VimtexCountLetters<CR>
 autocmd filetype tex map <leader>r :VimtexCompileSS<CR>
 autocmd BufWritePre *.tex :%s/\s\+$//e
 let g:vimtex_view_method = 'zathura'
+let g:vimtex_view_forward = 0
 
 """ Mappings
 
@@ -232,19 +239,33 @@ set updatetime=300
 set shortmess+=c
 
 " tab completion
+" inoremap <silent><expr> <TAB>
+" 			\ pumvisible() ? "\<C-n>" :
+" 			\ <SID>check_back_space() ? "\<TAB>" :
+" 			\ coc#refresh()
+" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" 
+" function! s:check_back_space() abort
+" 	let col = col('.') - 1
+" 	return !col || getline('.')[col - 1]  =~# '\s'
+" endfunction
+" 
+" inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm()
+"                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
 inoremap <silent><expr> <TAB>
-			\ pumvisible() ? "\<C-n>" :
-			\ <SID>check_back_space() ? "\<TAB>" :
-			\ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+      \ coc#pum#visible() ? coc#pum#next(1):
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
-function! s:check_back_space() abort
-	let col = col('.') - 1
-	return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm()
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
 " navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)

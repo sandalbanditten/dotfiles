@@ -33,7 +33,7 @@ height = 300
 origin = top-right
 
 # Offset from the origin
-offset = 12x64
+offset = 7x34
 
 # Scale factor. It is auto-detected if value is 0.
 scale = 0

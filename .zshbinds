@@ -1,6 +1,6 @@
 #!/bin/zsh
 bindkey '^E'    clear-screen
-bindkey '^G' backward-delete-char
+bindkey '^G'    backward-delete-char
 bindkey '^H'    backward-char
 bindkey '^J'    down-line-or-history
 bindkey '^K'    up-line-or-history
@@ -17,6 +17,6 @@ bindkey '^[h'   backward-word     # Alt + h
 bindkey '^[l'   forward-word
 bindkey '^[u'   down-case-word
 bindkey -r '^[f'
-bindkey -s '^N' '^[^Hcd .. && exa --icons^M'
+bindkey -s '^N' '^[^Hz .. && exa --icons^M'
 bindkey -s '^[e' '^[Hc ; ^[L'
 bindkey -s '^[v' 'cd^M^V'

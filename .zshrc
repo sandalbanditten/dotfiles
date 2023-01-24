@@ -29,5 +29,8 @@ source ~/.zshbinds
 
 exa --icons
 
+# Zoxide
+eval "$(zoxide init zsh)"
+
 # PS1
 eval "$(starship init zsh)"
