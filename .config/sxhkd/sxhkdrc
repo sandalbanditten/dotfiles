@@ -2,6 +2,9 @@
 # Personal scripts
 #
 
+super + b
+	bspc rule -a \* -o state=tiled ; surf
+
 super + {_,control,shift} + v
 	/home/notroot/Code/Scripts/{vids,picdir,pics}
 
@@ -19,9 +22,6 @@ super + shift + control + a
 
 super + p						
 	/home/notroot/Code/Scripts/audio
-
-super + shift + p
-	/home/notroot/Code/Scripts/letters
 
 #
 # Clipboard
@@ -47,11 +47,14 @@ super + o
 	obsidian
 
 #
-# Audio
+# Audio and Backlight
 #
 
-super + {q,e} + {control,_,shift}
-	pamixer {--decrease,--increase} {2,5,10}
+super + {q,e} + {_,shift}
+	pamixer {--decrease,--increase} {5,10}
+
+super + {q,e} + {control, control + shift}
+	xbacklight {-dec,-inc} {10,20}
 
 # super + {_,shift} + {q,e}
 # amixer -c 1 set Master {2,5}%{-,+}
@@ -83,11 +86,11 @@ super + control + s
 
 # terminal emulator
 super + Return
-	st
+	st -- tmux
 
 # floating terminal
 super + shift + Return
-	bspc rule -a \* -o state=floating && st
+	bspc rule -a \* -o state=floating ; st -- tmux
 
 # calc terminal
 super + control + Return
@@ -95,7 +98,7 @@ super + control + Return
 
 # floating calc terminal
 super + control + shift + Return
-	bspc rule -a \* -o state=floating && st -- kalker
+	bspc rule -a \* -o state=floating ; st -- kalker
 
 # R terminal
 super + shift + r
@@ -103,7 +106,7 @@ super + shift + r
 
 # R calc terminal
 super + control + r
-	bspc rule -a \* -o state=floating && st -- radian
+	bspc rule -a \* -o state=floating ; st -- radian
 
 # program launcher
 super + r

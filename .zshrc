@@ -11,6 +11,9 @@ bindkey -e
 # Completions
 source ~/.zshcompletion
 
+# Node Version Manager
+# source /usr/share/nvm/init-nvm.sh
+
 # Use nvim to read man pages
 compdef vman="man"
 
@@ -33,4 +36,4 @@ exa --icons
 eval "$(zoxide init zsh)"
 
 # PS1
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"

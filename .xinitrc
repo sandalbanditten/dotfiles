@@ -18,7 +18,7 @@ xrandr --output DP-4 --primary --mode 2560x1600 --rate 165
 
 # X settings
 xsetroot -solid "#282828" -cursor_name left_ptr
-setxkbmap -layout us -option compose:caps
+setxkbmap -layout us -option compose:ins
 xset b off
 
 # bluetooooooooth

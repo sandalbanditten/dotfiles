@@ -1,5 +1,5 @@
 add_newline = false
-format = '$all$line_break$character'
+format = "$all$line_break└─ $character"
 
 [battery]
 full_symbol = " "
@@ -17,7 +17,7 @@ style = "bold red"
 disabled = false
 
 [character]
-format = "└─ $symbol "
+format = "$symbol "
 success_symbol = "[λ](bold green)"
 error_symbol = "[λ](bold red)"
 vicmd_symbol = "[λ](bold yellow)"
@@ -61,7 +61,7 @@ untracked = "?"
 disabled = false
 
 [git_commit]
-disabled = true
+disabled = false
 
 [git_state]
 disabled = false
@@ -81,6 +81,9 @@ disabled = true
 # Disabled stuff (everything i don't need)
 [aws]
 disabled = true
+
+[c]
+style = 'bold 10'
 
 [cmake]
 disabled = true

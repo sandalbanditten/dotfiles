@@ -1,18 +1,18 @@
 # Font
-set font 'Fira Code 16'
+set font 'Fira Code Bold 16'
 
 # Colors
-set default-bg '#282828'
-set default-fg '#ebdbb2'
+set default-bg '#282828d9'
+set default-fg '#a89984'
 
 set inputbar-bg '#282828'
-set inputbar-fg '#ebdbb2'
+set inputbar-fg '#a89984'
 
 set statusbar-bg '#282828'
-set statusbar-fg '#ebdbb2'
+set statusbar-fg '#a89984'
 
 set notification-bg '#282828'
-set notification-fg '#ebdbb2'
+set notification-fg '#a89984'
 
 set notification-error-bg '#282828'
 set notification-error-fg '#cc241d'
@@ -27,11 +27,12 @@ set highlight-color '#d65d0e'
 set highlight-active-color '#fe8019'
 set highlight-transparency 0.7
 
+# Transparency not supported here
 set render-loading-bg '#282828'
-set render-loading-fg '#ebdbb2'
+set render-loading-fg '#a89984'
 
 # Page padding
-set page-padding 6
+set page-padding 12
 
 # Dark mode
 set recolor true
