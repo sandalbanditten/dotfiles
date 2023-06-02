@@ -1,17 +1,27 @@
-﻿# UTF-8 (Unicode) compose sequence
+# UTF-8 (Unicode) compose sequence
 # David.Monniaux@ens.fr
 #
 # Part 1 - Manual definitions
 # Spacing versions of dead accents
-<Multi_key> <less> <3>               : "♥"   U2665 # BLACK HEART SUIT
-<Multi_key> <1> <h>                  : "♥"   U2665 # BLACK HEART SUIT
-<Multi_key> <2> <h>                  : "♥♥"   U2665 # MORE HEARTS
-<Multi_key> <3> <h>                  : "♥♥♥"   U2665
-<Multi_key> <4> <h>                  : "♥♥♥♥"   U2665
-<Multi_key> <5> <h>                  : "♥♥♥♥♥"   U2665
-<Multi_key> <6> <h>                  : "♥♥♥♥♥♥"   U2665
-<Multi_key> <r> <l>                  : "👉👈"   # POINTING
-<Multi_key> <c> <c>                  : "🦀"   # CRAB
+# Dashes
+
+# Personal additions
+<Multi_key> <minus> <minus> <period> 	: "–"   U2013 # EN DASH
+<Multi_key> <minus> <minus> <minus> 	: "—"   U2014 # EM DASH
+# Personal
+<Multi_key> <period> <period>    	: "∘"   ellipsis # FUNCTION COMPOSITION
+<Multi_key> <less> <3>              : "♥"   U2665 # BLACK HEART SUIT
+<Multi_key> <1> <h>                 : "♥"   U2665 # BLACK HEART SUIT
+<Multi_key> <2> <h>                 : "♥♥"   U2665 # MORE HEARTS
+<Multi_key> <3> <h>                 : "♥♥♥"   U2665
+<Multi_key> <4> <h>                 : "♥♥♥♥"   U2665
+<Multi_key> <5> <h>                 : "♥♥♥♥♥"   U2665
+<Multi_key> <6> <h>                 : "♥♥♥♥♥♥"   U2665
+<Multi_key> <r> <l>                 : "👉👈"   # POINTING
+<Multi_key> <c> <c>                 : "🦀"   # CRAB
+<Multi_key> <l> <l>                 : "λ"   # LAMBDA
+
+# Other
 <dead_tilde> <space>             	: "~"   asciitilde # TILDE
 <dead_tilde> <dead_tilde>        	: "~"   asciitilde # TILDE
 <dead_acute> <space>             	: "'"   apostrophe # APOSTROPHE
@@ -106,7 +116,6 @@
 <Multi_key> <R> <O> 			: "®"   registered # REGISTERED SIGN
 <Multi_key> <period> <greater>   	: "›"   U203a # SINGLE RIGHT-POINTING ANGLE QUOTATION MARK
 <Multi_key> <period> <less>      	: "‹"   U2039 # SINGLE LEFT-POINTING ANGLE QUOTATION MARK
-<Multi_key> <period> <period>    	: "…"   ellipsis # HORIZONTAL ELLIPSIS
 <Multi_key> <period> <minus>    	: "·"   periodcentered # MIDDLE DOT
 <Multi_key> <period> <asciicircum> 	: "·"   periodcentered # MIDDLE DOT
 <Multi_key> <asciicircum> <period> 	: "·"   periodcentered # MIDDLE DOT
@@ -227,9 +236,6 @@
 <Multi_key> <f> <S>              	: "ſ"   U017f # LATIN SMALL LETTER LONG S
 <dead_abovedot> <Multi_key> <f> <s>	: "ẛ"   U1e9b # LATIN SMALL LETTER LONG S WITH DOT ABOVE
 <Multi_key> <dead_abovedot> <f> <s>	: "ẛ"   U1e9b # LATIN SMALL LETTER LONG S WITH DOT ABOVE
-# Dashes
-<Multi_key> <minus> <minus> <period> 	: "–"   U2013 # EN DASH
-<Multi_key> <minus> <minus> <minus> 	: "—"   U2014 # EM DASH
 # Musical alterations
 <Multi_key> <numbersign> <q>    	: "♩"   U2669 # QUARTER NOTE
 <Multi_key> <numbersign> <e>    	: "♪"   U266a # EIGHTH NOTE

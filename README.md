@@ -1,16 +1,16 @@
 # My dotfiles
 
-These are my personal dotfiles I use daily.
+<!--toc:start-->
+- [My dotfiles](#my-dotfiles)
+  - [My other repositories](#my-other-repositories)
+  - [My other links](#my-other-links)
+  - [Contributing](#contributing)
+  - [License](#license)
+<!--toc:end-->
+
+These are my personal dotfiles I use daily. ~~toby~~
 They are tracked in a git repository called ~/.dotfiles.
 Most of these will change daily.
-
-## Table of Contents
-
-* My dotfiles
-* My other repositories
-* My other links
-* Contributing
-* License
 
 ## My other repositories
 

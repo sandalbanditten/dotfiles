@@ -5,55 +5,54 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 killall polybar -q
 xsetroot -solid "#282828"
+killall picom
+killall wallpaper
+/home/notroot/Code/Scripts/wallpaper &
+picom --experimental-backend --xrender-sync-fence -b
+xsetroot -cursor_name left_ptr
 
-export MONCOUNT="$(xrandr | rg " connected " | wc -l)"
+export MONCOUNT="$(xrandr | rg ' connected ' | wc -l)"
 
 # Workspaces
 
 # One monitor
 if [ "$MONCOUNT" -eq 1 ]; then
-	polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini main &
+	polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini singlemainextraleft &
+	polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini singlemainleft &
+	polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini singlemaincenter &
+	polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini singlemainright &
 	bspc monitor DP-4 -d 1 2 3 4 5 6 7 8 9
-fi
-
-
-# Four monitors
-if [ "$MONCOUNT" -eq 4 ]; then
-	polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini main &
-	bspc monitor DP-4 -d 7 8
-
-	polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini hpmon &
-	bspc monitor HDMI-0 -d 5 6
-
-	polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini legionmon &
-	bspc monitor DP-0 -d 1 2
-
-	polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini msimon &
-	bspc monitor DP-2 -d 3 4
 fi
 
 # Three monitors
 if [ "$MONCOUNT" -eq 3 ]; then
-	polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini main &
+	polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini mainleft &
+	polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini maincenter &
+	polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini mainright &
 	bspc monitor DP-4 -d 7 8 9
 
-	polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini legionmon &
+	polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini legionmonleft &
+	polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini legionmonright &
 	bspc monitor DP-0 -d 1 2 3
 
-	polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini msimon &
+	polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini msimonleft &
+	polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini msimoncenter &
+	polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini msimonright &
 	bspc monitor DP-2 -d 4 5 6
 fi
 
 # BSPWM Configuration
 bspc config border_width        4
 bspc config window_gap          12
-bspc config top_padding         52 # Bar padding + bar + window gap
+bspc config top_padding         40 # Bar padding + bar + window gap
 
 bspc config split_ratio          0.5
 bspc config borderless_monocle   false
 bspc config gapless_monocle      false
 
+bspc rule -a surf state=tiled
 bspc rule -a Zathura state=tiled
+bspc rule -a grimp state=floating
 bspc rule -a mpv state=pseudo_tiled
 
 bspc config remove_disabled_monitors
