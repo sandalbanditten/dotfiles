@@ -30,7 +30,7 @@ source ~/.fzf.zsh
 # Binding some keys
 source ~/.zshbinds
 
-exa --icons
+eza --icons
 
 # Zoxide
 eval "$(zoxide init zsh)"

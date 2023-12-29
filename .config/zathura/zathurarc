@@ -3,16 +3,16 @@ set font 'Fira Code Bold 16'
 
 # Colors
 set default-bg '#282828d9'
-set default-fg '#a89984'
+set default-fg '#ebdbb2'
 
 set inputbar-bg '#282828'
-set inputbar-fg '#a89984'
+set inputbar-fg '#ebdbb2'
 
 set statusbar-bg '#282828'
-set statusbar-fg '#a89984'
+set statusbar-fg '#ebdbb2'
 
 set notification-bg '#282828'
-set notification-fg '#a89984'
+set notification-fg '#ebdbb2'
 
 set notification-error-bg '#282828'
 set notification-error-fg '#cc241d'
@@ -20,8 +20,8 @@ set notification-error-fg '#cc241d'
 set notification-warning-bg '#282828'
 set notification-warning-fg '#d79921'
 
-set recolor-lightcolor '#282828'
-set recolor-darkcolor '#ebdbb2'
+set recolor-lightcolor '#ebdbb2'
+set recolor-darkcolor '#282828'
 
 set highlight-color '#98971a'
 set highlight-active-color '#b8bb26'
@@ -29,7 +29,7 @@ set highlight-transparency 0.7
 
 # Transparency not supported here
 set render-loading-bg '#282828'
-set render-loading-fg '#a89984'
+set render-loading-fg '#ebdbb2'
 
 # Page padding
 set page-padding 12
@@ -41,7 +41,6 @@ set recolor true
 set statusbar-basename true
 set statusbar-home-tilde true
 
-# Size adjustment
-set adjust-open 'best-fit'
-
 set window-title-basename true
+
+set first-page-column '1:1:1'

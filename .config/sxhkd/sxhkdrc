@@ -24,6 +24,19 @@ super + p
 	/home/notroot/Code/Scripts/audio
 
 #
+# F-keys
+#
+
+{XF86MonBrightnessDown,XF86MonBrightnessUp}
+	xbacklight {-dec,-inc} 10
+
+{XF86AudioLowerVolume,XF86AudioRaiseVolume}
+	pamixer {--decrease,--increase} 5
+
+XF86AudioMute
+	pamixer --toggle-mute
+
+#
 # Clipboard
 #
 
@@ -56,15 +69,11 @@ super + {q,e} + {_,shift}
 super + {q,e} + {control, control + shift}
 	xbacklight {-dec,-inc} {10,20}
 
-# super + {_,shift} + {q,e}
-# amixer -c 1 set Master {2,5}%{-,+}
-
 super + 0
 	pamixer --set-volume 0
 
 super + shift + 0
 	pamixer --toggle-mute
-# amixer -c 1 set Master 0%
 
 #
 # Personal run-bins

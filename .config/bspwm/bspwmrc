@@ -15,8 +15,9 @@ export MONCOUNT="$(xrandr | rg ' connected ' | wc -l)"
 
 # Workspaces
 
+# Correcting for phantom "None-1-1" monitor
 # One monitor
-if [ "$MONCOUNT" -eq 1 ]; then
+if [ "$MONCOUNT" -eq 2 ]; then
 	polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini singlemainextraleft &
 	polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini singlemainleft &
 	polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini singlemaincenter &
@@ -25,7 +26,7 @@ if [ "$MONCOUNT" -eq 1 ]; then
 fi
 
 # Three monitors
-if [ "$MONCOUNT" -eq 3 ]; then
+if [ "$MONCOUNT" -eq 4 ]; then
 	polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini mainleft &
 	polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini maincenter &
 	polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini mainright &
