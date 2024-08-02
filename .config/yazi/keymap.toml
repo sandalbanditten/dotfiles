@@ -38,13 +38,13 @@ keymap = [
 	{ on = [ "<A-PageUp>" ],   exec = "seek -5", desc = "Seek up 5 units in the preview" },
 	{ on = [ "<A-PageDown>" ], exec = "seek 5",  desc = "Seek down 5 units in the preview" },
 
-	{ on = [ "<Up>" ],    exec = "arrow -1", desc = "Move cursor up" },
-	{ on = [ "<Down>" ],  exec = "arrow 1",  desc = "Move cursor down" },
-	{ on = [ "<Left>" ],  exec = "leave",    desc = "Go back to the parent directory" },
-	{ on = [ "<Right>" ], exec = "enter",    desc = "Enter the child directory" },
+	# { on = [ "<Up>" ],    exec = "arrow -1", desc = "Move cursor up" },
+	# { on = [ "<Down>" ],  exec = "arrow 1",  desc = "Move cursor down" },
+	# { on = [ "<Left>" ],  exec = "leave",    desc = "Go back to the parent directory" },
+	# { on = [ "<Right>" ], exec = "enter",    desc = "Enter the child directory" },
 
 	{ on = [ "g", "g" ], exec = "arrow -99999999", desc = "Move cursor to the top" },
-	{ on = [ "G" ],      exec = "arrow 99999999",  desc = "Move cursor to the bottom" },
+	{ on = [ "g", "e" ], exec = "arrow 99999999",  desc = "Move cursor to the bottom" },
 
 	# Selection
 	{ on = [ "<Space>" ], exec = [ "select --state=none", "arrow 1" ], desc = "Toggle the current selection state" },
@@ -138,9 +138,8 @@ keymap = [
 	{ on = [ "g", "h" ],       exec = "cd ~",             desc = "Go to the home directory" },
 	{ on = [ "g", "c" ],       exec = "cd ~/.config",     desc = "Go to the config directory" },
 	{ on = [ "g", "d" ],       exec = "cd ~/Downloads",   desc = "Go to the downloads directory" },
-	{ on = [ "g", "t" ],       exec = "cd /tmp",          desc = "Go to the temporary directory" },
+	# { on = [ "g", "t" ],       exec = "cd /tmp",          desc = "Go to the temporary directory" },
 	{ on = [ "g", "<Space>" ], exec = "cd --interactive", desc = "Go to a directory interactively" },
-
 	# Help
 	{ on = [ "~" ], exec = "help", desc = "Open help" },
 ]

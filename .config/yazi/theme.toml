@@ -1,12 +1,12 @@
 [manager]
-cwd = { fg = "cyan" }
+cwd = { fg = "green" }
 
 # Hovered
 hovered         = { fg = "black", bg = "green" }
 preview_hovered = { bold = true, fg = "green" }
 
 # Find
-find_keyword  = { fg = "yellow", italic = true }
+find_keyword  = { fg = "yellow" }
 find_position = { fg = "magenta", bg = "reset", italic = true }
 
 # Marker
@@ -15,8 +15,8 @@ marker_copied   = { fg = "lightyellow", bg = "lightyellow" }
 marker_cut      = { fg = "lightred",    bg = "lightred" }
 
 # Tab
-tab_active   = { fg = "black", bg = "lightblue" }
-tab_inactive = { fg = "white", bg = "darkgray" }
+tab_active   = { fg = "black", bg = "green" }
+tab_inactive = { fg = "gray", bg = "black" }
 tab_width    = 1
 
 # Border
@@ -34,11 +34,11 @@ separator_style = { fg = "darkgray", bg = "black" }
 # Mode
 mode_normal = { fg = "black", bg = "lightgreen", bold = true }
 mode_select = { fg = "black", bg = "lightmagenta", bold = true }
-mode_unset  = { fg = "black", bg = "lightblue", bold = true }
+mode_unset  = { fg = "black", bg = "blue", bold = true }
 
 # Progress
 progress_label  = { bold = true }
-progress_normal = { fg = "blue", bg = "black" }
+progress_normal = { fg = "green", bg = "black" }
 progress_error  = { fg = "red", bg = "black" }
 
 # Permissions
@@ -49,18 +49,18 @@ permissions_x = { fg = "lightgreen" }
 permissions_s = { fg = "darkgray" }
 
 [select]
-border   = { fg = "blue" }
+border   = { fg = "gray" }
 active   = { fg = "magenta" }
 inactive = {}
 
 [input]
-border   = { fg = "blue" }
+border   = { fg = "gray" }
 title    = {}
 value    = {}
 selected = { reversed = true }
 
 [completion]
-border   = { fg = "blue" }
+border   = { fg = "gray" }
 active   = { bg = "darkgray" }
 inactive = {}
 

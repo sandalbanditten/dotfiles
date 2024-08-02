@@ -1,994 +1,3 @@
-wow this shit crazy
-help
-ps
-z bruh
-help zoxide
-which zoxide
-which bruh
-which README.md
-which README
-version 
-helix
-hx
-hex
-hx $nu.config-path
-cd ~/Downloads
-cd
-hx $nu.config-path
-hx $nu
-z
-cd ~/Code/Rust/informatik-eksamen/
-gis
-git status
-exa
-ls
-x
-exa
-5 + 5
-"br" + "uh"
-2 ** 2
-x
-2 x 2
-2 * 2
-math e 
-math e
-doas
-doas hx 
-doas hx /etc/shells
-chsh -l
-chsh -s ~/.cargo/bin/nu
-ls
-exa
-exa --icons
-cd ~/Code/Rust/informatik-eksamen/
-exa --icons
-eenv
-echo $env
-echo $env.BAT_THEME
-echo $env.EXA_COLORS
-echo $env.SHELL
-ls
-exa
-hx
-helix
-zsh
-ls
-zsh
-nvim 
-nvim $nu.env-path
-x
-exa
-ls
-ea
-ls
-st -- zsh
-startx
-ls
-halsd
-hals
-helix
-x
-echo $env.PATH
-echo $env.VISUAL
-echo $env.PATH
-clear
-e $nu.loginshell-path
-hx $nu.loginshell-path
-ls
-^ls
-e $nu.config-path
-hx $nu.config-path
-x
-e $nu.env-path
-hx $nu.env-path
-hello, my name is toby
-uh
-cal
-^cal -w
-^cal -wm
-nu is kinda coolio
-echo $env.HOME
-pml
-pms anime
-b
-c
-btm
-alias btm = btm --color gruvbox
-btm
-echo $env.PATH
-cis
-x $env.HOME/.dotfiles
-x $env.HOME /.dotfiles
-x ($env.HOME)/.dotfiles
-x $"($env.HOME)"/.dotfiles
-x (env.HOME)/.dotfiles
-x env.HOME
-x $env.HOME
-x ($env.HOME)
-x ($env.HOME)/Code
-cg
-echo $nu.scope.aliases
-figlet bruh
-pt
-u
-pm
-za
-z
-cd ~/Code/Rust/informatik-eksamen/
-cg check
-cargo check
-clear ; cargo check
-ed README.md README.md
-git --git-dir=($env.HOME)/.dotfiles/ --work-tree=($env.HOME) status
-git --git-dir=$env.HOME/.dotfiles/ --work-tree=($env.HOME) status
-git --git-dir=$"($env.HOME)/.dotfiles/" --work-tree=($env.HOME) status
-git --git-dir=$"(env.HOME)/.dotfiles/" --work-tree=($env.HOME) status
-echo $"(env.HOME)"
-echo $"($env.HOME)"
-git --git-dir=$"($env.HOME)/.dotfiles/" --work-tree=($env.HOME) status
-git $"--git-dir=($env.HOME)/.dotfiles/" --work-tree=($env.HOME) status
-git $"--git-dir=($env.HOME)/.dotfiles/" $"--work-tree=($env.HOME)" status
-cis
-echo $"($env.HOME)" | clip
-/home/notroot
-eenv
-ehx
-en
-cios
-cis
-config status
-eX
-ev
-ez
-eze
-eenv
-zoxide init nushell | save -f ~/.zoxide.nu
-hx $nu.config-path
-z bruh
-z informatik-eksamen
-x
-gis
-time gis
-^time gis
-data
-date
-date now
-cis
-e $nu.config-path
-40% 20
-40 + 20
-e $nu.loginshell-path
-x
-hx $nu.config-path
-hx $nu.env-path
-ezp
-eze
-e $nu.env-path
-ls
-x
-echo $nothing
-zsh
-echo $nu.current-exe
-echo $nu.is-interactive
-echo $nu.is-login
-echo $nu.startup-time
-echo $env.TERM
-echo $env.TERM_PROGRAM
-echo $env.TERM_PROGRAM_VERSION
-tmux -v
-st
-tmux -v
-tmux -V
-e
-e Documents/UTF-8.txt
-assddas
-st
-z
-x
-e tmux-client-1137.log
-rm tmux-client-1 tmux-client-1212.log
-x
-rm tmux-client-1137.log
-zsh
-e $nu.c
-e $nu.config-path
-st
-st -- zsh
-e $nu.config-path
-bruh
-xterm
-pms xterm
-e $nu.config-path
-w
-wttr
-weather
-btop
-st
-btop
-pms xterm
-st
-xterm
-pmr xterm
-zsh
-e .zshrc
-echo $env.FZF_DEFAULT_OPTS
-echo $env.MOTD_SHOWN
-zsh
-x
-st
-LOCALE=UTF-8 btop
-LOCALE=UTF8 btop
-LOCALE=UTF_8 btop
-locale -a
-LOCALE=en_us.utf8 btop
-locale -a
-LOCALE=en_US.utf8 btop
-btop --utf-force
-locale
-LANG=en_US.utf8 btop
-e /etc/locale.conf
-e /etc/profile.d/locale.sh
-export-env { set-env LANG=en_US.UTF-8 }
-echo $env.LAST_EXIT_CODE
-export-env { let-env LANG=en_US.UTF-8 }
-export-env { let-env LANG = en_US.UTF-8 }
-echo $env.LANG
-st
-e $nu.loginshell-path
-e $nu.config-path
-ls
-echo $env.LANG
-locale
-echo $env.LANG
-export-env { let-env LANG = "en_US.UTF-8" }
-echo $env.LANG
-export-env { let-env LANG = \""en_US.UTF-8\"" }
-echo $env.LANG
-e .xorg.log
-e .xorg.log
-st
-x
-btop
-wttr
-weather
-bruh
-st
-if true { echo bruh }
-if falsee { echo bruh } else { echo l }
-if false { echo bruh } else { echo l }
-if false and true { echo bruh } else { echo l }
-enp
-e $nu.loginshell-path
-ezp
-e .xorg.log
-xinit
-startx
-st -- zsh
-x
-zsh
-m if
-man if
-vman if
-which vman
-which true
-which if
-ea
-eza
-zsh
-vman
-vman if
-vman man
-bspwm
-e $nu.config-path
-man if
-man '['
-man '\['
-man '[['
-pms carapace
-z aur
-x
-gicl 'https://aur.archlinux.org/carapace-bin.git'
-z carapace-bin/
-makepkg -sirc
-exa --all 
-x -a
-hx --health 
-echo $env.DISPLAY
-exa --version 
-m sh
-man sh
-e $nu.config-path
-if $env.BRUH = "" { echo "lit fam" }
-if $env.BRUH == "" { echo "lit fam" }
-if $env.BRUH == "" and $env.XDG_VTNR == 0 { echo "lit fam" }
-e $nu.loginshell-path
-zsh
-ezp
-e $nu.loginshell-path
-c
-echo $env.DISPLAY
-try { echo $env.DISPLAY }
-try { echo $env.DISPLAY } catch { export-env { set-env BRUH = 1 } }
-echo $env.BRUHY
-echo $env.BRUH
-try { echo $env.DISPLAY } catch { echo bruh }
-x
-e $nu.loginshell-path
-ehkl
-ehk
-bspc rule -a \* -o state=floating && st
-bspc rule -a \* -o state=floating ; st
-bspc rule -a \* -o state=floating
-ehk
-bspc rule -a * -o state=floating
-bspc rule -a '*' -o state=floating
-bspc rule -a \* -o state=floating
-bspc rule -a '*' -o state=floating
-ehk
-$env | select DISPLAY
-$env | select DISPLAY | empty?
-$env | select DISPLAY | is-empty
-e $nu.loginshell-path
-e .xorg.log
-e Code/Scripts/off
-e $nu.loginshell-path
-e $nu.env-path
-e $nu.loginshell-path
-echo $env.DISPLAY
-$env | select DISPLAY | is-empty
-e $nu.loginshell-path
-$env | select DISPLAY | is-empty
-$env | select AHH | is-empty
-$env | columns
-$env | columns | where $it == DISPLAY
-$env | columns | where $it == DISP
-$env | columns | where $it == DISP | empty
-$env | columns | where $it == DISP | 8s-empty
-$env | columns | where $it == DISP | is-empty
-e $nu.loginshell-path
-e .xorg.log
-e $nu.loginshell-path
-e .xinitrc
-omggg
-bruh
-btctl.
-zsh
-btctl
-e $nu.loginshell-path
-e $nu.config-path
-e $nu.env-path
-z Documents/
-x
-x Papers/
-z Papers/
-x
-echo $env.EXA_COLORS
-e $nu.env-path
-z Papers/
-x
-z Documents/Papers/
-x
-z
-z Papers/
-zsh
-e $nu.env-path
-z Papers/
-z Documents/Papers/
-x
-mv ~/Downloads/phd-thesis.pdf jon-gjengset-phd.pdf
-za 
-zaf 
-zaf jon-gjengset-phd.pdf
-z non-repeating-$and
-z non-repeating-rand
-zsh
-z
-zsh
-x
-z Papers
-x
-version 
-e $nu.config-path
-z Papers
-z non-repeating-rand
-z bruh
-z huh
-z C
-c ; topgrade 
-nmtiu
-nmtui
-z helix
-gif
-gis
-gipl
-gid
-imv logo.svg 
-x
-git log
-z Music
-x
-e ~/.histfile
-c ; topgrade 
-btctl
-yt-dlp 'https://music.youtube.com/playlist?list=OLAK5uy_le-31CerLzvMvK-aEVRY8DjOV9mYZVLqo' -o "(%tiltle).(%exts)" -x
-x
-yt-dlp 'https://music.youtube.com/playlist?list=OLAK5uy_njK1hBo6EsQhbjvfPA_vG2eM58bAWIsKE' -o "(%tiltle).(%exts)" -x
-x
-rm `(%tiltle).(%exts).opus`
-x
-rm .xorg.log
-man yt-dlp
-yt-dlp 'https://music.youtube.com/playlist?list=OLAK5uy_njK1hBo6EsQhbjvfPA_vG2eM58bAWIsKE' -o "(%tilte).(%exts)" -x
-x
-yt-dlp 'https://music.youtube.com/playlist?list=OLAK5uy_njK1hBo6EsQhbjvfPA_vG2eM58bAWIsKE' -o "(%title).(%exts)" -x
-rm *
-x
-yt-dlp 'https://music.youtube.com/playlist?list=OLAK5uy_njK1hBo6EsQhbjvfPA_vG2eM58bAWIsKE' -o
-z typst
-gif
-z typst
-z hvm
-gif
-z helix
-gif
-c ; top
-yt-dlp 'https://music.youtube.com/playlist?list=OLAK5uy_njK1hBo6EsQhbjvfPA_vG2eM58bAWIsKE' -x
-c ; topgrade 
-z Music
-x
-btctl
-e $nu.env-path
-x
-z Music
-x
-z Dansk
-x
-x Eksamen/
-x
-mkdir Eksamen-3G
-x
-z Eksamen-3G/
-x
-cp ~/Documents/School/
-cp ~/Documents/School/LaTeX/Default.tex ./opgave.tex
-zaf opgave.pdf
-z Haskell
-x
-e Blackbird.hs
-e Differences.hs
-e Fibonacci.hs
-e resources.md
-epb
-z Music
-x
-lsblk
-ds dd if=/dev/sdb1 of=/dev/null status=progress bs=1024k
-z ..
-x
-z Data
-x
-mpv 'LA PAURA DEL BUIO [WKuVr21tR7A].opus' 
-mpv *
-x .xorg.log
-e .xorg.log
-rm .xorg.log
-e $nu.loginshell-path
-e opgave.tex
-mpv *
-dym -l da indtil
-dym -l da ind til
-echo opgave.tex | entr -s 'pdflatex opgave.tex'
-echo opgave.tex | entr -s 'pdflatex opgave.tex ; dunstify $(detex opgave.det | wc -l)'
-echo opgave.tex | entr -s 'pdflatex opgave.tex ; dunstify $"(detex opgave.det | wc -l)"'
-m mpv
-c ; mpv *
-mpv '~/Videos/Beach Bunny - Oxygen' --vid=no
-mpv "~/Videos/Beach Bunny - Oxygen" --vid=no
-man mpv
-echo $"($env.HOME)"
-mpv $"($env.HOME)/Videos/Beach Bunny - Oxygen" --vid=no
-mpv --vid=no '/home/notroot/Videos/brain power' 
-c ; mpv *
-rm .xorg.log
-echo $env.DISPLAY
-echo $env.XDG_VTNR
-e opgave.tex
-e ~/.config/helix/config.toml
-echo opgave.tex | entr -s 'pdflatex opgave.tex ; dunstify $"(detex opgave.tex | wc)"'
-echo opgave.tex | entr -s 'pdflatex opgave.tex & ; dunstify $"(detex opgave.tex | wc)"'
-dunstify bruh
-dunstctl -h
-dunstctl bruh
-dunstctl is-paused
-systemctl status dunst
-dunstctl is-paused
-dunstify bruh
-dunst
-z typst
-x
-c ; mpv *
-z typst
-x
-e main.typ
-x
-e .histfile
-e ~/.histfile
-yt-dlp 'https://music.youtube.com/playlist?list=OLAK5uy_le-31CerLzvMvK-aEVRY8DjOV9mYZVLqo' -x
-x
-yt-dlp 'https://www.youtube.com/watch?v=oXcAYWTbJCM' -x
-x
-yt-dlp 'https://www.youtube.com/watch?v=oXcAYWTbJCM' -x
-e ~/.histfile
-yt-dlp 'https://www.youtube.com/watch?v=A4hR3NQmCZU' -o "%(name)s"
-x
-mpv NA.webm 
-rm NA.webm
-e ~/.histfile
-man yt-dlp
-yt-dlp 'https://www.youtube.com/watch?v=A4hR3NQmCZU' -o "%(title)s.%(ext)s"
-x
-rm `I'm smoking on Bhutanese shadow garden grown dark evil pack.webm`
-e ~/.histfile
-rm *
-yt-dlp 'https://www.youtube.com/watch?v=A4hR3NQmCZU' -o "%(title)s.%(ext)"
-yt-dlp 'https://www.youtube.com/watch?v=A4hR3NQmCZU' -o "%(title)s.%(ext)s"
-rm `I'm smoking on Bhutanese shadow garden grown dark evil pack.webm`
-e ~/.histfile
-yt-dlp 'https://www.youtube.com/watch?v=VMpSYJ_7aYM' -x -o "%(title)s.%(ext)s"
-x
-rm `C++ vs Rust： which is faster？.opus`
-e ~/.histfile
-yt-dlp 'https://www.youtube.com/watch?v=oXcAYWTbJCM' -x -o "%(title)s.%(ext)s"
-x
-mpv 'Breakcore to zone out to in club Cyberia [oXcAYWTbJCM].opus' 
-z helix
-gif
-c ; cg install --locked --path helix-term
-which cgf
-which cg
-cgo
-e $nu.config-path
-which cg
-which cgo
-e $nu.env-path
-echo $env.MOMMYS_LITTLE
-e $nu.config-path
-e $nu.env-path
-z helix
-which cgo
-which bruih
-which helix
-which hx
-e $nu.env-path
-e $nu.config-path
-which cargo
-z helix
-cargo check
-which cargo
-e $nu.config-path
-which cargo
-which cis
-which cg
-e $nu.config-path
-c ; cg install --locked --path helix-term
-z helix
-c ; cg install --locked --path helix-term
-c
-which cg
-which play
-cis
-nu --loglevel debug
-nu --log-level debug
-echo $env.TMUX
-echo $env.TMUX_PANE
-e ~/TODO
-ehk
-nu -c echo bruh
-nu -c 'echo bruh'
-e ~/TODO0
-e ~/TODO
-nu -c tmux
-st -- zsh
-st -- nu -c 'echo bro'
-st -- nu -c 'tmux'
-tmux attach
-st -- zsh
-rm $nu.loginshell-path
-chsh -s /usr/bin/zsh
-ehk
-e ~/TODO
-surf
-z surf
-x
-gis
-make clean
-gis
-e brih.md
-x
-rm brih.md
-ez
-eze
-e ~/TODO
-zsh
-e
-e $nu.config-path
-e $nu.history-path
-yt-dlp 'https://music.youtube.com/playlist?list=OLAK5uy_le-31CerLzvMvK-aEVRY8DjOV9mYZVLqo' -x
-x
-m zsh
-man zsh
-e ~/TODO
-echo $env | select PATH
-e 
-e $nu.config-path
-echo $env | select PATH
-e $nu.env-path
-mpv 'Breakcore to zone out to in club Cyberia.opus'
-x
-e ~/.histfile
-x
-x *.ytdl
-yt-dlp 'https://music.youtube.com/playlist?list=OLAK5uy_le-31CerLzvMvK-aEVRY8DjOV9mYZVLqo' -x
-e $nu.history-path
-yt-dlp 'https://music.youtube.com/playlist?list=OLAK5uy_njK1hBo6EsQhbjvfPA_vG2eM58bAWIsKE' -x
-e ~/TO
-e ~/TODO
-mpv *
-rm .xorg.log
-x
-xa
-x -a
-detex opgave.tex
-e $nu.config-path
-detex opgave.tex | save temp.txt
-rm temp.txt
-aspell opgave.tex
-spell opgave.tex
-aspell check opgave.tex
-dym -l da færrere
-dym -l da færre
-aspell check -l da opgave.tex
-surf 'https://typst.app'
-e $nu.config-path
-e $nu.env-path
-ez
-ezp
-e ~/.xinitrc
-eX
-e ~/TODO
-man aspell
-e ~/TODO
-mpv *
-e .poems
-z helix
-gif
-gis
-nvim
-e
-mpv 'Breakcore to zone out to in club Cyberia.opus' 
-mpv * --shuffle 
-mv .poems ~
-e ~/.xorg.log
-killall firefox
-killall killall 
-nu -c echo bruh
-nu -c 'echo bruh'
-mpv * --shuffle 
-eX
-detex opgave.tex | wc 
-za -V
-za -v
-eX
-za -v
-zathura --version 
-mpl
-pml
-zsh -c pml
-zsh
-zaf opgave.pdf
-eX
-echo '\U{2665}'
-echo \U{2665}
-echo U{2665}
-echo "\U{2665}"
-echo "\U2665"
-echo "\u2665"
-echo "\u{2665}"
-fd -. .xorg.log
-fd -h '.xorg.log'
-fd -H '.xorg.log'
-rm .xorg.log
-e ~/TODO
-fd -H .xorg.log
-e ~/TODO
-detex opgave.tex | wc 
-echo opgave.tex | entr -s 'pdflatex opgave.tex'
-watch opgave.tex { |it| pdflatex $it }
-x
-e ~/TODO
-(detex opgave.tex | wc -w)
-(detex opgave.tex | wc -w) - 918
-int(detex opgave.tex | wc -w) - 918
-man nu
-help 
-help typ
-help types
-math eval 
-(to decimal $"(detex opgave.tex | wc -w)") - 918
-(detex opgave.tex | wc -w | into decimal) - 918
-c ; (detex opgave.tex | wc -w | into decimal) - 918
-c ; (detex opgave.tex | wc -w | into decimal) - 906
-e opgave.tex
-aspell check -l da opgave.tex
-e ~/TODO
-echo opgave.tex | entr -s 'pdflatex opgave.tex'
-latexmk -c
-x
-rm *.bak
-libreoffice
-chsh -s /usr/bin/zsh
-ezp
-b $nu.loginshell-path
-c ; mpv * --shuffle 
-firefox
-tmux
-echo $env.SHELL
-tmux
-tmux -c nu
-gst
-e $nu.config-path
-st -- nu -c tmux
-st -- nu -c tmux -c nu
-st -- nu -c 'tmux -c nu'
-st -- tmux -c nu
-m tmux
-man tmux
-e .tmux.conf
-ehk
-echo $env.SHELL
-echo $env.PATH
-e $nu.env-path
-echo $env.PATH
-ezp
-ez
-eze
-rm .poems
-x
-echo $nu.is-login
-z eksamen
-x
-zaf opgave.pdf
-watch opgave.tex { |op, path, new_path| $"($op) ($path) ($new_path)" }
-watch **.tex { |op, path| pdflatex $path }
-watch *.tex { |op, path| pdflatex $path }
-watch . --glob=*.tex { |op, path| pdflatex $path }
-watch . --glob=*.tex { |op, path| clear ; pdflatex $path }
-e opgave.tex
-est
-z st
-est
-e x
-x
-z st
-x
-gis
-z Code
-x
-z Software/
-gicl --depth=1 'https://github.com/nushell/nu_scripts.git'
-x
-z nu_scripts/
-x
-use ./themes/themes/dracula.nu
-let-env config = ($env.config | merge {color_config})
-let-env config = ($env.config | merge {color_config: (gruvbox)})
-let-env config = ($env.config | merge {color_config: (dracula)})
-x
-hello my friend
-use ./themes/themes/gruvbox.nu
-let-env config = ($env.config | merge {color_config: (gruvbox)})
-e config.h
-z st
-x
-z st
-x
-e $nu.config-path
-z nu_scripts/
-z nu_scripts
-x
-rg 282828
-rg cc241d
-rg 98971a
-ed gruvbox dark
-x
-gstat
-gst
-e $nu.config-path
-e $nu.env-path
-e $nu.config-path
-e possible
-e themes/themes/gruvbox-dark.nu
-e config.h
-let-env PS1 = ""
-set-env PS1 = ""
-e ~/TODO
-gis
-cis
-btctl
-rfkill list
-e $nu.env-path
-btctl
-gamemode steam
-gamemode-run steam
-epb
-z helix
-gif
-gis
-c ; topgrade 
-e
-m aspell
-e .zshbinds
-showkey 
-showkey -a
-zsh
-bash
-z helix
-gif
-x
-z
-gif
-^ps
-ps
-btop
-z helix
-gif
-gis
-c ; topgrade 
-gamemoderun steam
-btop
-gst
-z st
-x
-e config.h
-btop
-pmr ttf-fira-code
-pml
-zsh -c pml
-zsh
-btop
-pms ttf-delugia-code
-pms otf-delugia-code
-pms ftf-delugia-code
-pms ttf-delugia-code
-zsh
-pmr ttf-nerd-fonts-symbols
-x
-btop
-pms ttf-nerd-fonts-symbols
-x
-btop
-wttr
-weather
-z papers
-x
-z
-fd category
-z Documents/
-x Books/
-mv Books/* Papers/
-rmdir Books/
-mv Papers/ PapersandBooks
-z PapersandBooks/
-x
-ghci
-btctl
-firefox
-btctl
-btop
-btctl
-z testing
-x
-z
-e .config/helix/
-e src/main.rs
-c ; e src/main.rs
-e src/main.rs
-e .config/helix/themes/mygruvbox.toml
-e .config/helix/runtime/themes/base16_default_dark.toml
-e .config/helix/themes/mygruvbox.toml
-c ; e src/main.rs
-c ; e src/main.rs --help
-c ; e src/main.rs --log bruh.txt
-e bruh.txt
-rm bruh.txt
-c ; e src/main.rs --log bruh.txt
-x
-rm bruh.txt
-c ; e src/main.rs
-e src/main.rs
-e src/main.rs
-c ; e .config/helix/themes/mygruvbox.toml
-z helix
-x
-z testing
-e src/main.rs
-e balls
-tmux attach
-mkdir .config/tmux
-mv .tmux.conf .config/tmux/
-e .tmux.conf
-mv .config/tmux/.tmux.conf .config/tmux/tmux.conf
-tmux attach
-zsh -c vman man
-zsh -c 'vman man'
-e .config/tmux/tmux.conf
-z testing
-z testing
-e src/main.rs
-e src/main.rs
-e .config/tmux/tmux.conf
-tmux source
-e .config/tmux/tmux.conf
-tmux set-option status-position top
-z helix
-gif
-gis
-zsh
-e $nu.config-path
-starship init nu
-starship init nu | save .starship.nu
-mv .starship.nu ~
-e ~/.starship.nu
-^e^source
-source ~/.starship.nu
-gif
-gis
-zsh
-x
-echo $env.PS1
-echo $env | select PS1
-echo $env | select *
-echo $env | select all
-rust-analyzer help
-rust-analyzer -h
-e .config/helix/config.toml
-e .config/helix/languages.toml
-c ; topgrade 
-gstat
-pms gstat
-let bruh = (echo bruh)
-bruh
-$bruh
-let gstat-out = (gstat)
-let gstatout = (gstat)
-gst
-apropos 
-apropos man
-z testing
-echo $light_theme
-echo $nothing
-config nu
-time
-timeit { echo bruh }
-time
-timeit { echo bruh }
-error make 
-error make Arduino/
-[1, 2, 3] | last
-[1, 2, 3] | head
-[1, 2, 3] | first 
-[1, 2, 3] | head 
-m head
-man head
-echo bruh | head
-echo bruh | ^head
-[1, 2, 3] | head 
-[1, 2, 3] | ^head 
-btctl
-ls
-x
-exa
-e TODO
 rm TODO
 btctl
 z helix
@@ -9559,3 +8568,1472 @@ cit status .config/nushell/config.nu
 z .dotfiles/
 x
 cit add --force .config/bspwm/bspwmrc .config/sxhkd/sxhkdrc .config/zathura/ .zshalias .zshrc
+cit add --force ~/.config/nushell/ ~/.config/yazi/
+cit status
+cit commit -m "nushell and yazi filemanager"
+cit push
+x
+z ..
+x
+btctl
+y
+e ~/.config/yazi/keymap.toml
+z ~/.config/yazi/
+e *.toml
+y
+y
+e
+y
+y
+nmcli device wifi rescan 
+e
+git show -a
+e
+e
+z server
+x
+e src/*
+e ~/.config/helix/themes/mygruvbox.toml
+e src/*
+pms ffmpegthumbnailer
+jq
+cg uninstall yazi-fm
+c ; topgrade
+cargo install --locked yazi-fm
+y
+z Downloads/
+x
+rm mathias.jpg
+btctl
+c ; topgrade
+btctl
+nmcli device wifi rescan 
+nmtui
+nmcli device disconnect wlp4s0 
+rfkill list
+i
+which i
+zsh
+e .histfile
+ip link set wlp4s0 up
+ds ip link set wlp4s0 up
+i
+ip link
+ip link set wlp4s0 up
+ds ip link set wlp4s0 up
+i
+systemctl status
+systemctl status NetworkManager
+i
+redshift -V
+btop
+btctl
+c ; topgrade
+z helix
+gif
+x
+e ~/.config/helix/themes/mygruvbox.toml
+z rust
+x
+z guessing_game/
+c ; cg install --path helix-term --force
+e book/src/configuration.md
+gid @{1}..
+e src/*
+e book/src/configuration.md
+e src/*
+e src/*
+e src/*
+e src/*
+e ~/.config/helix/config.toml
+e ~/.config/helix/themes/mygruvbox.toml
+btctl
+C ; topgra
+C ; topgrade 
+c ; topgrade 
+z helix
+gif
+gipl
+gid @{1}..
+btctl
+c ; topgrade 
+btctl
+z helix
+gif
+gipl
+gid @{1}..
+btctl
+c ; topgrade 
+btctl
+c ; topgrade 
+btctl
+nmcli device wifi rescan 
+btctl
+c ; topgrade 
+btctl
+setxkbmap -layout us -option compose:ins
+z helix
+gif
+gipl
+gid @{1}..
+z typst
+gif
+gipl
+gid @{1}..
+c ; cg install --path typst-cli --force
+x
+z ..
+x
+z coreutils
+gif
+z nushell
+gif
+gipl
+git stash
+gipl
+gid @{1}..
+git stash pop
+x
+gipl
+gid @{1}..
+x
+z ..
+x
+z typst-lsp
+gif
+gipl
+x
+z
+x
+e .cargo/config.toml
+c ; topgrade 
+cg install --path . --force
+c ; cg install --path crates/typst-cli --force
+cg install --path . --force
+cg install --path . --force
+nl
+man nl
+x
+> R]]
+< README.md ? 
+b README.md | nl
+b README.md
+z helix
+z
+z helix
+x
+z
+z aw
+z ~
+z
+fd -HI eza.nu
+zoxide init nushell | save -f ~/.zoxide.nu.new
+diff .zoxide.new.nu .zoxide.nu 
+difft .zoxide.new.nu .zoxide.nu 
+e .zoxide.nu
+z helix
+e .zoxide.nu
+z
+z helix
+x
+e .zoxide.nu
+x
+xal
+rm .zoxide.new.nu
+difft .zoxide.nu .zoxide.nu.new
+rm .zoxide.nu.new
+e .config/nushell/config.nu
+btctl
+ttyper
+c ; topgrade 
+btctl
+c ; topgrade 
+rfkill list
+i
+btctl
+c ; topgrade 
+ttyper
+btctl
+btop
+nmcli device wifi rescan 
+cal
+c ; topgrade 
+btctl
+btctl
+btop
+c ; topgrade 
+btctl
++71<402884510687131
+difft a b
+e
+e
+x
+rm a b
+cal
+cal -3
+cal
+cal -jan
+cal --jan
+call --full-year
+cal --full-year
+cal --full-year 2023
+cal --full-year 2024
+c
+cal --full-year 2024
+nmcli device wifi rescan 
+xrandr
+e .histfile
+xrandr --output HDMI-0 --rate 60.00 --mode 1920x1080 --above DP-4
+exit
+xrandr --output DP-0 --off
+xrandr
+xrandr --output None-1-1 --off
+xrandr --output DP-4 --off
+ebsp
+bspc reload
+bspc restart
+bspc 
+bspc -h
+xrandr
+xrandr --output None-1-1 --off
+xrandr
+xrandr --output None-1-1 --of
+xrandr --output HDMI-0 --rate 60.00 --mode 1920x1080 --above DP-4
+xrandr --output HDMI-0 --rate 60.00 --mode 1920x1080 --above DP-4 --primary
+xrandr --output DP-4 --off
+steam
+killall steam
+btctl
+x
+xrandr --output HDMI-0 --rate 60.00 --mode 1920x1080 --above DP-4 --primary
+xrandr --output DP-4 --off
+c ; topgrade 
+nmcli device wifi rescan 
+i
+c ; topgrade 
+btctl
+asound
+ehk
+pamixer
+pamixer -h
+pamixer --get-volume
+btctl
+e
+ebsp
+xrandr | rg " connected " | wc -l
+xrandr
+xrandr --output DP-4 --primary --mode 2560x1600 --rate 165 --output DP-2 --above DP-4 --mode 2560x1440 --rate 144 --output DP-0 --left-of DP-2 --mode 1920x1080 --rate 240 --rotate right
+xsetroot -solid "#282828"
+ex
+ebsp
+bspc reload
+bspc restart
+bspwm reload
+bspwm restart
+c ; topgrade 
+z helix
+gif
+gipl
+z nushell
+z typst
+gif
+gipl
+gif
+gipl
+git stash
+gipl
+git stash pop
+rustup toolchain list
+usbhid-dump 
+ds usbhid-dump 
+c ; cg install --path helix-term --force
+c ; cg install --path crates/typst-cli --force
+cg install --path . --force
+550 + 650 + 220
+c ; topgrade 
+setxkbmap -layout us -option compose:ins
+setxkbmap -layout ua -option compose:ins
+setxkbmap -layout us -option compose:ins
+c ; topgrade 
+220 + 139 + 650 + 550
+showkey -a
+c ; topgrade 
+nmcli device wifi rescan 
+c ; topgrade 
+st
+x
+b DND
+b dnd
+b dnd.md
+rm dnd.md
+x Games/
+z Games/mod-organizer-2-skyrimspecialedition/
+x
+x modorganizer2/
+z Downloads/
+x
+u mo2installer-4.6.1.tar.gz
+x
+e install.sh
+zaf *.pdf
+rm *.pdf
+x
+rm 5ac1c261-2b09-4601-8856-f1ff728f507a.html gamesinfo/ handlers/ install.sh LICENSE steam-redirector/ step/ utils/ workarounds/ -rf
+mv mo2installer-4.6.1.tar.gz ..
+x
+z ..
+x
+mkdir M02
+rmdir M02
+mkdir MO2
+mv mo2installer-4.6.1.tar.gz MO2/
+z MO2/
+x
+u mo2installer-4.6.1.tar.gz
+x
+./install.sh
+z ..
+rm MO2 -r
+x
+WINEESYNC=1 WINEFSYNC=1 protontricks-launch --appid 489830 "$HOME/.config/modorganizer2/instances/skyrimspecialedition/modorganizer2/ModOrganizer.exe"
+mv Downloads/mo2installer-4.6.1.tar.gz .
+mkdir MO2
+mv mo2installer-4.6.1.tar.gz MO2/
+z MO2/
+x
+u mo2installer-4.6.1.tar.gz
+x
+./install.sh
+z .steam/steam/steamapps/
+x
+fd organizer
+z `Skyrim Special Edition/modorganizer2/`
+x
+b *
+z Games/mod-organizer-2-skyrimspecialedition/
+x
+z Games
+x
+z
+z Games/
+z mod-organizer-2-skyrimspecialedition/
+x
+z modorganizer2/
+x
+x tutorials/
+z skyrim
+x
+z
+z .steam/steam/steamapps/
+x
+z compatdata/
+x
+fd skyrim
+fd rganiz
+z 4051148297/
+x
+z pfx/drive_c/Modding/MO2/n
+z pfx/drive_c/Modding/MO2/
+x
+z ..
+z ../../..
+x
+z ..
+z 489830/
+x
+z pfx
+x
+z drive_c/
+x
+fd skyrim
+z
+fd skyrim
+z skyrim
+x
+mv SkyrimSE_SKSE.exe SkyrimSE.exe
+mv SkyrimSE_SKSE.exe SkyrimSE.exe -f
+mv SkyrimSE.exe SkyrimSE_SKSE.exe
+cp SkyrimSE.exe.bak SkyrimSE.exe
+x
+x modorganizer2/
+x Mods
+x Data
+x Data/SKSE/
+x Data/SKSE/Plugins/
+z skyrim
+x
+btop
+nmtui
+c ; topgrade 
+z Downloads/
+x
+mkdir BB-campaign
+mv Bloodborne-esk_campaign.zip BB-campaign/
+rm mo2installer-4_3_0.tar.gz
+e README.md
+rm README.md
+imv *.jpg
+rm *.jpg
+z BB-campaign/
+x
+u Bloodborne-esk_campaign.zip
+z BB-campaign/
+x
+z BB-campaign
+x
+mv `Bloodborne-esk campaign/` ..
+rm Bloodborne-esk_campaign.zip
+z ..
+x
+rm BB-campaign/
+rm BB-campaign/ -r
+mv `Bloodborne-esk campaign/` ~/Documents/TTRPG/
+z TTRPG
+x
+nmtui
+epb
+setxkbmap -layout us -option compose:ins
+polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini singlemainextraleft
+polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini singlemainextraleft &
+polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini singlemainextraleft
+epb
+ebswp
+ebsp
+bspwm restart
+bspwm reload
+bspwm confiog
+bspwm config
+bspwm quit
+bspwm exit
+bspc restart
+bspc -h
+bspc help
+bspc
+man bswpc
+man bspc
+bspc -h
+bspc --help
+bspc -h
+man bspc
+bspc wm
+bspc wm restart
+bspc wm reload
+bspc wm -r
+ebsp
+e bar-contents
+e bar-contents.md
+c ; topgrade 
+z helix
+gif
+gipl
+z nushell
+gif
+gipl
+git stash
+gipl
+git stash pop
+z typst
+gif
+gipl
+gid @{1}..
+e
+c ; topgrade 
+e m
+b -h
+cat -h
+cat --help
+b -s m
+rm m
+x
+c ; topgrade 
+x
+xx
+x
+btop
+c ; topgrade 
+x
+e
+x
+z
+x
+z typst
+x
+z undergrad
+x
+zaf undergrad_math.pdf
+c ; topgrade 
+dust
+z stremio-cache
+z .stremio-server/stremio-cache/
+x
+dust
+rm * -r
+z
+dust
+z Software
+x
+dust
+z helix
+cg clean
+z nushell
+cg clean
+z typst
+cg clean
+z typst-lsp
+cg clean
+z ..
+dust
+z coreutils
+cg clean
+dust
+duf
+htop
+ds htop
+htop
+systemctl status gamemoded
+systemctl status gamemode
+systemctl status
+systemctl status gamemoded
+systemctl status gamemode
+systemctl list
+systemctl list-jobs
+systemctl list-units 
+ds htop
+btctl
+c ; topgrade 
+nmtui
+nmcli device wifi rescan 
+i
+nmtui
+rmlint
+pms rmlint
+rmlint
+rm rmlint.*
+btctl
+c ; topgrade 
+btctl
+xrandr
+xrandr --output None-1-1 --off
+xrandr --output HDMI-0 --rate 60.00 --mode 1920x1080 --above DP-4 --primary
+fd background
+nmtui
+btctl
+c ; topgrade 
+x
+mv bar-contents.md Documents/
+x
+z helix
+gif
+gipl
+gid @{1}..
+z typst
+gif
+gipl
+gid @{1}..
+c ; topgrade 
+x
+c ; topgrade 
+z helix
+gif
+gipl
+gid @{1}..
+c ; topgrade 
+uwuify -h
+sleep 5min
+man uwuify
+b README.md | uwuify
+c ; topgrade 
+setxkbmap -layout us -option compose:ins
+btctl
+xrandr --output HDMI-0 --rate 60.00 --mode 1920x1080 --above DP-4 --primary
+xsetroot -solid "#282828"
+c ; topgrade 
+z /home/notroot/.local/share/Steam/steamapps/common/sandstorm/EasyAntiCheat/
+x
+z ..
+x
+nmcli device disconnect wlp4s0 
+btctl
+c ; topgrade 
+nmcli device disconnect wlp4s0 
+killall steam
+nmcli device wifi rescan 
+nmcli device disconnect wlp4s0 
+xrandr --output HDMI-0 --rate 60.00 --mode 1920x1080 --above DP-4 --primary
+nmcli device disconnect wlp4s0 
+btctl
+xrandr --output HDMI-0 --rate 60.00 --mode 1920x1080 --above DP-4 --primary
+z pf
+x
+imv Pics/mundus.png 
+c ; topgrade 
+z pf
+x
+setxkbmap -layout us -option compose:ins
+z pf
+x
+z pf
+x
+z ttrpg
+x
+z characters/
+x
+stat r
+stat README.md 
+duf
+z helix
+gif
+ipl
+gipl
+z nushell
+z typst
+gif
+showkey -a
+gif
+gid @{1}..
+gipl
+gipl
+gid @{1}..
+c ; topgrade 
+setxkbmap -layout us -option compose:ins
+z helix
+gif
+gipl
+z nushell
+gif
+gipl
+git stash
+gipl
+gid @{1}..
+x
+gipl
+git stash pop
+z typst
+gif
+gipl
+gid
+gid @{1}..
+btctl
+c ; topgrade 
+z typst
+gif
+cg clippy
+z haskell
+x
+z Sandallisp/
+z ../Phyllotaxis/
+z ../P7/
+x
+x
+e src/*
+e app/*.hs
+x
+e src/*
+e tex/
+zaf tex/001a.pdf
+z rust
+z server
+x
+e src/*
+x
+e srrc
+e src
+e src/*
+e src/*.rs
+e src/*
+e src/**
+x
+x src
+e src/**/*
+e src/**/*.*
+z ..
+x
+x serf
+x serf/*
+z backend
+x
+e Cargo.toml
+z ..
+x
+e Cargo.toml
+cg r -r
+cg clippy -- -W clippy::pedantic -W clippy::nursery -W clippy::all
+z www
+e src/*
+cg r -r
+z rust
+x
+z boids-rs
+z ..
+x
+cg clippy -- -W clippy::pedantic -W clippy::nursery -W clippy::all
+z informatik-eksamen
+x
+cg clippy -- -W clippy::pedantic -W clippy::nursery -W clippy::all
+e src/*
+xt
+xt -r
+xt --recursive
+xt -h
+x -h
+x --help
+xt -R
+x -R
+x
+x src
+e src/*
+c ; topgrade 
+nmcli device disconnect wlp4s0 
+rfkill list
+nmtui
+btctl
+setxkbmap -layout us -option compose:ins
+btctl
+c ; topgrade 
+setxkbmap -layout us -option compose:ins
+scrcpy -d --no-audio
+e $nu.history-path
+scrcpy -d --no-audio
+z Downloads/
+x
+java fabric-installer-1.0.0.jar
+java -r fabric-installer-1.0.0.jar
+java -run fabric-installer-1.0.0.jar
+java -version
+x
+java fabric-installer-1.0.0.jar
+java ./fabric-installer-1.0.0.jar
+java -f fabric-installer-1.0.0.jar
+javac
+java "fabric-installer-1.0.0.jar"
+java -jar "fabric-installer-1.0.0.jar"
+z ~/.minecraft
+x
+z mods
+mv ~/Downloads/fabric-api-0.91.1+1.20.1.jar .
+mv ~/Downloads/tectonic-mod-1.19.3-v2.2.1.jar
+mv ~/Downloads/tectonic-mod-1.19.3-v2.2.1.jar .
+mv ~/Downloads/sodium-fabric-0.5.8+mc1.20.1.jar .
+x
+rm fabric-api-0.91.1+1.20.1.jar
+mv ~/Downloads/fabric-api-0.92.0+1.20.1.jar .
+x
+mv ~/Downloads/DistantHorizons-2.0.1-a-1.20.1.jar .
+rm `~/Downloads/DistantHorizons-2.0.1-a-1.20.1(1).jar`
+x ~/Downloads/
+z Downloadsx
+z Downloads
+x
+java -jar Iris-Installer-3.2.0.jar 
+x
+rm DistantHorizons-2.0.1-a-1.20.1.jar
+x
+pms bitwarden
+pms bitwarden-cli
+bitwarden
+bitwarden-cli
+pms bitwarden-cli
+bw
+bw login "tobias.nikolai.clasen@gmail.com"
+bw list
+bw list --help
+bw list items
+pms yad
+mv ~/Downloads/dmenu_bw ~/Code/Scripts/
+z Scripts
+x
+chmod +x dmenu_bw 
+dmenu_bw 
+e ~/.config/Bitwarden/config.json
+source ~/.cache/bwsession
+bw
+bw login
+bw get card Mastercard
+bw get item Mastercard
+pmr bitwardem-cli
+pmr bitwarden-cli
+rm ~/Code/Scripts/dmenu_bw
+e ~/.config/Bitwarden/config.json
+rm ~/.config/Bitwarden/config.json
+e ~/.config/Bitwarden CLI/config.json
+e "~/.config/Bitwarden CLI/config.json"
+rm `~/.config/Bitwarden CLI/` -r
+pms bitwarden-cli
+ehk
+c ; topgrade 
+btcr
+btctl
+imv Downloads/2e.webp 
+btctl
+z Papers
+x
+mv ~/Downloads/96709.96718.pdf .
+zaf 96709.96718.pdf
+zaf interaction-combinators.pdf
+c ; topgrade 
+z helix
+gif
+gpil
+gipl
+c ; topgrade 
+nmcli device wifi rescan 
+c ; topgrade 
+z rust
+x
+z boids-rs
+z ..
+z backend
+x
+z helix
+helix -V
+gif
+gipl
+gid @{1}..
+z typst
+gif
+gipl
+cg install --path helix-term --force
+hx -V
+e src/*
+z .config/helix
+yazi
+x
+z themes
+x
+z ~/.config/helix
+x
+xr
+e themes/mygruvbox.toml
+c ; topgrade 
+btctk
+xrandr --output HDMI-0 --rate 60.00 --mode 1920x1080 --above DP-4 --primary
+exit
+btctl
+systemctl restart bluetooth
+rfkill list
+systemctl status bluetooth
+btctl
+sude btctl
+ds btctl
+su root
+btctl
+c ; topgrade 
+btctl
+xrandr --output HDMI-0 --rate 60.00 --mode 1920x1080 --above DP-4 --primary
+btctl
+e .config/helix/themes/mygruvbox.toml
+e .config/helix/config.toml
+z backend
+e src/*
+xset -dpms ; xset s off
+ds xset -dpms ; ds xset s off
+xset -h
+xset -dpms ; xset s 2
+xset -dpms ; xset s 20
+60 * 60 * 3
+xset -dpms ; xset s 10800
+ex
+xset -dpms -h
+xset -dpms help
+xrandr --output HDMI-0 --rate 60.00 --mode 1920x1080 --above DP-4 --primary
+btctl
+c ; topgrade 
+btctl
+xrandr --output HDMI-0 --rate 60.00 --mode 1920x1080 --above DP-4 --primary
+btctl
+c ; topgrade 
+cargo update
+cargo
+z Downloads/
+x
+mv document.pdf lønseddel-03-24.pdf
+mv document.pdf lønseddel-02-24.pdf
+z Downloads/
+s
+x
+za lønseddel-0[23]-24.pdf
+cal
+300 * 30
+200 * 30
+184 * 2 * 4
+btctl
+za lønseddel-0*-24.pdf
+c ; topgrade 
+cg uninstall yazi-fm
+cg install yazi-fm
+file
+pms ffmpegthumbnailer
+cg install --locked yazi-fm
+yazi
+yazi -h
+e .config/yazi/*
+e ".config/yazi/*"
+e .config/yazi/**
+y
+run
+zsh
+y
+z
+y
+imv Pictures/random/
+imv Pictures/toby/
+pms chafa
+z
+y
+e .config/yazi/
+z
+z typst
+x
+gif
+gipl
+z typst
+x
+z `Matematik Mundtlig Eksamen/`
+x
+zaf main.pdf
+man zathura-conf
+man zathura
+man zathurarc
+zaf main.pdf
+e ~/.config/zathura/zathurarc
+e .tmux.conf
+x
+e .config/tmux/tmux.conf
+e main.typ
+typst w main.typ
+yt-dlp -o "%(title)s.%(ext)s" 'https://www.youtube.com/watch?v=gkyiPQf1wVU'
+x
+mpv 'Blud are you dumb？ Are you getting rude to man？.webm' 
+rm `Blud are you dumb？ Are you getting rude to man？.webm`
+yt-dlp -o "%(title)s.%(ext)s" 'https://www.youtube.com/watch?v=KdnO15TGVDw'
+mv `blud sounds like raccoon eggs.webm` mp7.webm
+mv mp7.webm Videos/
+nmcli device wifi rescan 
+bw
+bw login
+e $nu.config-path
+e $nu.env-path
+$env.BW_SESSION = "i2Fi0WQ0zARO1XK8A7OUtfPVvbPERaLMptZMTzKztj8yJaVQ3Uqzcngol+goFYOxPcy4zR5S28/ed1Q5Hy2qbA=="
+bw unlock firefox
+bw login
+bw logout
+bw login
+btctl
+bw login
+$env.BW_SESSION = "VZ1ZcVf/F+KN6ckw0UlgwaxiiDipZ/WLgpyhddKtgzRCeFg0kaoGzwz9ubf1IVfEZ34t/qkKKntg0r6cgdq+uw=="
+bw list items
+bw list items --search firefox
+bw list items --search google
+bw unlock google
+bw unlock google --pretty
+bw unlock facebook
+bw list items --search google --pretty
+/
+z
+bw google --pretty
+bw get google --pretty
+c ; topgrade 
+setxkbmap -layout us -option compose:ins
+z helix
+gif
+gipl
+bitwarden-cli
+bw
+c ; cg install --path helix-term --force
+bw login
+bitwarden-desktop
+c ; topgrade 
+x
+clear
+e .config/tmux/tmux.conf
+c ; topgrade 
+e .config/tmux/tmux.conf
+ya
+y
+run y
+pms run
+ueberzugpp layer
+pms ueberzug
+pms ueberzugpp
+pms ueberzug++
+pms ueberzugpp
+ueberzugpp layer
+pms libopencv
+pms libopencv-videoio
+pms libvideoio
+pms ueberzug
+ueberzugpp layer
+ueberzug layer
+ya
+y
+pmr ueberzug
+z Software
+x
+gicl --depth=1 'https://aur.archlinux.org/ueberzugpp.git'
+z ueberzugpp/
+makepkg -sirc
+{"action":"add","identifier":"preview","max_height":0,"max_width":0,"path":"/home/notroot/Pictures/forest/forest0.jpg","x":0,"y":0}
+ueberzugpp layer
+ya
+e $nu.config-path
+y
+tmux kill-server && tmux || tmux
+tmux kill-server && tmux and tmux
+tmux kill-server and tmux || tmux
+tmux kill-server and tmux or tmux
+tmux kill-server && tmux || tmux
+tmux kill-server ; tmux and tmux
+ya
+z Software
+x
+zellij
+z
+zj
+cg uninstall zellij
+gicl --depth=1 'https://github.com/zellij-org/zellij.git'
+x
+z zellij/
+x
+cg install --path zellij-client --force
+z ..
+x
+rm -rf zellij/
+c ; topgrade 
+xrandr --output HDMI-0 --rate 60.00 --mode 1920x1080 --above DP-4 --primary
+xrandr --output HDMI-0 --off
+z <rust
+z rust
+x
+z backend
+x
+e src/*
+c ; topgrade 
+setxkbmap -layout us -option compose:ins
+z .minecraft
+x
+x mods
+x saves
+btctl
+nmcli device wifi rescan 
+c ; topgrade 
+yt-dlp -o "%(title)s.%(ext)s" 'https://www.youtube.com/watch?v=KdnO15TGVDw'
+x
+mpv 'blud sounds like raccoon eggs.webm' 
+yt-dlp -o "%(title)s.%(ext)s" 'https://www.youtube.com/watch?v=FudPwWp1GKM'
+x
+rm `blud sounds like raccoon eggs.webm`
+mv `guy singing stereo hearts in the mountains.webm` Videos/
+yt-dlp -o "%(title)s.%(ext)s" 'https://www.youtube.com/watch?v=kEZ6is4KrPw'
+mv `Every episode of house md ever.mp4` Videos/
+x
+yt-dlp -o "%(title)s.%(ext)s" 'https://www.youtube.com/watch?v=KQg4UhKjdCM'
+mv `Glockinator 64 rounds in 1.5 seconds.webm` Glockinator.webm
+mv Glockinator.webm Videos/
+dust Videos/
+nmcli device wifi rescan 
+btctl
+c ; topgrade 
+xrandr --output HDMI-0 --off
+xrandr --output HDMI-0 --rate 60.00 --mode 1920x1080 --above DP-4 --primary
+btctl
+nmcli device wifi rescan 
+xrandr --output HDMI-0 --rate 60.00 --mode 1920x1080 --above DP-4 --primary
+z C
+z
+z Software
+z ../C
+x
+pmr exa
+cg uninstall exa
+cg uninstall eza
+pms eza
+cg install eza
+x
+mkdir test
+z test
+x
+clear
+l
+ls
+x
+c ; topgrade 
+cg uninstall cargo-install-update
+cg uninstall cargo-update
+cg install cargo-update
+zsh
+x
+ls
+c
+c ; topgrade 
+gcc main.c ; ./a.out
+e main.c
+xrandr --output HDMI-0 --rate 60.00 --mode 1920x1080 --above DP-4 --primary
+nmtui
+nmcli disconnect
+nmcli device disconnect wlp4s0 
+systemctl status bluetooth
+btctl
+ds btctl
+alias btctl
+which btctl
+btctl
+z Downloads/
+x
+cal
+cal -y
+z Downloads/
+x
+rm `Ansøgningsskema - Fast indkvartering.docx`
+mv `Ansøgningsskema - Fast indkvartering.docx.pdf` `Ansøgningsskema - Fast indkvartering.pdf`
+xrandr --output HDMI-0 --rate 60.00 --mode 1920x1080 --above DP-4 --primary
+btctl
+nmcli device disconnect wlp4s0 
+btctl
+c ; topgrade 
+yt-dlp -o "%(title)s.%(ext)s" 'https://www.youtube.com/watch?v=ZrWCJf2_YXE'
+mv `SCAV DRIP IRL.webm` Videos/
+swr
+setxkbmap -layout us -option compose:ins
+c ; topgrade 
+polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini singlemainextraleft
+ex
+xrandr
+ebsp
+xrandr --output HDMI-0 --rate 60.00 --mode 1920x1080 --above DP-4 --primary
+btctl
+nmcli device wifi rescan 
+xrandr --output HDMI-0 --rate 60.00 --mode 1920x1080 --above DP-4 --primary
+nmcli device wifi rescan 
+btctl
+nmcli disco
+nmcli disconnect
+nmcli device disconnect wlp4s0 
+c ; topgrade 
+systemctl status networkmanager
+systemctl status networkmanagerd
+systemctl status networkd
+xrandr --output HDMI-0 --rate 60.00 --mode 1920x1080 --above DP-4 --primary
+xrandr --output HDMI-0 --rate 60.00 --mode auto --above DP-4 --primary
+xrandr
+xrandr --output HDMI-0 --rate 60.00 --mode 1920x1080 --above DP-4 --primary
+nmcli device disconnect wlp4s0 
+z helix
+x
+btctl
+nmcli device wifi rescan 
+btctl
+dust
+z ModOrganizer
+x
+dust
+z ..
+dust
+rm ModOrganizer/ -rf
+dust
+z Skyrim
+x
+z Skyrim
+z steamuser
+x
+dust
+rm `Documents/My Games/Skyrim Special Edition/Saves` -rf
+dust
+btctl
+c ; topgrade 
+btctl
+nmcli device wifi rescan 
+c ; topgrade 
+z helix
+gif
+gipl
+gid @{1}..
+cal
+c
+k
+btctl
+bt
+btctl
+systemctl status bluetooth
+btctl
+c ; topgrade 
+nmcli device wifi rescan 
+btctl
+c ; topgrade 
+btctl
+nmcli device wifi rescan 
+btctl
+nmtui
+duf
+df
+btctl
+c ; topgrade 
+z helix
+gif
+gipl
+hx -v
+hx -V
+c ; cg install --path helix-term --force
+cg install --path helix-term --force
+z
+c
+hx -V
+z ..
+x
+z nushell
+x
+gif
+gipl
+git stash
+gipl
+git stash pop
+gid
+cg install --path . --force
+z ..
+x
+z ..
+z helix
+x
+e Cargo.toml
+fd news
+z helix-core
+x
+e src/*
+x
+e src/auto_pairs.rs
+z typst
+x
+gif
+gipl
+x
+e CITATION.cff
+e ~/.config/helix/languages.toml
+pass
+pass show all
+c ; cg install --path crates/typst-cli --force
+z typst
+x
+z `Matematik Mundtlig Eksamen/`
+x
+config nu --default
+e $nu.config-path
+e main.typ
+z tyost
+z typst
+x
+z typst
+x
+z ..
+x
+e $nu.config-path
+str length
+echo '()' | str length
+x
+asd
+z typst
+x
+echo $home
+echo $env.home
+($env.PWD | str substring 0..($env.home | str length) | str replace $env.home "~")
+($env.PWD | str substring ($env.home | str length)..)
+z ..
+x
+e $nu.env-path
+z st
+z suckless
+x
+x
+st -V
+st --version
+st -h
+st -v
+x
+mv st my_st
+mv dmenu my_dmenu
+git clone 'https://git.suckless.org/st'
+git clone 'https://git.suckless.org/dmenu'
+difft dmenu my_dmenu/
+difft dmenu my_dmenu/ | bat
+difft --help
+c
+difft dmenu my_dmenu/
+aasuhda
+c
+clear --tmux
+clear -a
+c -a
+e $nu.config-path
+c -a
+difft my_st st
+pmr pass
+pmr passmenu
+pmr pass_menu
+passmenu
+pmenu
+e .zshrc
+ehk
+x
+z Scripts
+x
+b cam
+chmod +x cam
+x
+b gmail
+b cast
+chmod +x cast
+chmod +x rcam
+b schoolmail
+npm i -g bitwarden_dmenu
+pmi bitwarden-cli
+pms bitwarden-cli
+bw
+e bwmenu
+chmod +x bwmenu
+bwmenu
+chmod +x bwmenu
+wofi
+chmod +x bwmenu
+bwmenu --help
+bwmenu
+e lib_bwmenu
+chmod +x lib_bwmenu 
+x
+rm schoolmail
+ehk
+z Scripts
+x
+bwmenu
+x
+mv lib_bwmenu lib-bwmenu
+bwmenu
+dunst-reload
+dunst 
+bwmenu
+dunst 
+bwmenu
+dunst 
+bwmenu
+dunst 
+bwmenu
+dunst 
+dunst
+bwmenu
+ebsp
+dunst
+bwmenu
+dunst
+ebsp
+bwmenu
+dunst
+bwmenu
+e ~/.config/dunst/
+bwmenu
+printf '' | eval "$ASK_PASSWORD_COMMAND"
+dmenu -p "Master Password" --password --lines 1
+dmenu -p "Master Password" --lines 1
+man dmenu
+dmenu -p "Master Password" -p 1
+dmenu -p "Master Password" -l 1
+dmenu -p "Master Password" --password -l 1
+bwmenu
+e bwmenu
+x
+rm bwmenu*
+x
+rm lib-bwmenu
+dunst
+epb
+bspc monitor DP-4 -d 1 2 3 4 5 6 7 8 9
+bspc monitor DP-4 -d 1 2 3 4 5 6 7 8
+bspc monitor DP-4 -d 1 2 3 4 5 6 7 "bruh"
+bspc monitor DP-4 -d 1 2 3 4 5 6 7 8 9
+polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini singlemainextraleft
+polybar --quiet --reload --config=/home/notroot/.config/polybar/config.ini singlemainmid
+counter=0<\n>bspc query -D --names | while read -r name; do<\n>  printf 'ws-icon-%i = "%s;<insert-icon-here>"\n' $((counter++)) $name<\n>done
+baspc query -D --names
+bspc query -D --names
+bspc monitor DP-4 -d --helpl
+bspc monitor DP-4 -d --help
+bspc monitor DP-4 -d -h
+bspc monitor DP-4 -d 1 2 3 4 5 6 7 8 9
+bspc monitor DP-4 -d COM WWW DEV GAME
+bspc monitor DP-4 -d 1 2 3 4 5 6 7 8 9
+ehk
+epb
+epb
+dmenu -p "Master Password" -P -l 1
+z dmenu
+x
+z ..
+x
+rm dmenu/
+rm dmenu/ -r
+mv my_dmenu/ dmenu
+rm -r st
+mv my_st/ st
+z dmenu/
+dmenu -V
+dmenu -v
+e password.diff
+patch -p < password.diff 
+e $nu.history-path
+patch -i password.diff 
+x
+e password.diff
+e dmenu.c.orig
+e dmenu.c
+x
+rm *.orig *.rej
+e dmenu.c.rej
+e $nu.config-path
+e $nu.loginshell-path
+e $nu.config-path
+e $nu.loginshell-path
+make clean
+x
+xl
+make build && ds make install
+make build and ds make install
+make all and ds make install
+ds make install
+dmenu -v
+dmenu -p "Master Password" -P -l 1
+dwmenu
+curl wettr.in
+curl wttr.in
+st -v
+topgrade
+dym mosquito
+tokio-console 
+e .tmux.conf
+e .config/tmux/tmux.conf
+e main.typ
+e .config/tmux/tmux.conf
+zaf main.pdf\
+zaf main.pdf
+typst w main.typ
+e main.typ
+x
+rm main*
+rm MO2 -r
+x
+z helix
+gif
+gipl
+gid @{1}..
+topgrade
+r .XCompose
+^r^e
+r^e
+e .XCompose
+c ; topgrade 
+fsck
+epb
+ezp
+btop
+bspc config focused_border_color '#98971a'
+cis
+e $nu.config-path
+cit
+cit status
+cit diff
+cit status

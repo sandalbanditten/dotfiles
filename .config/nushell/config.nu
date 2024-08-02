@@ -176,13 +176,13 @@ let light_theme = {
 
 # External completer example
 let carapace_completer = { |spans|
-    carapace $spans.0 nushell $spans | from json
+    carapace $spans.0 nushell ...$spans | from json
 }
 
 # Aliases
 alias b = bat
 alias btctl = bluetoothctl
-alias c = clear
+alias c = clear -a
 alias cg = cargo
 alias cit = git $"--git-dir=($env.HOME)/.dotfiles/" $"--work-tree=($env.HOME)"
 alias clip = xclip -selection clipboard
@@ -252,7 +252,7 @@ alias xl = eza --icons --tree --level=1 --long --git
 alias xla = eza --icons --tree --level=1 --all --long --git
 alias xr = eza --icons -R
 alias xt = eza --icons --tree --level=1
-alias y = yazi
+alias ya = yazi
 alias yt-dlp = yt-dlp -o "%(title)s.%(ext)s"
 alias za = zathura
 alias zaf = zathura --fork
@@ -341,7 +341,7 @@ $env.config = {
   }
 
   history: {
-    max_size: 10000 # Session has to be reloaded for this to take effect
+    max_size: 100000 # Session has to be reloaded for this to take effect
     sync_on_enter: true # Enable to share history between multiple sessions, else you have to close the session to write history to file
     file_format: "plaintext" # "sqlite" or "plaintext"
   }
@@ -372,7 +372,7 @@ $env.config = {
   # buffer_editor: "emacs" # command that will be used to edit the current line buffer with ctrl+o, if unset fallback to $env.EDITOR and $env.VISUAL
   use_ansi_coloring: true
   edit_mode: vi # emacs, vi
-  shell_integration: true # enables terminal markers and a workaround to arrow keys stop working issue
+  # shell_integration: true # enables terminal markers and a workaround to arrow keys stop working issue
   render_right_prompt_on_last_line: false # true or false to enable or disable right prompt to be rendered on last line of the prompt.
 
   hooks: {

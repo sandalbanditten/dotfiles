@@ -33,10 +33,11 @@ height = 300
 origin = top-right
 
 # Offset from the origin
-offset = 7x34
+offset = 6x28
 
 # Scale factor. It is auto-detected if value is 0.
-scale = 0
+# scale = 0
+scale = 2
 
 # Maximum number of notification (0 means no limit)
 notification_limit = 0
