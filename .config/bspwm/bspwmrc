@@ -53,7 +53,6 @@ bspc config gapless_monocle      false
 
 bspc rule -a surf state=tiled
 bspc rule -a Zathura state=tiled
-bspc rule -a grimp state=floating
 bspc rule -a mpv state=pseudo_tiled
 
 bspc config remove_disabled_monitors

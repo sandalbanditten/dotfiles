@@ -24,7 +24,7 @@ follow = keyboard
 # dynamic width from 0 to 300
 # width = (0, 300)
 # constant width of 300
-width = 217
+width = 400
 
 # The maximum height of a single notification, excluding the frame.
 height = 300
@@ -33,11 +33,11 @@ height = 300
 origin = top-right
 
 # Offset from the origin
-offset = 6x28
+offset = 12x12
 
 # Scale factor. It is auto-detected if value is 0.
 # scale = 0
-scale = 2
+scale = 0
 
 # Maximum number of notification (0 means no limit)
 notification_limit = 0
@@ -87,10 +87,10 @@ text_icon_padding = 0
 
 # Defines width in pixels of frame around the notification window.
 # Set to 0 to disable.
-frame_width = 2
+frame_width = 4
 
 # Defines color of the frame around the notification window.
-frame_color = "#928374"
+frame_color = "#98971a"
 
 # Define a color for the separator.
 # possible values are:
@@ -112,7 +112,7 @@ sort = yes
 
 ### Text ###
 
-font = Fira Code Medium 8
+font = Fira Code Retina 14
 
 # The spacing between lines.  If the height is smaller than the
 # font height, it will get raised to the font height.
@@ -230,7 +230,7 @@ class = Dunst
 # corners.
 # The radius will be automatically lowered if it exceeds half of the
 # notification height to avoid clipping text and/or icons.
-corner_radius = 5
+corner_radius = 12
 
 # Ignore the dbus closeNotification message.
 # Useful to enforce the timeout set by dunst configuration. Without this
@@ -429,3 +429,7 @@ timeout = 10
 #    set_stack_tag = "volume"
 #
 # vim: ft=cfg
+
+[ignore_flameshot_warning]
+    body = "grim's screenshot component is implemented based on wlroots, it may not be used in GNOME or similar desktop environments"
+    format = ""

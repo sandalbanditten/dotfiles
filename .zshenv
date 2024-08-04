@@ -10,6 +10,9 @@ export GPG_TTY="$(tty)"
 # programs
 export FZF_DEFAULT_OPTS="--color fg:#EBDBB2,hl:#504945,fg+:#EBDBB2,bg+:#3C3836,hl+:#504945,pointer:#FB4934,info:#928374,spinner:#928374,header:#928374,prompt:#458588,marker:#D79921"
 export EDITOR="helix"
+export TERM="xterm-kitty"
+export TERM_PROGRAM="xterm-kitty"
+export TERMINAL="xterm-kitty"
 export BAT_THEME="base16"
 export PASTEL_COLOR_MODE="24bit"
 # kinda cursed, see exa_colors(5)

@@ -10037,3 +10037,698 @@ cit
 cit status
 cit diff
 cit status
+cit add *
+cit status
+cit commit -m "minor stuff"
+e
+ebsp
+i
+nmtui
+nmcli wifi
+nmcli device wifi
+iwgetid
+iwlist
+epb
+es
+e Code/Scripts/image
+e Code/Scripts/pics
+e .config/tmux/tmux.conf
+pms hyprland
+z Software
+gicl --depth=1 'https://aur.archlinux.org/hyprland-git.git'
+z hyprland-git/
+gif
+makepkg -sirc
+z ..
+rm hyprland-git/
+rm hyprland-git/ -r
+pms hyprland
+st -- ya
+ya
+e .config/yazi/yazi.toml
+ya
+st -- ya
+st -- zsh -c ya
+st -e ya
+man st
+man zsh
+st -e "zsh -c ya"
+st
+ehk
+man tmux
+st -- tmux
+st -- "tmux -c ya"
+st -c "tmux -c ya"
+e ~/.config/hypr/hyprland.conf
+pms swaync
+pml
+pacman -Sc
+pms polkit-kde-agent
+pms qt5-wayland
+pms qt6-wayland
+pms wayland
+zsh
+ex
+eX
+x
+xa
+e .xinitrc
+e .zsp
+ezp
+x
+e
+ezp
+x
+firefox
+config
+e .config/kitty/kitty.conf
+pms waybar
+waybar
+pms hyprpaper
+pms wofi
+e .config/hypr/hyprland.conf
+gst
+x
+e .config/kitty/kitty.conf
+x
+z
+x
+gst
+x
+e ~/Documents/UTF-8.txt
+e .config/kitty/kitty.conf
+st -- nu
+e patches.txt
+pms ttf-libration
+pms ttf-liberation
+z aur
+gicl --depth=1 'https://aur.archlinux.org/ttf-ms-win10-auto.git'
+https://aur.archlinux.org/ttf-ms-win11-auto.git
+gicl --depth=1 'https://aur.archlinux.org/ttf-ms-win11-auto.git'
+z ttf-ms-win10-auto/
+makepkg -sirc
+pms udftools
+z ../ttf-ms-win11-auto/
+makepkg -sirc
+pms httpdirfs
+z ../ttf-ms-win10-auto/
+makepkg -sirc
+e PKGBUILD
+pms httpfs2
+pms httpfs
+z ..
+pmr udftools
+rm ttf-ms-win1*
+rm ttf-ms-win1* -r
+killall steam
+e .config/hypr/hyprland.conf
+kitty -- nu
+kitty -- ya
+ya
+st -- yazi
+kitty -- yazi
+b
+x
+tree
+tee
+asd
+btop
+this shit oompid
+gst
+e patches.txt
+eenv
+pms wl-clipboard
+wl-copy
+wl-paste
+wl-paste 'a'
+echo a | wl-copy
+wl-paste
+e /etc/xdg/waybar
+cp /etc/xdg/waybar ~/.config/waybar
+cp /etc/xdg/waybar ~/.config/waybar -r
+x
+waybar
+dunstify 'aa'
+waybar
+ddcutil detect --verbose
+swaync
+killall dunst
+killall dunstctl
+ezp
+ex
+killall dunstctl
+dunstify 'aa'
+killall dunst
+dunstify 'aa'
+btop
+btop
+swaync
+swaync -h
+swaync -v
+echo $env.XCURSOR_SIZE
+e .config/hypr/hyprland.conf
+e .config/kitty/kitty.conf
+st -- tmux
+killall waybar
+echo $env.XCURSOR_SIZE
+btop
+hyprctl monitors all
+waybar
+pms pavucontrol
+waybar
+e .config/waybar/*
+waybar
+killall dunst
+swaync
+e .config/waybar/power_menu.xml
+swaync
+waybar
+pms otf-font-awesome
+waybar
+e .config/kitty/kitty.conf
+e .config/hypr/hyprland.conf
+e .xorg.log
+e x
+rfkill list\
+rfkill list
+ehx
+c ; topgrade 
+dunst
+dunstify 'aa'
+swaync
+swaync -h
+swaync-client
+swaync-client -op
+flameshot
+ezp
+flameshot gui
+echo $env.XDG_CURRENT_DESKTOP
+flameshot -V
+flameshot -v
+cg install satty
+pms cliphist
+cliphist
+pms wl-clipboard
+pms xdg-utils
+cliphist list | dmenu | cliphist decode | wl-copy
+cliphist list | wofi | cliphist decode | wl-copy
+wofi -h
+man wofi
+man wofi 7
+man 7 wofi
+cliphist list | wofi --mode dmenu | cliphist decode | wl-copy
+cliphist list | wofi --show dmenu | cliphist decode | wl-copy
+flameshot gui
+XDG_CURRENT_DESKTOP=sway flameshot gui
+zsh
+flameshot --grim
+flameshot --help
+x Pictures/
+mkdir Pictures/screenshots
+dunstify 'aa'
+swaync-client -t
+pms grim
+flameshot gui
+z Software
+gicl --depth=1 'https://github.com/flameshot-org/flameshot.git'
+pmr flameshot
+pms qt5-wayland
+pms qt6-wayland
+pms xdg-desktop-portal xdg-desktop-portal-wlr grim
+z flameshot/
+x
+e CMakeLists.txt
+cmake -DUSE_WAYLAND_CLIPBOARD=true -DUSE_WAYLAND_GRIM=ON
+x
+z ..
+rm flameshot/ -r
+gicl --depth=1 'https://github.com/flameshot-org/flameshot.git'
+z flameshot/
+mkdir build
+z build
+cmake -DUSE_WAYLAND_CLIPBOARD=true -DUSE_WAYLAND_GRIM=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ../
+pms kguiaddons
+cmake -DUSE_WAYLAND_CLIPBOARD=true -DUSE_WAYLAND_GRIM=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ../
+z ..
+rm flameshot/ -r
+gicl --depth=1 'https://github.com/flameshot-org/flameshot.git'
+z flameshot/
+x
+mkdir build
+z flameshot/build
+x
+cmake -DUSE_WAYLAND_CLIPBOARD=true -DUSE_WAYLAND_GRIM=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ../
+x
+e Makefile
+z ..
+rg GuiAddons
+pms kguiaddons5
+z build
+cmake -DUSE_WAYLAND_CLIPBOARD=true -DUSE_WAYLAND_GRIM=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ../
+flameshot config
+wl-paste --watch cliphist store
+z
+make
+e .config/waybar/*
+flameshot gui
+ds make install
+flameshot gui
+est
+gst
+flameshot config
+flameshot gui
+flameshot config
+exec-once firefox
+gst
+e .config/swa
+swaync
+swaync -h
+swaync -c
+z
+cp /etc/xdg/swaync/config.json ~/.config/swaync/
+mkdir .config/swaync
+e .config/yazi/*
+e .config/yazi/**/*
+cp /etc/xdg/swaync/config.json ~/.config/swaync/
+killall swaybar
+killall waybar 
+killall waybar and waybar
+killall waybar & waybar
+killall waybar ; waybar
+echo $env.ELECTRON_OZONE_PLATFORM_HINT
+killall discord
+btop
+zsh
+waybar
+k
+waybar
+btop
+zsxh
+waybar
+e .config/kitty/kitty.conf
+showkey -a
+waybar
+qt
+qml6 
+waybar
+dunstify 'aa'
+swaync-client -t
+btop
+dunstify 'aa'
+dunst
+dunstify 'aa'
+dunst
+c ; dunst
+dunstify 'aa'
+c ; dunst
+btop
+c ; dunst
+killall swaync
+c ; killall swaync ; dunst
+sway
+swaync
+dunst
+dunstify 'aa'
+dunst
+dunstify 'aa'
+swaync
+killall swaync
+dunst
+dunstify 'aa'
+dunst
+dunstify 'aa'
+dunst
+dunstify 'aa'
+dunst
+e .config/dunst/dunstrc
+e .config/yazi/*.toml
+e .config/swaync/config.json
+e .config/kitty/kitty.conf
+e .config/mimeapps.list
+showkey -a
+kitty --config NONE -o background_opacity=0.5
+killall waybar
+waybar
+e .config/dunst/dunstrc
+e config.h
+epb
+hx
+e .config/hypr/hyprland.conf
+e .config/waybar/*
+waybar
+e .config/hel
+e .config/helix/themes/mygruvbox.toml
+hx
+waybar
+e .config/kitty/kitty.conf
+cliphist
+cliphist list | wofi --show dmenu | cliphist decode | wl-copy
+echo "cliphist list | wofi --show dmenu | cliphist decode | wl-copy" | wl-copy
+e $nu.history-path
+pms hyprpaper
+ebsp
+hyprctl hyprpaper
+hyprctl hyprpaper preload ~/Pictures/forest/forest0.jpg
+hyprctl hyprpaper wallpaper ~/Pictures/forest/forest0.jpg
+hyprctl hyprpaper wallpaper "eDP-1, ~/Pictures/forest/forest0.jpg"
+random_background=$(ls ~/Pictures/forest/* | shuf -n 1)
+ls ~/Pictures/forest/* | shuf -n 1
+x ~/Pictures/forest/* | shuf -n 1
+~/Code/Scripts/wallpaper
+e ~/.config/hypr/hyprpaper.conf
+e .config/waybar/*
+e .hypr.log
+waybar
+e .config/waybar/*
+hyprctl setcursor Bibata-Modern-Classic 24
+e .config/hypr/hyprland.conf
+x
+z Software
+gicl --depth=1 'https://github.com/lbonn/rofi.git'
+z rofi
+z ..
+rm -rf rofi/
+gicl --depth=1 'https://aur.archlinux.org/rofi-lbonn-wayland-git.git'
+z rofi-lbonn-wayland-git/
+makepkg -sirc
+rofi 
+rofi run
+rofi -show run
+echo $TERM
+echo $env.TERM
+nvim
+pms xdg-desktop-portal-hyprland
+e .config/wofi/wofi.conf
+echo $env.XDG_BACKEND
+echo $env.XDG_RUNTIME_DIR
+echo $env.XDG_CONFIG_HOME
+z
+e .config/mimeapps.list
+ezp
+eenv
+e .zshenv
+rg TERM -a
+z .config
+rg TERM -a
+show_kitty_env_vars
+echo $env.TERM
+ehk
+ebsp
+e .config/yazi/*.toml
+e .config/tmux/tmux.conf
+ehk
+e .config/waybar/*
+e Code/Scripts/wallpaper
+btop
+e Code/Scripts/wallpaper
+BG=$(ls ~/Pictures/forest/* | shuf -n 1)
+hyprctl hyprpaper preload "$(ls ~/Pictures/forest/* | shuf -n 1)"
+hyprctl hyprpaper preload $(ls ~/Pictures/forest/* | shuf -n 1)
+hyprctl hyprpaper preload (ls ~/Pictures/forest/* | shuf -n 1)
+hyprctl hyprpaper preload (x ~/Pictures/forest/* | shuf -n 1)
+hyprctl hyprpaper wallaperp "eDP-1,$(x ~/Pictures/forest/* | shuf -n 1)"
+e Code/Scripts/wallpaper
+imv Pictures/forest/
+e .config/hypr/hyprpaper.conf
+e Code/Scripts/wallpaper
+e .config/hypr/hyprland.conf
+e /usr/share/applications/nvim.desktop
+yazi
+echo $env.TERM
+z ..
+zsh
+st
+e .zprofile
+e zsh
+e .zshrc
+e /usr/share/applications/btop.desktop
+tmux kill-server && tmux || tmux
+tmux kill-server and tmux || tmux
+ya
+echo $env.TERM
+echo $env.TERM_PROGRAM
+e .local/share/applications/mimeinfo.cache
+xdg-mime default yazi inode/directory
+xdg-mime default yazi.desktop inode/directory
+xdg-settings list
+xdg-settings --list
+e .config/mimeapps.list
+rm .config/mimeapps.list
+ya
+e .config/yazi/*.toml
+c ; topgrade 
+ya
+yazi -V
+yazi -v
+yazi -V
+z Software
+x
+cg  install yazi
+sudo pacman -S yazi ffmpegthumbnailer p7zip jq poppler fd ripgrep fzf zoxide imagemagick
+pmr yazi
+gicl --depth=1 'https://github.com/sxyazi/yazi.git'
+z yazi
+x
+cg install --path . --force
+cg install
+btop
+cg install --path yazi-cli --force
+ds hx /etc/xdg/mimeapps.list
+ln -s ~/.config/mimeapps.list ~/.local/share/applications/mimeapps.list
+ya
+echo $env.XDG_SESSION_TYPE
+ya -V
+yazi
+yazi -V
+rm ~/.cargo/bin/ya*
+ya
+e $nu.config-path
+z yazi
+cg install --path yazi-cli --force
+ya
+ya -V
+ya
+ya help
+ya help pub
+e README.md
+yazi
+ya
+cg uninstall yazi-cli
+x
+cg build -r
+cg clean
+cg install --path yazi-fm --force
+yazi
+ya
+yazi
+e $nu.config-path
+e .config/yazi/*.toml
+e .config/mimeapps.list
+xdg-mime default imv.desktop image/jpeg
+xdg-mime default imv.desktop image/png
+xdg-mime default imv.desktop image/jpg
+xdg-mime default imv.desktop image/webp
+/usr/share/applications
+x
+e kitty*
+e mimeinfo.cache
+hx
+which hx
+ds hx /usr/share/applications/helix.desktop
+ds hx /usr/share/applications/yazi.desktop
+xdg-open .
+xdg-open Pictures/
+gst
+ds make uninstall
+scripts
+e Code/Scripts/scripts
+e Code/Scripts/audio
+e Code/Scripts/skill
+flameshot gui
+btop
+e .config/dunst/dunstrc
+killall dunst
+ehk
+pms hyprcursor
+x .local/share/icons/
+wget -cO- https://github.com/phisch/phinger-cursors/releases/latest/download/phinger-cursors-variants.tar.bz2 | tar xfj - -C ~/.local/share/icons
+e .icons/default/index.theme
+e .config/gtk-3.0/settings.ini
+hyprctl
+x .local/share/icons/
+hyprctl setcursor
+hyprctl setcursor phinger_cursor_dark
+hyprctl setcursor 24 phinger_cursor_dark
+hyprctl setcursor 24
+hyprctl setcursor help
+e .config/hypr/hyprland.conf
+wget -cO- https://github.com/phisch/phinger-cursors/releases/latest/download/phinger-cursors-variants.tar.bz2 | tar xfj - -C ~/.local/share/icons
+e .icons/default/index.theme
+e .config/gtk-3.0/settings.ini
+e .config/hypr/hyprland.conf
+e
+gsettings set org.gnome.desktop.interface cursor-theme 'phinger_cursors_dark'
+e .
+e .config/hypr/hyprland.conf
+hyprctl setcursor 24
+hyprctl setcursor 48
+e .config/dunst/dunstrc
+e .hypr.log
+e .config/waybar/*
+wpctl
+wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-
+wpctl set-volume -l 1.5 5%-
+wpctl set-volume -l 1.5
+wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%+
+pactl set-sink-volume @DEFAULT_SINK@ +5%
+wpctl set-sink-volume @DEFAULT_SINK@ +5%
+pamixer -i 5 @DEFAULT_SINK@
+pamixer -d 5 @DEFAULT_SINK@
+e
+e .config/hypr/hyprland.conf
+ehk
+showkey -a
+e .config/mimeapps.list
+pms exiftool
+pms perl-image-exiftool
+e .config/hypr/hyprland.conf
+e .config/mimeapps.list
+pms xorg-xeyes
+xeyes
+z rofi
+x
+pmr rofi-lbonn-wayland-git
+pms rofi-wayland
+xeyes
+pms ydotool
+bw
+z Scripts
+e bwmenu
+e lib-bwmenu
+bwmenu
+x
+~/Code/Scripts/
+x
+chmod +x lib_bwmenu 
+chmod +x lib-bwmenu 
+chmod +x bwmenu 
+e .config/kitty/kitty.conf
+z
+kitty
+e .config/kitty/kitty.conf
+bwmenu
+z Scripts
+e bwmenu
+bwmenu
+z
+z Scripts
+e bwmenu
+bwmenu
+bw login
+e .config/hypr/hyprland.conf
+echo $env.MOZ_ENABLE_WAYLAND
+bwmenu
+z
+e bwmenu
+e .config/hypr/hyprland.conf
+e .config/dunst/dunstrc
+rofi -dump-config > ~/.config/rofi/config.rasi
+e ~/.config/rofi/config.rasi
+rofi -dump-config | save ~/.config/rofi/config.rasi
+rofi -dump-config | save ~/.config/rofi/config.rasi -f
+e ~/.config/hypr/hyprpaper.conf
+e ~/.config/hypr/hyprland.conf
+rofi -dump-theme > ~/.config/rofi/current.rasi
+rofi -dump-theme | save ~/.config/rofi/current.rasi
+rofi
+rofi -show run
+rofi-theme-selector 
+e .config/rofi/current.rasi
+duf
+e ~/.config/rofi/config.rasi
+e ~/.config/hypr/hyprland.conf
+e .config/waybar/*
+killall waybar
+waybar
+cit status
+c ; topgrade 
+bwmenu
+e .config/hypr/hyprland.conf
+bwmenu
+bwmenu -V
+bwmenu
+bwmenu --version
+z Scripts
+x
+bw 
+bw get password google.com
+24 * 12
+e .config/hypr/hyprland.conf
+z
+22000 * 7 + 24000 * 5
+rofi
+e .config/rofi/current.rasi
+e .config/rofi/config.rasi
+bw --session $env.BW_SESSION
+bw get password google.com --session $env.BW_SESSION
+e .config/nushell/config.nu
+ezp
+ezenv
+eenv
+man rg
+rg BW_SESSION -.
+zsh
+bw login
+bw unlock
+$env:BW_SESSION="pYi8M9omEuaM1Fe6FmOLOP0WLHv51o/VXknhbnfxsiEfbxGAmsnt2bUgBTs7SxbpsGAQotWg/CwxluqmeSZr3A=="
+eenv
+$env.BW_SESSION = "pYi8M9omEuaM1Fe6FmOLOP0WLHv51o/VXknhbnfxsiEfbxGAmsnt2bUgBTs7SxbpsGAQotWg/CwxluqmeSZr3A=="
+echo $env.BW_SESSION
+bwmenu
+echo $env.BW_SESSION
+bwmenu
+bw get password google.com
+bw get password google.com --session $env.BW_SESSION
+bwmenu
+cit add .config/hypr/ .config/rofi/ .config/waybar/
+cit status
+cit add .config/hypr/ .config/rofi/ .config/waybar/ -f
+cit status
+cit add -f .config/kitty/kitty.conf
+cit add -f .config/mimeapps.list
+hyprctl setcursor 48
+e .config/hypr/hyprland.conf
+e $nu.history-path
+hyprctl dispatch fullscreen 1
+hyprctl dispatch fullscreen 0
+e .config/hypr/hyprland.conf
+exec-once=hyprctl setcursor phinger-cursors-dark 24
+hyprctl setcursor phinger-cursors-dark 24
+hyprctl setcursor phinger-cursors-dark 48
+hyprctl setcursor phinger-cursors-dark 32
+hyprctl setcursor phinger-cursors-light 32
+xeyes
+hyprctl setcursor -h
+hyprctl setcursor phinger-cursors-light 32
+hyprctl setcursor phinger-cursors-light 38
+hyprctl setcursor phinger-cursors-light 48
+hyprctl setcursor phinger-cursors-light 46
+hyprctl setcursor phinger-cursors-light 44
+hyprctl setcursor phinger-cursors-light 42
+hyprctl setcursor phinger-cursors-light 40
+e .config/hypr/hyprland.conf
+gsettings set org.gnome.desktop.interface cursor-theme 'phinger-cursors-light'
+e .config/hypr/hyprland.conf
+e /usr/share/applications/btop.desktop
+b /usr/share/applications/mimeinfo.cache
+echo 4 | append e.txt
+e /usr/share/applications/mimeinfo.cache
+e /usr/share/applications/helix.desktop
+e /usr/share/applications/org.pwmt.zathura.desktop
+e /usr/share/applications/org.pwmt.zathura-pdf-mupdf.desktop
+pmr feh
+pms krita
+pmr gimp
+e .local/share/applications/mimeinfo.cache
+cit status
+cit commit -m "Shift to Wayland"

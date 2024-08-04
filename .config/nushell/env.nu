@@ -96,7 +96,7 @@ $env.PASTEL_COLOR_MODE = "24bit"
 $env.EXA_COLORS = $"(vivid generate gruvbox-dark)"
 $env.LS_COLORS = $"($env.EXA_COLORS)"
 $env.RUSTC_WRAPPER = "sccache"
-$env.XCURSOR_SIZE = 16
+# $env.XCURSOR_SIZE = 16
 $env.STARSHIP_CONFIG = "~/.config/starship/starship.toml"
 $env.TEXMFHOME = "/home/notroot/.texmf"
 
