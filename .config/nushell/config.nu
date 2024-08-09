@@ -225,6 +225,7 @@ alias gsls = cd ~/Code/Software/suckless/slstatus
 alias gst = cd ~/Code/Software/suckless/st
 alias gv = cd ~/.config/nvim
 alias i = ip -c a
+alias icat = kitty +kitten icat
 alias imv = imv -b '#282828'
 alias ip = ip -c=auto
 alias k = kalker

@@ -3,79 +3,65 @@
  * Rofi version: 1.7.5+wayland3
  **/
 * {
-    red:              rgba(204, 36, 29, 100%);
-    foreground-color: rgba(235, 219, 178, 100%);
-    background-color: rgba(40, 40, 40, 100%);
-    alt-background:   rgba(40, 40, 40, 100%);
-    green:            rgba(152, 151, 26, 100%);
-    yellow:           rgba(215, 153, 33, 100%);
+    fg-color: rgba(235, 219, 178, 100%);
+    bg-color: rgba(40, 40, 40, 75%);
     lightfg:          rgba(88, 104, 117, 100%);
+    green:            rgba(152, 151, 26, 100%);
+    red:              rgba(204, 36, 29, 100%);
+    yellow:           rgba(215, 153, 33, 100%);
     spacing:          2;
+    background-color: transparent;
 }
 element {
     padding:          1px ;
     cursor:           pointer;
     spacing:          5px ;
     border:           0;
-    background-color: var(background-color);
-    text-color:       var(foreground-color);
-}
-element text {
-    highlight:        underline #ff0000;
-    text-color:       #ff0000;
+    text-color:       var(fg-color);
 }
 element normal.normal {
-    background-color: var(background-color);
-    text-color:       var(foreground-color);
+    text-color:       var(fg-color);
 }
 element normal.urgent {
-    background-color: var(background-color);
     text-color:       var(red);
 }
 element normal.active {
-    background-color: var(background-color);
     text-color:       var(yellow);
 }
 element selected.normal {
-    background-color: var(green);
-    text-color:       var(background-color);
+    text-color:       var(green);
 }
 element selected.urgent {
     background-color: var(red);
-    text-color:       var(foreground-color);
+    text-color:       rgb(40, 40, 40);
 }
 element selected.active {
     background-color: var(yellow);
-    text-color:       var(foreground-color);
+    text-color:       rgb(40, 40, 40);
 }
 element alternate.normal {
-    background-color: var(background-color);
-    text-color:       var(foreground-color);
+    text-color:       var(fg-color);
 }
 element alternate.urgent {
-    background-color: var(background-color);
     text-color:       var(red);
 }
 element alternate.active {
-    background-color: var(background-color);
     text-color:       var(yellow);
 }
 element-text {
     background-color: inherit;
     cursor:           inherit;
-    highlight:        inherit;
     highlight:        bold;
     text-color:       inherit;
+    vertical-align: 0.5;
 }
 element-icon {
-    background-color: var(background-color);
-    size:             1.0000em;
+    size:             2.0000em;
     cursor:           inherit;
-    text-color:       inherit;
 }
 window {
     padding:          5;
-    background-color: var(background-color);
+    background-color: var(bg-color);
     border:           4px;
     border-color:     var(green);
     border-radius:    12px;
@@ -90,7 +76,7 @@ message {
     border:       2px solid 0px 0px;
 }
 textbox {
-    text-color: var(foreground-color);
+    text-color: var(fg-color);
 }
 listview {
     padding:      2px 0px 0px ;
@@ -114,11 +100,10 @@ sidebar {
 button {
     cursor:     pointer;
     spacing:    0;
-    text-color: var(foreground-color);
+    text-color: var(fg-color);
 }
 button selected {
-    background-color: var(background-color);
-    text-color:       var(foreground-color);
+    text-color:       var(fg-color);
 }
 num-filtered-rows {
     expand:     false;
@@ -136,15 +121,15 @@ textbox-num-sep {
 inputbar {
     padding:    1px ;
     spacing:    0px ;
-    text-color: var(foreground-color);
+    text-color: var(fg-color);
     children:   [ "prompt","textbox-prompt-colon","entry","num-filtered-rows","textbox-num-sep","num-rows","case-indicator" ];
 }
 case-indicator {
     spacing:    0;
-    text-color: var(foreground-color);
+    text-color: var(fg-color);
 }
 entry {
-    text-color:        var(foreground-color);
+    text-color:        var(fg-color);
     cursor:            text;
     spacing:           0;
     placeholder-color: Gray;
@@ -152,7 +137,7 @@ entry {
 }
 prompt {
     spacing:    0;
-    text-color: var(foreground-color);
+    text-color: var(fg-color);
 }
 textbox-prompt-colon {
     margin:     0px 0.3000em 0.0000em 0.0000em ;

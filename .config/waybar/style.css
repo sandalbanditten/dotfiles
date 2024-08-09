@@ -4,9 +4,10 @@
     font-size: 20px;
     color: @foreground;
     /* background-color: @background; */
-    background-color: transparent;
+    /* background-color: transparent; */
     /* padding: 1px 4px 4px 0px */
-    padding-top: 1px;
+    /* padding-top: 1px; */
+    border-radius: 12px;
 }
 
 @import "gruvbox.css";
@@ -35,19 +36,15 @@ tooltip label {
     /* background: @background; */
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-/* button:hover { */
-    /* background: inherit; */
-    /* box-shadow: inset 0 -4px #ffffff; */
-/* } */
-
-/* you can set a style on hover for any module like this */
-/* #pulseaudio:hover { */
-    /* background-color: @background; */
-/* } */
+#waybar {
+    margin-top: 12px;
+    background: transparent;
+    color: @background;
+}
 
 #workspaces {
-    
+    border-radius: 8px;
+    background: rgba(40, 40, 40, 0.75);
 }
 
 #workspaces button {
@@ -63,15 +60,15 @@ tooltip label {
     /* color: @background; */
     box-shadow: none;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
 }
 
 #workspaces button.active:hover {
-    background: rgba(40, 40, 40, 0.75);
+    background: #282828;
     /* color: @background; */
     box-shadow: none;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
 }
 
 #workspaces button.empty {
@@ -111,14 +108,17 @@ tooltip label {
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
-#mpd {
-    padding: 0 10px;
-    color: #ffffff;
+#window {
+    border-radius: 8px;
+    background: rgba(40, 40, 40, 0.75);
+    padding: 0px 8px 0px 8px;
 }
 
-#window,
+window#waybar.empty #window {
+    background: transparent;
+}
 /* #workspaces { */
-    /* margin: 0 4px; */
+/* margin: 0 4px; */
 /* } */
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -132,20 +132,11 @@ tooltip label {
 }
 
 #clock {
+    margin-right: 12px;
     /* background-color: @background; */
-    padding-right: 24px;
+    /* border-radius: 8px; */
+    background: rgba(40, 40, 40, 0.75);
     color: @foreground;
-}
-
-#battery {
-    /* background-color: @background; */
-    color: @foreground;
-}
-
-#battery.charging, #battery.plugged {
-    color: @foreground;
-    /* background-color: @green; */
-    box-shadow: inset 0 -4px @green;
 }
 
 @keyframes blink {
@@ -155,10 +146,29 @@ tooltip label {
     }
 }
 
+#battery {
+    border-radius: 8px;
+    background: rgba(40, 40, 40, 0.75);
+    /* background-color: @background; */
+    color: @foreground;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: @foreground;
+    /* background-color: @green; */
+    /* box-shadow: inset 0 -4px @green; */
+    background-color: @green;
+    color: @background;
+    /* border: 4px solid @green; */
+    /* border-radius: 12px; */
+}
+
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    color: @foreground;
-    box-shadow: inset 0 -4px @red;
+    color: @background;
+    background-color: @red;
+    /* box-shadow: inset 0 -4px @red; */
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -167,41 +177,59 @@ tooltip label {
 }
 
 /* label:focus { */
-    /* background-color: #000000; */
+/* background-color: #000000; */
 /* } */
 
 #cpu {
+    border-radius: 8px;
+    background: rgba(40, 40, 40, 0.75);
     /* background-color: #2ecc71; */
     /* color: #000000; */
     color: @foreground;
 }
 
 #memory {
+    border-radius: 8px;
+    background: rgba(40, 40, 40, 0.75);
     /* background-color: #9b59b6; */
     color: @foreground;
 }
 
 #disk {
-    background-color: #964B00;
+    border-radius: 8px;
+    background: rgba(40, 40, 40, 0.75);
+    background-color: #964b00;
 }
 
 #backlight {
+    border-radius: 8px;
+    background: rgba(40, 40, 40, 0.75);
     /* background-color: #90b1b1; */
     color: @foreground;
 }
 
 #network {
-    box-shadow: inset 0 -4px @green;
-    /* background-color: @green; */
-    color: @foreground;
+    border-radius: 8px;
+    background: rgba(40, 40, 40, 0.75);
+    /* box-shadow: inset 0 -4px @green; */
+    /* border: 4px solid @green; */
+    /* border-radius: 12px; */
+    background-color: @green;
+    color: @background;
 }
 
 #network.disconnected {
-    box-shadow: inset 0 -4px @red;
-    color: @foreground;
+    /* box-shadow: inset 0 -4px @red; */
+    /* border: 4px solid @red; */
+    /* border-radius: 12px; */
+    /* color: @foreground; */
+    background-color: @red;
+    color: @background;
 }
 
 #pulseaudio {
+    border-radius: 8px;
+    background: rgba(40, 40, 40, 0.75);
     /* background-color: #f1c40f; */
     /* color: #000000; */
     color: @foreground;
@@ -209,8 +237,12 @@ tooltip label {
 
 #pulseaudio.muted {
     /* background-color: @red; */
-    color: @foreground;
-    box-shadow: inset 0 -4px @red;
+    /* color: @foreground; */
+    /* box-shadow: inset 0 -4px @red; */
+    /* border: 4px solid @red; */
+    /* border-radius: 12px; */
+    background-color: @red;
+    color: @background;
     /* color: #2a5c45; */
 }
 
@@ -229,15 +261,9 @@ tooltip label {
     min-width: 100px;
 }
 
-#custom-media.custom-spotify {
-    background-color: #66cc99;
-}
-
-#custom-media.custom-vlc {
-    background-color: #ffa000;
-}
-
 #temperature {
+    border-radius: 8px;
+    background: rgba(40, 40, 40, 0.75);
     background-color: #f0932b;
 }
 
@@ -246,9 +272,11 @@ tooltip label {
 }
 
 #tray {
+    border-radius: 8px;
+    background: rgba(40, 40, 40, 0.75);
     /* background-color: #2980b9; */
-    background-color: transparent;
-    padding-left: 24px;
+    /* background-color: transparent; */
+    margin-left: 12px;
 }
 
 #tray menu {
@@ -263,6 +291,8 @@ tooltip label {
 #tray menu menuitem:hover {
     background-color: @green;
     /* box-shadow: inset 0 -4px @foreground; */
+    color: #0000ff;
+    border-radius: 0px;
 }
 
 #tray > .passive {
@@ -275,32 +305,15 @@ tooltip label {
 }
 
 #idle_inhibitor {
+    margin: 0px 0px 0px 12px;
+    border-radius: 8px;
+    background: rgba(40, 40, 40, 0.75);
     /* background-color: #2d3436; */
     color: @foreground;
 }
 
 #idle_inhibitor.activated {
-    background-color: @foreground;
+    background: @foreground;
     color: @background;
 }
 
-#privacy {
-    padding: 0;
-}
-
-#privacy-item {
-    padding: 0 5px;
-    color: white;
-}
-
-#privacy-item.screenshare {
-    background-color: #cf5700;
-}
-
-#privacy-item.audio-in {
-    background-color: #1ca000;
-}
-
-#privacy-item.audio-out {
-    background-color: #0069d4;
-}
