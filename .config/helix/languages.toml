@@ -1,0 +1,37 @@
+[[language]]
+name = "rust"
+
+[language-server.rust-analyzer.config]
+rust-analyzer.inlayHints.bindingModeHints.enable = true
+rust-analyzer.inlayHints.closureReturnTypeHints.enable = "always"
+rust-analyzer.inlayHints.closureStyle = "rust_analyzer"
+rust-analyzer.inlayHints.discriminantHints.enable = "always"
+rust-analyzer.inlayHints.typeHints.hideClosureInitialization = true
+
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+'<' = '>'
+
+[[language]]
+name = "haskell"
+auto-format = true
+formatter = { command = "stylish-haskell" }
+
+# [[language]]
+# name = "typst"
+# auto-format = true
+# formatter = { command = "prettypst", args = ["--use-std-in", "--use-std-out", "--style=otbs"] }
+# formatter = { command = "typstfmt" }
+
+# [language.config.texlab.build]
+# executable = "latexmk"
+# args = ["-xelatex", "%f"]
+# onSave = true
+# forwardSearchAfter = false
+
+# [language.config.texlab.chktex]
+# onEdit = true
