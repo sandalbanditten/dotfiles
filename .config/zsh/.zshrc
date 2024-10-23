@@ -18,7 +18,7 @@ source ~/.zshcompletion
 compdef vman="man"
 
 # Aliases
-source ~/.zshalias
+source ~/.config/zsh/.zshalias
 
 # Suggestions and syntax highlighting
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -28,7 +28,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source ~/.fzf.zsh
 
 # Binding some keys
-source ~/.zshbinds
+source ~/.config/zsh/.zshbinds
 
 eza --icons
 
@@ -37,3 +37,6 @@ eval "$(zoxide init zsh)"
 
 # PS1
 # eval "$(starship init zsh)"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

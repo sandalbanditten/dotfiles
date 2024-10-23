@@ -4,7 +4,7 @@ export VISUAL="vi"
 export XDG_CONFIG_HOME="$HOME/.config"
 # other path
 export PATH="$PATH:$HOME/.local/bin"
-export PATH="$PATH:$HOME/Code/Scripts"
+export PATH="$PATH:$HOME/Code/scripts"
 # for gpg
 export GPG_TTY="$(tty)"
 # programs
