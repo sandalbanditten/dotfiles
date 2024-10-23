@@ -1,10 +1,5 @@
 [Default Applications]
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
-# application/rtf=wine-extension-rtf.desktop;
-# application/vnd.ms-htmlhelp=wine-extension-chm.desktop;
-# application/winhlp=wine-extension-hlp.desktop;
-# application/x-mswinurl=wine-extension-url.desktop;
-# application/x-mswrite=wine-extension-wri.desktop;
 application/x-wine-extension-ini=wine-extension-ini.desktop;
 application/x-wine-extension-msp=wine-extension-msp.desktop;
 application/xml=helix.desktop;
@@ -14,8 +9,6 @@ image/png=imv.desktop;
 text/html=helix.desktop;
 text/plain=helix.desktop;
 text/vbscript=helix.desktop;
-
-# From /usr/share/applications/mimeinfo.cache
 application/clarisworks=libreoffice-calc.desktop;libreoffice-draw.desktop;libreoffice-writer.desktop;
 application/csv=libreoffice-calc.desktop;
 application/docbook+xml=libreoffice-writer.desktop;
@@ -422,3 +415,7 @@ x-scheme-handler/vnd.libreoffice.cmis=libreoffice-startcenter.desktop;
 x-scheme-handler/vnd.libreoffice.command=libreoffice-startcenter.desktop;
 x-scheme-handler/vnd.sun.star.webdav=libreoffice-startcenter.desktop;
 x-scheme-handler/vnd.sun.star.webdavs=libreoffice-startcenter.desktop;
+x-scheme-handler/tonsite=org.telegram.desktop.desktop
+
+[Added Associations]
+x-scheme-handler/tonsite=org.telegram.desktop.desktop;
