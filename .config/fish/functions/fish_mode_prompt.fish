@@ -54,7 +54,7 @@ function fish_mode_prompt --description 'Write out the prompt'
 
     # PWD
     set_color $color_cwd
-    echo -n (prompt_pwd)
+    echo -n (prompt_pwd --full-length-dirs=7 --dir-length=3)
     set_color normal
 
     printf '%s ' (fish_vcs_prompt)
@@ -69,22 +69,23 @@ function fish_mode_prompt --description 'Write out the prompt'
         case default
             set_color --bold green
             echo -n "Λ "
-            # echo -n "λ "
+            # echo -n ">_ "
         case insert
             set_color --bold blue
             echo -n "λ "
+            # echo -n ">_ "
         case replace_one
             set_color --bold purple
             echo -n "Λ "
-            # echo -n "λ "
+            # echo -n ">_ "
         case replace
             set_color --bold purple
             echo -n "Λ "
-            # echo -n "λ "
+            # echo -n ">_ "
         case visual
             set_color --bold yellow
             echo -n "Λ "
-            # echo -n "λ "
+            # echo -n ">_ "
     end
     # echo -n "$suffix "
     set_color normal
