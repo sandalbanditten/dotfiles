@@ -1,5 +1,5 @@
 {
-    "spacing": 8,
+    "spacing": 12,
     "margin-top": 12,
     "modules-left": [
         "tray",
@@ -9,11 +9,10 @@
         "hyprland/window"
     ],
     "modules-right": [
-        "idle_inhibitor",
         "pulseaudio",
         "network",
-        "cpu",
-        "memory",
+        // "cpu",
+        // "memory",
         "backlight",
         "battery",
         "clock"
@@ -22,26 +21,55 @@
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": true,
-        "format": "{name}",
-        "persistent-workspaces": {
-            "*": 9
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "0",
         }
+        // "persistent-workspaces": {
+            // "1": [],
+            // "2": [],
+            // "3": [],
+            // "4": [],
+            // "5": [],
+            // "6": [],
+            // "7": [],
+            // "8": [],
+            // "9": [],
+            // "0": [],
+        // }
     },
     "hyprland/window": {
         "format": "{title}",
         "rewrite": {
-            "(.*) — Mozilla Firefox": " — $1",
-            "yazi: (.*)": " — $1",
-            "btop(.*)": "",
-            "(.*) - Discord": "",
-            "tmux (.*)": " — $1",
-            "(.*) - mpv": " — $1",
-            "kitty(.*)": " — $1",
-            "steam(.*)": "",
-            "imv - (.*)": " — $1",
-            "(.*) - Obsidian v(.*)": " — $1",
-            "Obsidian": "",
-            "Obsidian(.*)": " — $1"
+            "(.*) — Mozilla Firefox": " - $1",
+            "Mozilla Firefox": "",
+            "yazi: (.*)": " - $1",
+            "btop(.*)": " ",
+            "(.*) - Discord": " ",
+            "tmux (.*)": " - $1",
+            "(.*) - mpv": " - $1",
+            "kitty(.*)": " - $1",
+            "steam(.*)": " ",
+            "imv - (.*)": " - $1",
+            "(.*) - Obsidian v(.*)": " - $1",
+            "Obsidian": " ",
+            "Obsidian(.*)": " - $1",
+            "(.*) - YouTube(.*)": "$1 - $2",
+            "(.*)YouTube(.*)": "$1$2",
+            "(.*) \\| The StoryGraph(.*)": "$1 - $2",
+            "(.*)ArchWiki(.*)": "$1󰣇$2",
+            "(.*)Arch Linux(.*)": "$1󰣇$2",
+            "(.*)AUR (.)en(.)(.*)": "$1󰣇$4",
+            "(.*)Wikipedia(.*)": "$1󰖬 ",
         }
     },
     "keyboard-state": {
@@ -52,15 +80,6 @@
             "locked": "",
             "unlocked": ""
         }
-    },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "sway/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
     },
     "idle_inhibitor": {
         "format": "{icon}",
@@ -80,19 +99,19 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "{usage}% ",
+        "format": "{usage}%  ",
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}%  "
     },
     "temperature": {
         "critical-threshold": 80,
         "format": "{temperatureC}°C {icon}",
         "format-icons": [
-            "",
-            "",
-            ""
+            " ",
+            " ",
+            " "
         ]
     },
     "backlight": {
@@ -121,13 +140,13 @@
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            " ",
+            " ",
+            " ",
+            " ",
+            " "
         ]
-    },
+     },
     "power-profiles-daemon": {
         "format": "{icon}",
         "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
@@ -140,7 +159,7 @@
         }
     },
     "network": {
-        "format-wifi": "{essid} ",
+        "format-wifi": "{essid}  ",
         "format-ethernet": "{ipaddr}/{cidr}",
         "tooltip-format": "{ifname} via {gwaddr}",
         "format-linked": "{ifname} (No IP)",
@@ -150,18 +169,18 @@
     "pulseaudio": {
         "scroll-step": 5,
         "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": "{volume}%  {icon} {format_source}",
+        "format-muted": "{volume}%  {format_source}",
+        "format-source": "{volume}% " ,
+        "format-source-muted": "{volume}%  ",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
             "default": [
                 "",
                 "",

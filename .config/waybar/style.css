@@ -76,10 +76,27 @@ tooltip label {
     box-shadow: inset 0 -4px transparent;
 }
 
+#workspaces button.empty:hover {
+    background: #282828;
+    /* color: @background; */
+    box-shadow: none;
+    border: none;
+    border-radius: 6px;
+}
+
 /* Focused on other monitor */
 #workspaces button.visible {
     /* background-color: #ffffff; */
     box-shadow: inset 0 -4px @blue;
+}
+
+/* Focused on other monitor */
+#workspaces button.visible:hover {
+    background: #282828;
+    /* color: @background; */
+    box-shadow: none;
+    border: none;
+    border-radius: 6px;
 }
 
 #workspaces button.active {
@@ -90,6 +107,14 @@ tooltip label {
 #workspaces button.urgent {
     box-shadow: inset 0 -4px @red;
     color: @red;
+}
+
+#workspaces button.urgent:hover {
+    background: #282828;
+    /* color: @background; */
+    box-shadow: none;
+    border: none;
+    border-radius: 6px;
 }
 
 #clock,
@@ -111,7 +136,7 @@ tooltip label {
 #window {
     border-radius: 8px;
     background: rgba(40, 40, 40, 0.75);
-    padding: 0px 8px 0px 8px;
+    padding: 0px 12px 0px 12px;
 }
 
 window#waybar.empty #window {
@@ -202,6 +227,7 @@ window#waybar.empty #window {
 }
 
 #backlight {
+    padding-right: 12px;
     border-radius: 8px;
     background: rgba(40, 40, 40, 0.75);
     /* background-color: #90b1b1; */
@@ -228,6 +254,7 @@ window#waybar.empty #window {
 }
 
 #pulseaudio {
+    padding-right: 12px;
     border-radius: 8px;
     background: rgba(40, 40, 40, 0.75);
     /* background-color: #f1c40f; */
@@ -236,6 +263,7 @@ window#waybar.empty #window {
 }
 
 #pulseaudio.muted {
+    padding-right: 12px;
     /* background-color: @red; */
     /* color: @foreground; */
     /* box-shadow: inset 0 -4px @red; */
