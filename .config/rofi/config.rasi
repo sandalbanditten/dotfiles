@@ -43,7 +43,7 @@ configuration {
 	window-format: "{w}    {c}   {t}";
 	click-to-exit: true;
 	global-kb: false;
-	max-history-size: 25;
+	max-history-size: 50;
 	combi-hide-mode-prefix: false;
 	combi-display-format: "{mode} {text}";
 	/* matching-negate-char: '-'  unsupported ; */
