@@ -1,6 +1,6 @@
 {
-    "spacing": 12,
-    "margin-top": 12,
+    "spacing": 0,
+    // "margin-top": 12,
     "modules-left": [
         "tray",
         "hyprland/workspaces"

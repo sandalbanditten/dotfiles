@@ -3,11 +3,11 @@
     font-family: Fira Code Retina;
     font-size: 20px;
     color: @foreground;
-    /* background-color: @background; */
+    background-color: @background;
     /* background-color: transparent; */
     /* padding: 1px 4px 4px 0px */
     /* padding-top: 1px; */
-    border-radius: 12px;
+    /* border-radius: 12px; */
 }
 
 @import "gruvbox.css";
@@ -23,11 +23,13 @@ button {
 }
 
 tooltip {
-    /* color: @background; */
+    /* color: transparent; */
     /* background: @background; */
-    background: rgba(40, 40, 40, 0.75);
+    border: none;
     border: 4px solid @green;
-    border-radius: 12px;
+    border-radius: 0px;
+    padding: 0px;
+    margin: 0px;
 }
 
 tooltip label {
@@ -36,15 +38,9 @@ tooltip label {
     /* background: @background; */
 }
 
-#waybar {
-    margin-top: 12px;
-    background: transparent;
-    color: @background;
-}
-
 #workspaces {
-    border-radius: 8px;
-    background: rgba(40, 40, 40, 0.75);
+    /* border-radius: 8px; */
+    background: @background;
 }
 
 #workspaces button {
@@ -56,32 +52,37 @@ tooltip label {
 }
 
 #workspaces button:hover {
-    background: rgba(40, 40, 40, 0.75);
+    animation: disabled;
+    background: #3c3836;
     /* color: @background; */
-    box-shadow: none;
+    /* box-shadow: none; */
     border: none;
-    border-radius: 6px;
+    /* border-radius: 6px; */
+}
+
+#workspaces button:hover * {
+    background-color: #3c3836;
+    animation: disabled;
 }
 
 #workspaces button.active:hover {
-    background: #282828;
+    background: #3c3836;
+    /* background: @background; */
     /* color: @background; */
-    box-shadow: none;
     border: none;
-    border-radius: 6px;
+    /* border-radius: 6px; */
 }
-
 #workspaces button.empty {
     /* color: @green; */
     box-shadow: inset 0 -4px transparent;
 }
 
 #workspaces button.empty:hover {
-    background: #282828;
+    background: #3c3836;
     /* color: @background; */
     box-shadow: none;
     border: none;
-    border-radius: 6px;
+    /* border-radius: 6px; */
 }
 
 /* Focused on other monitor */
@@ -92,11 +93,11 @@ tooltip label {
 
 /* Focused on other monitor */
 #workspaces button.visible:hover {
-    background: #282828;
+    background: #3c3836;
     /* color: @background; */
-    box-shadow: none;
+    /* box-shadow: none; */
     border: none;
-    border-radius: 6px;
+    /* border-radius: 6px; */
 }
 
 #workspaces button.active {
@@ -110,11 +111,10 @@ tooltip label {
 }
 
 #workspaces button.urgent:hover {
-    background: #282828;
+    background: #3c3836;
     /* color: @background; */
-    box-shadow: none;
     border: none;
-    border-radius: 6px;
+    /* border-radius: 6px; */
 }
 
 #clock,
@@ -128,23 +128,16 @@ tooltip label {
 #pulseaudio,
 #wireplumber,
 #custom-media,
-#tray,
 #mode,
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
 #window {
-    border-radius: 8px;
-    background: rgba(40, 40, 40, 0.75);
+    /* border-radius: 8px; */
+    background: @background;
     padding: 0px 12px 0px 12px;
+    border-bottom: 0px;
 }
-
-window#waybar.empty #window {
-    background: transparent;
-}
-/* #workspaces { */
-/* margin: 0 4px; */
-/* } */
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
@@ -157,10 +150,10 @@ window#waybar.empty #window {
 }
 
 #clock {
-    margin-right: 12px;
+    margin-right: 0px;
     /* background-color: @background; */
     /* border-radius: 8px; */
-    background: rgba(40, 40, 40, 0.75);
+    background: @background;
     color: @foreground;
 }
 
@@ -172,8 +165,8 @@ window#waybar.empty #window {
 }
 
 #battery {
-    border-radius: 8px;
-    background: rgba(40, 40, 40, 0.75);
+    /* border-radius: 8px; */
+    background: @background;
     /* background-color: @background; */
     color: @foreground;
 }
@@ -206,37 +199,37 @@ window#waybar.empty #window {
 /* } */
 
 #cpu {
-    border-radius: 8px;
-    background: rgba(40, 40, 40, 0.75);
+    /* border-radius: 8px; */
+    background: @background;
     /* background-color: #2ecc71; */
     /* color: #000000; */
     color: @foreground;
 }
 
 #memory {
-    border-radius: 8px;
-    background: rgba(40, 40, 40, 0.75);
+    /* border-radius: 8px; */
+    background: @background;
     /* background-color: #9b59b6; */
     color: @foreground;
 }
 
 #disk {
-    border-radius: 8px;
-    background: rgba(40, 40, 40, 0.75);
-    background-color: #964b00;
+    /* border-radius: 8px; */
+    background: @background;
+    background-color: @background;
 }
 
 #backlight {
     padding-right: 12px;
-    border-radius: 8px;
-    background: rgba(40, 40, 40, 0.75);
+    /* border-radius: 8px; */
+    background: @background;
     /* background-color: #90b1b1; */
     color: @foreground;
 }
 
 #network {
-    border-radius: 8px;
-    background: rgba(40, 40, 40, 0.75);
+    /* border-radius: 8px; */
+    background: @background;
     /* box-shadow: inset 0 -4px @green; */
     /* border: 4px solid @green; */
     /* border-radius: 12px; */
@@ -255,8 +248,8 @@ window#waybar.empty #window {
 
 #pulseaudio {
     padding-right: 12px;
-    border-radius: 8px;
-    background: rgba(40, 40, 40, 0.75);
+    /* border-radius: 8px; */
+    background: @background;
     /* background-color: #f1c40f; */
     /* color: #000000; */
     color: @foreground;
@@ -290,8 +283,8 @@ window#waybar.empty #window {
 }
 
 #temperature {
-    border-radius: 8px;
-    background: rgba(40, 40, 40, 0.75);
+    /* border-radius: 8px; */
+    background: @background;
     background-color: #f0932b;
 }
 
@@ -300,27 +293,27 @@ window#waybar.empty #window {
 }
 
 #tray {
-    border-radius: 8px;
-    background: rgba(40, 40, 40, 0.75);
+    padding: 0px 12px 0px 12px;
+    /* border-radius: 8px; */
+    background: @background;
     /* background-color: #2980b9; */
     /* background-color: transparent; */
-    margin-left: 12px;
 }
 
 #tray menu {
-    /* background-color: @red; */
-    /* background: @background; */
-    background: rgba(40, 40, 40, 0.75);
+    background: #282828;
     border: 4px solid @green;
-    /* border: solid; */
-    border-radius: 12px;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
 }
 
 #tray menu menuitem:hover {
-    background-color: @green;
-    /* box-shadow: inset 0 -4px @foreground; */
-    color: #0000ff;
-    border-radius: 0px;
+    background-color: #3c3836;
+}
+
+#tray menu menuitem:hover * {
+    background-color: #3c3836;
 }
 
 #tray > .passive {
@@ -334,8 +327,8 @@ window#waybar.empty #window {
 
 #idle_inhibitor {
     margin: 0px 0px 0px 12px;
-    border-radius: 8px;
-    background: rgba(40, 40, 40, 0.75);
+    /* border-radius: 8px; */
+    background: @background;
     /* background-color: #2d3436; */
     color: @foreground;
 }

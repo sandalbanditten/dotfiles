@@ -2,8 +2,8 @@ div > .vimiumHintMarker {
   padding: 4px 6px;
   background-color: #282828;
   border: 0;
-  border-radius: 2px;
-  /* box-shadow: 0em 0.1em 0.6em 0.1em rgba(0, 0, 0, 0.4); */
+  border-radius: 0px;
+  box-shadow: 0em 0em 0em 0em rgba(0, 0, 0, 0.4);
   background-image: none;
 }
 
@@ -22,8 +22,9 @@ div > .vimiumHintMarker > .matchingCharacter {
 /*VOMNIBAR*/
 #vomnibar{
   background-color: #282828;
-  border-radius: 8px;
-  border: 2px solid #98971a;
+  border-radius: 0px;
+  border: 3px solid #98971a;
+  box-shadow: #000000 0px 0px 0px 0px;
 }
 
 #vomnibar input {
@@ -35,7 +36,7 @@ div > .vimiumHintMarker > .matchingCharacter {
   /* margin-bottom: 0; */
   padding: 4px;
   background-color: #282828;
-  /* box-shadow: #add8e6 0px 0px 1px; */
+  box-shadow: #000000 0px 0px 0px 0px;
   width: 100%;
   outline: none;
   box-sizing: border-box;
@@ -45,8 +46,8 @@ div > .vimiumHintMarker > .matchingCharacter {
   display: block;
   padding: 12px;
   background-color: #282828;
-  border-radius: 8px;
-  /* border-bottom: 1px solid #ff0000; */
+  border-radius: 1px;
+  border-bottom: 0px solid #fbf1c7;
 }
 
 #vomnibar ul {
@@ -60,7 +61,7 @@ div > .vimiumHintMarker > .matchingCharacter {
 }
 
 #vomnibar li {
-  /* border-bottom: 1px solid #1d2021; */
+  border-bottom: 0px solid #fbf1c7;
   line-height: 1.1em;
   padding: 7px 10px;
   font-size: 16px;

@@ -3,7 +3,7 @@ abbr -a b bat
 abbr -a btctl bluetoothctl
 abbr -a c clear
 abbr -a cg cargo
-abbr -a cit git --git-dir=/home/notroot/.dotfiles/ --work-tree=/home/notroot
+abbr -a config git --git-dir=/home/notroot/.dotfiles/ --work-tree=/home/notroot
 abbr -a duf duf -theme ansi
 abbr -a e hx
 abbr -a gia git add
@@ -23,6 +23,7 @@ abbr -a k kalker
 abbr -a kb head -n 42 ~/Documents/keymap.c
 abbr -a pmr doas pacman -Rns
 abbr -a pms doas pacman -S
+abbr -a showcolor perl -e '\'print "\e[48;2;".join(";",unpack("C*",pack("H*",$ARGV[0])))."m  \e[49m"\''
 abbr -a x eza --icons
 abbr -a xal eza --icons -aTlL1 --git
 abbr -a xl eza --icons -TlL1 --git
