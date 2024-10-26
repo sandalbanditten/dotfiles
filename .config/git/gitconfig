@@ -1,0 +1,13 @@
+[user]
+	email = sandalbanditten@tutanota.com
+	name = "Tobias Clasen"
+[core]
+	pager = bat
+	editor = helix
+[diff]
+	# tool = nvim -d
+	external = difft
+[credential]
+	helper = store
+[init]
+	defaultBranch = main
