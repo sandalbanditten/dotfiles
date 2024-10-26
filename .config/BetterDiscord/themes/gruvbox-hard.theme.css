@@ -15,8 +15,8 @@ pre > code {
 .theme-dark {
     --background-primary: #282828;
     --background-secondary: #282828;
-    --background-tertiary: #282828;
-    --background-accent: #3c3836;
+    --background-tertiary: #3c3836;
+    --background-accent: #7c6f64;
     --text-normal: #ebdbb2;
     --text-spotify: #fbf1c7;
     --text-muted: #bdae93;
@@ -656,7 +656,7 @@ div[class*="contentContainer"] > div[class*="scroller"] > div[class*="contentWid
     display: block;
     overflow-x: auto;
     padding: 0.5em;
-    background: #282828;
+    background: #ff0000;
 }
   
 .theme-dark .hljs,
@@ -736,8 +736,7 @@ div[class*="contentContainer"] > div[class*="scroller"] > div[class*="contentWid
 .hljs-meta-keyword,
 .hljs-selector-pseudo,
 .hljs-tag {
-    color: #9891a;
-    /* color: #8ec07c; */
+    color: #98971a;
 }
   
 /* Gruvbox Gray */
