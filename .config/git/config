@@ -1,0 +1,12 @@
+[user]
+	email = sandalbanditten@tutanota.com
+	name = Tobias Clasen
+[diff]
+	tool = difft
+[merge]
+	tool = difft
+[difftool]
+	prompt = false
+[core]
+	pager = bat
+	editor = helix
