@@ -90,7 +90,7 @@ text_icon_padding = 0
 frame_width = 4
 
 # Defines color of the frame around the notification window.
-frame_color = "#98971a"
+frame_color = "#b16286"
 
 # Define a color for the separator.
 # possible values are:

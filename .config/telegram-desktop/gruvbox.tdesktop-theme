@@ -62,7 +62,7 @@ material_orange: #e78a4e;
 
 none: #00000000;
 
-windowActiveTextFg: bright_orange; // fallback for active text like online status
+windowActiveTextFg: bright_purple; // fallback for active text like online status
 windowBg: bg0; // fallback for background
 windowBgActive: windowActiveTextFg; // fallback for filled active areas
 windowBgOver: bg0_soft; // fallback for background with mouse over
@@ -113,8 +113,8 @@ filterInputBorderFg: neutral_gray; // default rounded input field border (like i
 filterInputInactiveBg: bg1; // default rounded input field background (like in chats list search field when field is inactive)
 filterInputActiveBg: filterInputInactiveBg; // default rounded input field active background (like in chats list search field when field is focused)
 
-activeButtonBg: neutral_orange; // default active button background
-activeButtonBgOver: bright_orange; // default active button background with mouse over
+activeButtonBg: neutral_purple; // default active button background
+activeButtonBgOver: bright_purple; // default active button background with mouse over
 activeButtonBgRipple: windowBgRipple; // default active button ripple effect
 activeButtonFg: fg; // default active button text
 activeButtonFgOver: activeButtonFg; // default active button text with mouse over
@@ -206,7 +206,7 @@ msgOutMonoFg: fg4; // outbox message monospace text
 
 msgServiceFg: fg1; // service message text (like date dividers or service message about the group title being changed)
 msgServiceBg: bg1; // service message background (like in a service message about group title being changed) (adjusted)
-msgInServiceFg: bright_orange; // inbox message information text (like information about a forwarded message original sender)
+msgInServiceFg: bright_purple; // inbox message information text (like information about a forwarded message original sender)
 msgOutServiceFg: msgInServiceFg; // outbox message information text (like information about a forwarded message original sender)
 msgInReplyBarColor: msgInServiceFg; // inbox message reply outline
 msgOutReplyBarColor: msgOutServiceFg; // outbox message reply outline
@@ -403,7 +403,7 @@ sideBarIconFgActive: windowActiveTextFg; // filters side bar active item icon
 statisticsChartLineBlue: bright_red; // syntax highlight: atrule, attr-value, keyword, function
 statisticsChartLineRed: bright_purple; // syntax highlight: property, tag, boolean, number, constant, symbol, deleted, operator, entity, url, punctuation
 statisticsChartLineOrange: bright_yellow; // syntax highlight: selector, attr-name, string, char, builtin, inserted
-statisticsChartLinePurple: bright_orange; // syntax highlight: class-name
+statisticsChartLinePurple: bright_purple; // syntax highlight: class-name
 statisticsChartLineLightblue: neutral_gray; // syntax highlight: comment, block-comment, prolog, doctype, cdata
 
 statisticsChartLineGreen: neutral_green; // syntax highlight: none

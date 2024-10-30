@@ -4,7 +4,7 @@
 "attribute" = "red1" # class attributes idk fuck OOP
 "keyword" = { fg = "red1" }
 "keyword.directive" = "red1"
-"namespace" = "orange1"
+"namespace" = "purple0"
 "type" = { fg = "yellow1", modifiers = ["bold"] }
 "type.builtin" = { fg = "yellow1" }
 "constructor" = { fg = "yellow1", modifiers = ["bold"] } # in Rust: Some(_), etc.
@@ -42,7 +42,7 @@
 "keyword.storage" = { fg = "red1" }
 "keyword.storage.type" = { fg = "red1" }
 "keyword.storage.modifier" = { fg = "red1" }
-"operator" = "orange1"
+"operator" = "fg0"
 "function" = { fg = "blue0", modifiers = ["bold"] }
 "function.builtin" = { fg = "yellow1", modifiers = ["bold"] }
 "function.method" = { fg = "blue0", modifiers = ["bold"] }
@@ -57,7 +57,7 @@
 "markup.italic" = { modifiers = ["italic"] }
 "markup.link.url" = { fg = "yellow1", modifiers = ["underlined"] }
 "markup.link.label" = { fg = "yellow1", modifiers = ["underlined"] }
-"markup.link.text" = "orange1"
+"markup.link.text" = "purple0"
 "markup.quote" = "green1"
 "markup.raw" = "red1"
 "diff" = "fg4"
@@ -92,7 +92,7 @@
 "ui.statusline.normal" = { bg = "green1", fg = "bg0" }
 "ui.statusline.insert" = { bg = "blue0", fg = "bg0" }
 "ui.statusline.select" = { bg = "yellow1", fg = "bg0" }
-"ui.statusline.separator" = { bg = "purple1", fg = "bg0" } # ???
+"ui.statusline.separator" = { bg = "red1", fg = "bg0" } # ???
 # "ui.popup" = { bg = "bg1" }
 # "ui.popup.info" = { bg = "bg1" }
 # "ui.window" = { bg = "bg0" } # split separator - commented out for transparency

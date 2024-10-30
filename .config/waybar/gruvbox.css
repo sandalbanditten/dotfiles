@@ -7,6 +7,7 @@
 @define-color blue       #458588;
 @define-color magenta    #b16286;
 @define-color cyan       #689d6a;
+@define-color purple     #b16286;
 @define-color white      #a89984;
 @define-color aqua       #689d6a;
 @define-color orange     #d65d0e;
@@ -20,4 +21,5 @@
 @define-color green_b    #b8bb26;
 @define-color blue_b     #83a598;
 @define-color aqua_b     #8ec07c;
+@define-color purple_b   #d3869b;
 @define-color orange_b   #fe8010;
