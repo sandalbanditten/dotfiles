@@ -4,7 +4,7 @@
 "attribute" = "red1" # class attributes idk fuck OOP
 "keyword" = { fg = "red1" }
 "keyword.directive" = "red1"
-"namespace" = "purple0"
+"namespace" = "yellow0"
 "type" = { fg = "yellow1", modifiers = ["bold"] }
 "type.builtin" = { fg = "yellow1" }
 "constructor" = { fg = "yellow1", modifiers = ["bold"] } # in Rust: Some(_), etc.
