@@ -23,8 +23,8 @@ set notification-warning-fg '#d79921'
 set recolor-lightcolor '#ebdbb2'
 set recolor-darkcolor '#282828'
 
-set highlight-color 'rgba(152, 151, 26, 0.5)'
-set highlight-active-color 'rgba(184, 187, 38, 0.5)'
+set highlight-color 'rgba(168, 153, 132, 0.5)'
+set highlight-active-color 'rgba(250, 189, 47, 0.5)'
 
 # Transparency not supported here
 set render-loading-bg '#282828'
