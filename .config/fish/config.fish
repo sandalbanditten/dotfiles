@@ -25,8 +25,8 @@ abbr -a pmr doas pacman -Rns
 abbr -a pms doas pacman -S
 abbr -a showcolor perl -e '\'print "\e[48;2;".join(";",unpack("C*",pack("H*",$ARGV[0])))."m  \e[49m"\''
 abbr -a x eza
-abbr -a xal eza -aTlL1 --git
-abbr -a xl eza -TlL1 --git
+abbr -a xal eza -aTlgL1 --git
+abbr -a xl eza -TlgL1 --git
 abbr -a za zathura
 abbr -a zaf zathura --fork
 
