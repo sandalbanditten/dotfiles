@@ -1,5 +1,5 @@
 [Default Applications]
-application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
+application/pdf=org.pwmt.zathura.desktop;
 application/x-wine-extension-ini=wine-extension-ini.desktop;
 application/x-wine-extension-msp=wine-extension-msp.desktop;
 application/xml=helix.desktop;
