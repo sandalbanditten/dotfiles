@@ -1,5 +1,5 @@
 # Font
-set font 'Fira Code Bold 16'
+set font 'Berkeley Mono 16'
 
 # Colors
 set default-bg 'rgba(40, 40, 40, 0.75)'
