@@ -20,7 +20,17 @@ rust-analyzer.inlayHints.typeHints.hideClosureInitialization = true
 name = "haskell"
 auto-format = true
 formatter = { command = "stylish-haskell" }
+indent = { tab-width = 4, unit = "    " }
 
+[[language]]
+name = "typst"
+language-servers = ["tinymist"]
+# TODO: Fix having to manually call :fmt
+formatter = { command = "typstyle" }
+
+[language-server.tinymist]
+command = "tinymist"
+config = { exportPdf = "onType", formatterMode = "typstyle", root-path = "-" }
 # [[language]]
 # name = "typst"
 # auto-format = true

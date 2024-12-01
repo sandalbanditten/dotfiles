@@ -28,8 +28,9 @@ normal = "block"
 select = "underline"
 
 [keys.normal]
-space = { w = ":w", q = ":q", i = ":toggle lsp.display-inlay-hints" }
+space = { w = ":w", q = ":q", i = ":toggle lsp.display-inlay-hints", x = ":bc" }
 esc = ["collapse_selection", "keep_primary_selection"]
+ret = "goto_word"
 
 # Use modal editing, pussy
 [keys.insert]
@@ -48,9 +49,9 @@ tab = "none"
 newline = "none"
 nbsp = "none"
 
-# [editor.whitespace.characters]
-# space = "·"
-# nbsp = "⍽"
-# tab = "→"
-# newline = "⏎"
-# tabpad = "·"
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+tab = "→"
+newline = "⏎"
+tabpad = "·"

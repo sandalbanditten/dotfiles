@@ -5,6 +5,7 @@ abbr -a c clear
 abbr -a cg cargo
 abbr -a config git --git-dir=/home/notroot/.cfg/ --work-tree=/home/notroot
 abbr -a duf duf -theme ansi
+abbr -a dust dust -r
 abbr -a e hx
 abbr -a gia git add
 abbr -a gic git commit

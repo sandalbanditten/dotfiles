@@ -1,6 +1,6 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Fira Code Retina;
+    font-family: Berkeley Mono;
     font-size: 20px;
     color: @foreground;
     background-color: @background;
