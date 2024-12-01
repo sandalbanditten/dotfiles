@@ -1,21 +1,21 @@
 [manager]
-cwd = { fg = "green" }
+cwd = { fg = "magenta" }
 
 # Hovered
-hovered         = { fg = "black", bg = "green" }
-preview_hovered = { bold = true, fg = "green" }
+hovered         = { fg = "black", bg = "magenta" }
+preview_hovered = { bold = true, fg = "magenta" }
 
 # Find
 find_keyword  = { fg = "yellow" }
 find_position = { fg = "magenta", bg = "reset", italic = true }
 
 # Marker
-marker_selected = { fg = "lightgreen",  bg = "lightgreen" }
+marker_selected = { fg = "lightmagenta",  bg = "lightmagenta" }
 marker_copied   = { fg = "lightyellow", bg = "lightyellow" }
 marker_cut      = { fg = "lightred",    bg = "lightred" }
 
 # Tab
-tab_active   = { fg = "black", bg = "green" }
+tab_active   = { fg = "black", bg = "magenta" }
 tab_inactive = { fg = "gray", bg = "black" }
 tab_width    = 1
 

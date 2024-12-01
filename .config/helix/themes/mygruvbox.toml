@@ -2,14 +2,12 @@
 # The theme uses the gruvbox dark palette with standard contrast: github.com/morhetz/gruvbox
 
 "attribute" = "red1" # class attributes idk fuck OOP
-"keyword" = { fg = "red1" }
-"keyword.directive" = "red1"
-"namespace" = "yellow0"
-"type" = { fg = "yellow1", modifiers = ["bold"] }
+"namespace" = "fg2"
+"type" = { fg = "yellow1", modifiers = [] }
 "type.builtin" = { fg = "yellow1" }
 "constructor" = { fg = "yellow1", modifiers = ["bold"] } # in Rust: Some(_), etc.
 # "constant" = { fg = "yellow1", mo1ifiers = ["bold"] }
-"constant.builtin" = { fg = "yellow1", modifiers = ["bold"] }
+"constant.builtin" = { fg = "yellow1", modifiers = [] }
 "constant.character" = { fg = "green1" }
 "constant.character.escape" = { fg = "fg2", modifiers = ["bold"] } # Don't work in Rust
 "constant.numeric" = "yellow1"
@@ -18,30 +16,32 @@
 "string.special.path" = { fg = "green1", modifiers = ["bold"] }
 "string.special.url" = { fg = "green1", modifiers = ["underlined"] }
 "string.special.symbol" = { fg = "green1", modifiers = ["bold"] }
-# "comment" = { fg = "gray1", modifiers = ["italic"] }
-"comment" = { fg = "gray1" }
-"comment.line" = { fg = "gray1", modifiers = ["italic"] }
-"comment.block" = { fg = "gray1", modifiers = ["italic"] }
+# "comment" = { fg = "gray", modifiers = ["italic"] }
+"comment" = { fg = "gray" }
+"comment.line" = { fg = "gray", modifiers = ["italic"] }
+"comment.block" = { fg = "gray", modifiers = ["italic"] }
 "variable" = "fg2"
 "variable.builtin" = "yellow1"
 "variable.parameter" = "fg2"
 "variable.other.member" = "fg2"
-"label" = "aqua0"
+"label" = "yellow0"
 "punctuation" = "fg2"
 "punctuation.delimiter" = "fg4"
 "punctuation.bracket" = "fg4"
 "punctuation.special" = "fg1"
-"keyword.control" = { fg = "red1" }
-"keyword.control.conditional" = { fg = "red1" }
-"keyword.control.repeat" = { fg = "red1" }
-"keyword.control.import" = { fg = "red1" }
-"keyword.control.return" = { fg = "red1" }
-"keyword.control.exception" = { fg = "red1" }
-"keyword.operator" = { fg = "red1" }
-"keyword.function" = { fg = "red1" }
-"keyword.storage" = { fg = "red1" }
-"keyword.storage.type" = { fg = "red1" }
-"keyword.storage.modifier" = { fg = "red1" }
+"keyword" = { fg = "purple1", modifiers = ["bold"] }
+"keyword.directive" = { fg = "purple1", modifiers = ["bold"] }
+"keyword.control" = { fg = "purple1", modifiers = ["bold"] }
+"keyword.control.conditional" = { fg = "purple1", modifiers = ["bold"] }
+"keyword.control.repeat" = { fg = "purple1", modifiers = ["bold"] }
+"keyword.control.import" = { fg = "purple1", modifiers = ["bold"] }
+"keyword.control.return" = { fg = "purple1", modifiers = ["bold"] }
+"keyword.control.exception" = { fg = "purple1", modifiers = ["bold"] }
+"keyword.operator" = { fg = "purple1", modifiers = ["bold"] }
+"keyword.function" = { fg = "purple1", modifiers = ["bold"] }
+"keyword.storage" = { fg = "purple1", modifiers = ["bold"] }
+"keyword.storage.type" = { fg = "purple1", modifiers = ["bold"] }
+"keyword.storage.modifier" = { fg = "purple1", modifiers = ["bold"] }
 "operator" = "fg0"
 "function" = { fg = "blue0", modifiers = ["bold"] }
 "function.builtin" = { fg = "yellow1", modifiers = ["bold"] }
@@ -57,7 +57,7 @@
 "markup.italic" = { modifiers = ["italic"] }
 "markup.link.url" = { fg = "yellow1", modifiers = ["underlined"] }
 "markup.link.label" = { fg = "yellow1", modifiers = ["underlined"] }
-"markup.link.text" = "purple0"
+"markup.link.text" = "purple1"
 "markup.quote" = "green1"
 "markup.raw" = "red1"
 "diff" = "fg4"
@@ -93,23 +93,23 @@
 "ui.statusline.insert" = { bg = "blue0", fg = "bg0" }
 "ui.statusline.select" = { bg = "yellow1", fg = "bg0" }
 "ui.statusline.separator" = { bg = "red1", fg = "bg0" } # ???
-# "ui.popup" = { bg = "bg1" }
-# "ui.popup.info" = { bg = "bg1" }
+"ui.popup" = { bg = "bg0" }
+"ui.popup.info" = { bg = "bg0" }
 # "ui.window" = { bg = "bg0" } # split separator - commented out for transparency
-"ui.help" = { fg = "fg2", bg = "bg1" } # help windows
+"ui.help" = { fg = "fg2", bg = "bg0" } # help windows
 # "ui.text" = { fg = "fg2", bg = "bg0" }
 "ui.virtual.ruler" = { bg = "bg1" }
 # "ui.virtual.wrap" = { fg = "fg4" }
 "ui.virtual.inlay-hint" = { fg = "fg4" }
-"ui.virtual.inlay-hint.parameter" = { fg = "gray1" }
-"ui.virtual.inlay-hint.type" = { fg = "gray1" }
-"ui.virtual.jump-label" = { fg = "yellow0", modifiers = ["bold", "italic", "alkjwlkjad"] }
+"ui.virtual.inlay-hint.parameter" = { fg = "gray" }
+"ui.virtual.inlay-hint.type" = { fg = "gray" }
+"ui.virtual.jump-label" = { fg = "purple1", modifiers = ["bold"] }
 # below is uncommented to appropriately highlight selected whitespace
 # "ui.virtual.whitespace" = { fg = "purple1", bg = "bg0" } # :set whitespace.render all
 # this foreground is undefined to appropriately render selected indent guidelines
 "ui.virtual.indent-guide" = { fg = "bg1" }
-"ui.menu" = { fg = "fg2", bg = "bg1" }
-"ui.menu.selected" = { fg = "bg1", bg = "blue1", modifiers = ["bold"] }
+"ui.menu" = { fg = "fg2", bg = "bg0" }
+"ui.menu.selected" = { fg = "bg1", bg = "purple1", modifiers = ["bold"] }
 "ui.menu.scroll" = { fg = "fg2", bg = "bg1" }
 "ui.selection" = { bg = "bg1" }
 "ui.selection.primary" = { bg = "bg1", modifiers = ["bold"] }
@@ -125,15 +125,15 @@
 # "hint" = { fg = "blue1", bg = "bg0" }
 "warning" = { fg = "orange1" }
 "error" = { fg = "red1" }
-"info" = { fg = "aqua1" }
-"hint" = { fg = "blue1" }
+"info" = { fg = "yellow1" }
+"hint" = { fg = "purple1" }
 
 ## UI diagnostics in editing area
 "diagnostic" = { modifiers = ["underlined"] }
 "diagnostic.warning" = { underline = { style = "line", color = "orange1" } }
 "diagnostic.error" = { underline = { style = "line", color = "red1" } }
-"diagnostic.info" = { underline = { style = "line", color = "aqua1" } }
-"diagnostic.hint" = { underline = { style = "line", color = "blue1" } }
+"diagnostic.info" = { underline = { style = "line", color = "yellow1" } }
+"diagnostic.hint" = { underline = { style = "line", color = "purple1" } }
 
 "ui.virtual.wrap" = { fg = "bg2" }
 
@@ -148,10 +148,9 @@ fg0 = "#fbf1c7"
 fg1 = "#ebdbb2"
 fg2 = "#d5c4a1" # main foreground
 fg3 = "#bdae93"
-fg4 = "#a89984" # gray0
+fg4 = "#a89984"
 
-gray0 = "#a89984"
-gray1 = "#928374"
+gray = "#928374"
 
 red0    = "#cc241d" # neutral
 red1    = "#fb4934" # bright
