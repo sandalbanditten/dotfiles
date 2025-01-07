@@ -25,7 +25,7 @@ indent = { tab-width = 4, unit = "    " }
 [[language]]
 name = "typst"
 language-servers = ["tinymist"]
-# TODO: Fix having to manually call :fmt
+auto-format = true
 formatter = { command = "typstyle" }
 
 [language-server.tinymist]
