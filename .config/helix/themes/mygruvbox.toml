@@ -1,141 +1,160 @@
 # Original Author : Jakub Bartodziej <kubabartodziej@gmail.com>
+# 
 # The theme uses the gruvbox dark palette with standard contrast: github.com/morhetz/gruvbox
 
-"attribute" = "red1" # class attributes idk fuck OOP
+"annotation" = { fg = "fg1" }
+
+"attribute" = { fg = "aqua1", modifiers = ["italic"] }
+
+"comment" = { fg = "gray" }
+
+"constant" = { fg = "yellow1", modifiers = ["bold"] }
+"constant.builtin" = { fg = "yellow1", modifiers = ["bold"] }
+"constant.character" = { fg = "green1", modifiers = ["bold"] }
+"constant.character.escape" = { fg = "fg1", modifiers = ["bold"] }
+"constant.macro" = { fg = "red1", modifiers = ["bold"] }
+"constructor" = { fg = "yellow1", modifiers = ["bold"] }
+
+"definition" = { underline = { color = "aqua1" } }
+
+"diagnostic" = { underline = { color = "orange1" } }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+"diagnostic.error" = { underline = { color = "red1", style = "line" } }
+"diagnostic.hint" = { underline = { color = "blue0", style = "line" } }
+"diagnostic.info" = { underline = { color = "yellow1", style = "line" } }
+"diagnostic.warning" = { underline = { color = "orange1", style = "line" } }
+# "diagnostic.unnecessary" = { modifiers = ["dim"] }  # do not remove this for future resolving
+
+"error" = { fg = "red1" }
+"hint" = { fg = "blue0" }
+"info" = { fg = "yellow1" }
+"warning" = { fg = "orange1" }
+
+"diff.delta" = { fg = "yellow1" }
+"diff.minus" = { fg = "red1" }
+"diff.plus" = { fg = "green1" }
+
+"function" = { fg = "blue0", modifiers = ["bold"] }
+"function.builtin" = { fg = "blue0", modifiers = ["bold"] }
+"function.method" = { fg = "blue0", modifiers = ["bold"] }
+"function.macro" = { fg = "blue0", modifiers = ["bold"] }
+"function.special" = { fg = "blue0", modifiers = ["bold"] }
+
+"keyword" = { fg = "purple1" }
+"keyword.directive" = { fg = "purple1" }
+"keyword.control" = { fg = "purple1" }
+"keyword.control.conditional" = { fg = "purple1" }
+"keyword.control.repeat" = { fg = "purple1" }
+"keyword.control.import" = { fg = "purple1" }
+"keyword.control.return" = { fg = "purple1" }
+"keyword.control.exception" = { fg = "purple1" }
+"keyword.operator" = { fg = "purple1" }
+"keyword.function" = { fg = "purple1" }
+"keyword.storage" = { fg = "purple1" }
+"keyword.storage.type" = { fg = "purple1" }
+"keyword.storage.modifier" = { fg = "purple1" }
+
+"label" = "yellow1"
+
+"markup" = "fg1"
+"markup.bold" = { modifiers = ["bold"] }
+"markup.heading" = "fg1"
+"markup.heading.marker" = "fg3"
+"markup.italic" = { modifiers = ["italic"] }
+"markup.link.text" = "purple1"
+"markup.link.url" = { fg = "purple1", modifiers = ["underlined"] }
+"markup.link.label" = { fg = "purple1", modifiers = ["underlined"] }
+"markup.raw" = "red1"
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.quote" = "green1"
+
+"module" = { fg = "aqua1" }
+
 "namespace" = "fg2"
-"type" = { fg = "yellow1", modifiers = [] }
-"type.builtin" = { fg = "yellow1" }
-"constructor" = { fg = "yellow1", modifiers = ["bold"] } # in Rust: Some(_), etc.
-# "constant" = { fg = "yellow1", mo1ifiers = ["bold"] }
-"constant.builtin" = { fg = "yellow1", modifiers = [] }
-"constant.character" = { fg = "green1" }
-"constant.character.escape" = { fg = "fg2", modifiers = ["bold"] } # Don't work in Rust
-"constant.numeric" = "yellow1"
+
+"operator" = "fg0"
+
+"punctuation" = "fg2"
+"punctuation.delimiter" = "fg3"
+"punctuation.bracket" = "fg3"
+"punctuation.special" = "purple1"
+
+"special" = { fg = "purple1" }
+
 "string" = "green1"
 "string.regexp" = { fg = "green1", modifiers = ["bold"] }
+"string.special" = { fg = "green1", modifiers = ["bold"] }
 "string.special.path" = { fg = "green1", modifiers = ["bold"] }
 "string.special.url" = { fg = "green1", modifiers = ["underlined"] }
 "string.special.symbol" = { fg = "green1", modifiers = ["bold"] }
-# "comment" = { fg = "gray", modifiers = ["italic"] }
-"comment" = { fg = "gray" }
-"comment.line" = { fg = "gray", modifiers = ["italic"] }
-"comment.block" = { fg = "gray", modifiers = ["italic"] }
+
+"tag" = "red1"
+
+"tabstop" = { bg = "bg1" }
+
+"type" = { fg = "yellow1" }
+
+# "ui.background" = { bg = "bg0" }
+# "ui.bufferline" = { fg = "fg1", bg = "bg1" }
+# "ui.bufferline.active" = { fg = "bg0", bg = "yellow0" }
+# "ui.bufferline.background" = { bg = "bg2" }
+
+"ui.cursor" = { bg = "bg1" }
+# "ui.cursor.insert" = { fg = "bg1", bg = "blue0" }
+# "ui.cursor.normal" = { fg = "bg1", bg = "gray" }
+# "ui.cursor.select" = { fg = "bg1", bg = "orange0" }
+"ui.cursor.match" = { bg = "bg3" }
+
+"ui.cursor.primary" = { modifiers = ["reversed", "bold"] }
+# "ui.cursor.primary.insert" = { fg = "bg1", bg = "blue1" }
+# "ui.cursor.primary.normal" = { fg = "bg1", bg = "fg3" }
+# "ui.cursor.primary.select" = { fg = "bg1", bg = "orange1" }
+
+"ui.cursorline" = { bg = "bg1" }
+"ui.cursorline.primary" = { bg = "bg1" }
+"ui.cursorline.secondary" = { bg = "bg1" }
+
+"ui.debug.breakpoint" = { fg = "red1" }
+"ui.debug.active"  = { fg = "red1" }
+ 
+# "ui.gutter" = { bg = "bg0" }
+# "ui.gutter.selected" = { bg = "bg0" }
+
+"ui.help" = { fg = "fg2", bg = "bg0" }
+"ui.highlight.frameline" = { fg = "red1" }
+"ui.linenr" = { fg = "bg4" }
+"ui.linenr.selected" = { fg = "yellow1", modifiers = ["bold"] }
+"ui.menu" = { fg = "fg2", bg = "bg0" }
+"ui.menu.selected" = { fg = "bg1", bg = "purple1", modifiers = ["bold"] }
+"ui.menu.scroll" = { fg = "fg2", bg = "bg1" }
+"ui.popup" = { bg = "bg0" }
+"ui.popup.info" = { bg = "bg0" }
+"ui.picker.header.column" = { underline.style = "line" }
+"ui.picker.header.column.active" = { modifiers = ["bold"], underline.style = "line" }
+"ui.selection" = { bg = "bg1" }
+"ui.selection.primary" = { bg = "bg1", modifiers = ["bold"] }
+
+"ui.statusline" = { fg = "fg0" }
+"ui.statusline.inactive" = { fg = "fg2" }
+"ui.statusline.insert" = { bg = "blue0", fg = "bg0" }
+"ui.statusline.normal" = { bg = "green1", fg = "bg0" }
+"ui.statusline.select" = { bg = "yellow1", fg = "bg0" }
+
+# "ui.text" = { fg = "fg2", bg = "bg0" }
+# "ui.text.directory" = { fg = "fg2", bg = "bg0" }
+"ui.virtual.inlay-hint" = { fg = "gray" }
+"ui.virtual.jump-label" = { fg = "purple1", modifiers = ["bold"] }
+"ui.virtual.ruler" = { bg = "bg1" }
+"ui.virtual.whitespace" = "gray"
+"ui.virtual.wrap" = { fg = "gray" }
+"ui.virtual.indent-guide" = { fg = "bg1" }
+# "ui.window" = { bg = "bg0" }
+
 "variable" = "fg2"
 "variable.builtin" = "yellow1"
 "variable.parameter" = "fg2"
 "variable.other.member" = "fg2"
-"label" = "yellow0"
-"punctuation" = "fg2"
-"punctuation.delimiter" = "fg4"
-"punctuation.bracket" = "fg4"
-"punctuation.special" = "fg1"
-"keyword" = { fg = "purple1", modifiers = ["bold"] }
-"keyword.directive" = { fg = "purple1", modifiers = ["bold"] }
-"keyword.control" = { fg = "purple1", modifiers = ["bold"] }
-"keyword.control.conditional" = { fg = "purple1", modifiers = ["bold"] }
-"keyword.control.repeat" = { fg = "purple1", modifiers = ["bold"] }
-"keyword.control.import" = { fg = "purple1", modifiers = ["bold"] }
-"keyword.control.return" = { fg = "purple1", modifiers = ["bold"] }
-"keyword.control.exception" = { fg = "purple1", modifiers = ["bold"] }
-"keyword.operator" = { fg = "purple1", modifiers = ["bold"] }
-"keyword.function" = { fg = "purple1", modifiers = ["bold"] }
-"keyword.storage" = { fg = "purple1", modifiers = ["bold"] }
-"keyword.storage.type" = { fg = "purple1", modifiers = ["bold"] }
-"keyword.storage.modifier" = { fg = "purple1", modifiers = ["bold"] }
-"operator" = "fg0"
-"function" = { fg = "blue0", modifiers = ["bold"] }
-"function.builtin" = { fg = "yellow1", modifiers = ["bold"] }
-"function.method" = { fg = "blue0", modifiers = ["bold"] }
-"function.macro" = { fg = "blue0", modifiers = ["bold"] }
-"function.special" = { fg = "blue0", modifiers = ["bold"] } # C preprocessor functions
-"tag" = "red1" # HTML etc.
-"markup" = "fg4"
-"markup.heading" = "fg0"
-"markup.heading.marker" = "fg4"
-"markup.bold" = { modifiers = ["bold"] }
-"markup.strikethrough" = { modifiers = ["crossed_out"] }
-"markup.italic" = { modifiers = ["italic"] }
-"markup.link.url" = { fg = "yellow1", modifiers = ["underlined"] }
-"markup.link.label" = { fg = "yellow1", modifiers = ["underlined"] }
-"markup.link.text" = "purple1"
-"markup.quote" = "green1"
-"markup.raw" = "red1"
-"diff" = "fg4"
-"diff.plus" = "green1"
-"diff.minus" = "red1"
-"diff.delta" = "orange1"
-"diff.delta.moved" = "red1"
 
-# Editor Interface
-
-## UI
-# The following are commented out to allow a transparent background
-# "ui.background" = { bg = "bg0" }
-# "ui.background.separator" = { bg = "bg0" }
-# "ui.cursor.insert" = { bg = "bg0" }
-# "ui.cursor.select" = { bg = "bg0" }
-# "ui.gutter" = { bg = "bg0" }
-# "ui.statusline" = { fg = "fg0", bg = "bg0" }
-# "ui.gutter.selected" = { bg = "bg0" } # current line in gutter
-"ui.debug.breakpoint" = { fg = "red1" } # Breakpoint indicator, found in the gutter
-"ui.debug.active"  = { fg = "red1" } # Indicator for the line at which debugging execution is paused at, found in the gutter
-"ui.highlight.frameline" = { fg = "red1" } # Line at which debugging execution is paused at
-"ui.selected" = { fg = "red1" }
-"ui.statusline" = { fg = "fg0" }
-"ui.cursor.match" = { bg = "bg3" }
-"ui.cursor" = { bg = "bg1" }
-"ui.cursor.primary" = { modifiers = ["reversed", "bold"] }
-"ui.linenr" = { fg = "bg4" }
-"ui.linenr.selected" = { fg = "yellow1", modifiers = ["bold"] }
-# "ui.statusline.inactive" = { fg = "fg2", bg = "bg0" }
-"ui.statusline.inactive" = { fg = "fg2" }
-"ui.statusline.normal" = { bg = "green1", fg = "bg0" }
-"ui.statusline.insert" = { bg = "blue0", fg = "bg0" }
-"ui.statusline.select" = { bg = "yellow1", fg = "bg0" }
-"ui.statusline.separator" = { bg = "red1", fg = "bg0" } # ???
-"ui.popup" = { bg = "bg0" }
-"ui.popup.info" = { bg = "bg0" }
-# "ui.window" = { bg = "bg0" } # split separator - commented out for transparency
-"ui.help" = { fg = "fg2", bg = "bg0" } # help windows
-# "ui.text" = { fg = "fg2", bg = "bg0" }
-"ui.virtual.ruler" = { bg = "bg1" }
-# "ui.virtual.wrap" = { fg = "fg4" }
-"ui.virtual.inlay-hint" = { fg = "fg4" }
-"ui.virtual.inlay-hint.parameter" = { fg = "gray" }
-"ui.virtual.inlay-hint.type" = { fg = "gray" }
-"ui.virtual.jump-label" = { fg = "purple1", modifiers = ["bold"] }
-# below is uncommented to appropriately highlight selected whitespace
-# "ui.virtual.whitespace" = { fg = "purple1", bg = "bg0" } # :set whitespace.render all
-# this foreground is undefined to appropriately render selected indent guidelines
-"ui.virtual.indent-guide" = { fg = "bg1" }
-"ui.menu" = { fg = "fg2", bg = "bg0" }
-"ui.menu.selected" = { fg = "bg1", bg = "purple1", modifiers = ["bold"] }
-"ui.menu.scroll" = { fg = "fg2", bg = "bg1" }
-"ui.selection" = { bg = "bg1" }
-"ui.selection.primary" = { bg = "bg1", modifiers = ["bold"] }
-"ui.cursorline.primary" = { bg = "bg1" }
-"ui.cursorline.secondary" = { bg = "bg1" }
-"ui.cursorcolumn.primary" = { bg = "bg1" }
-"ui.cursorcolumn.secondary" = { bg = "bg1" }
-
-## UI diagnostics in gutter
-# "warning" = { fg = "orange1", bg = "bg0" }
-# "error" = { fg = "red1", bg = "bg0" }
-# "info" = { fg = "aqua1", bg = "bg0" }
-# "hint" = { fg = "blue1", bg = "bg0" }
-"warning" = { fg = "orange1" }
-"error" = { fg = "red1" }
-"info" = { fg = "yellow1" }
-"hint" = { fg = "purple1" }
-
-## UI diagnostics in editing area
-"diagnostic" = { modifiers = ["underlined"] }
-"diagnostic.warning" = { underline = { style = "line", color = "orange1" } }
-"diagnostic.error" = { underline = { style = "line", color = "red1" } }
-"diagnostic.info" = { underline = { style = "line", color = "yellow1" } }
-"diagnostic.hint" = { underline = { style = "line", color = "purple1" } }
-
-"ui.virtual.wrap" = { fg = "bg2" }
 
 [palette]
 bg0 = "#282828" # main background
