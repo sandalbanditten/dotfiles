@@ -6,32 +6,32 @@
 
 "attribute" = { fg = "aqua1", modifiers = ["italic"] }
 
-"comment" = { fg = "gray" }
+"comment" = { fg = "gray", modifiers = ["italic"] }
 
 "constant" = { fg = "yellow1", modifiers = ["bold"] }
 "constant.builtin" = { fg = "yellow1", modifiers = ["bold"] }
 "constant.character" = { fg = "green1", modifiers = ["bold"] }
 "constant.character.escape" = { fg = "fg1", modifiers = ["bold"] }
-"constant.macro" = { fg = "red1", modifiers = ["bold"] }
+"constant.macro" = { fg = "yellow1", modifiers = ["bold"] }
 "constructor" = { fg = "yellow1", modifiers = ["bold"] }
 
 "definition" = { underline = { color = "aqua1" } }
 
-"diagnostic" = { underline = { color = "orange1" } }
+# "diagnostic" = { modifiers = ["underline"] }
 "diagnostic.deprecated" = { modifiers = ["crossed_out"] }
-"diagnostic.error" = { underline = { color = "red1", style = "line" } }
+"diagnostic.error" = { underline = { color = "red0", style = "line" } }
 "diagnostic.hint" = { underline = { color = "blue0", style = "line" } }
 "diagnostic.info" = { underline = { color = "yellow1", style = "line" } }
 "diagnostic.warning" = { underline = { color = "orange1", style = "line" } }
 # "diagnostic.unnecessary" = { modifiers = ["dim"] }  # do not remove this for future resolving
 
-"error" = { fg = "red1" }
-"hint" = { fg = "blue0" }
-"info" = { fg = "yellow1" }
-"warning" = { fg = "orange1" }
+"error" = { fg = "red0", modifiers = ["bold"] }
+"hint" = { fg = "blue0", modifiers = ["bold"] }
+"info" = { fg = "yellow1", modifiers = ["bold"] }
+"warning" = { fg = "orange1", modifiers = ["bold"] }
 
 "diff.delta" = { fg = "yellow1" }
-"diff.minus" = { fg = "red1" }
+"diff.minus" = { fg = "red0" }
 "diff.plus" = { fg = "green1" }
 
 "function" = { fg = "blue0", modifiers = ["bold"] }
@@ -64,7 +64,7 @@
 "markup.link.text" = "purple1"
 "markup.link.url" = { fg = "purple1", modifiers = ["underlined"] }
 "markup.link.label" = { fg = "purple1", modifiers = ["underlined"] }
-"markup.raw" = "red1"
+"markup.raw" = "yellow1"
 "markup.strikethrough" = { modifiers = ["crossed_out"] }
 "markup.quote" = "green1"
 
@@ -88,7 +88,7 @@
 "string.special.url" = { fg = "green1", modifiers = ["underlined"] }
 "string.special.symbol" = { fg = "green1", modifiers = ["bold"] }
 
-"tag" = "red1"
+"tag" = "fg3"
 
 "tabstop" = { bg = "bg1" }
 
@@ -114,14 +114,14 @@
 "ui.cursorline.primary" = { bg = "bg1" }
 "ui.cursorline.secondary" = { bg = "bg1" }
 
-"ui.debug.breakpoint" = { fg = "red1" }
-"ui.debug.active"  = { fg = "red1" }
+"ui.debug.breakpoint" = { fg = "red0" }
+"ui.debug.active"  = { fg = "red0" }
  
 # "ui.gutter" = { bg = "bg0" }
 # "ui.gutter.selected" = { bg = "bg0" }
 
 "ui.help" = { fg = "fg2", bg = "bg0" }
-"ui.highlight.frameline" = { fg = "red1" }
+"ui.highlight.frameline" = { fg = "red0" }
 "ui.linenr" = { fg = "bg4" }
 "ui.linenr.selected" = { fg = "yellow1", modifiers = ["bold"] }
 "ui.menu" = { fg = "fg2", bg = "bg0" }

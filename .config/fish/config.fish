@@ -17,13 +17,9 @@ abbr -a gipl git pull
 abbr -a gir git rm
 abbr -a gis git status
 abbr -a i ip -c
-abbr -a icat kitty +kitten icat
 abbr -a imv imv -b '\#282828'
-abbr -a k kalker
 abbr -a kb head -n 42 ~/Documents/keymap.c
 abbr -a objdump objdump -M intel
-abbr -a pmr doas pacman -Rns
-abbr -a pms doas pacman -S
 abbr -a showcolor perl -e '\'print "\e[48;2;".join(";",unpack("C*",pack("H*",$ARGV[0])))."m  \e[49m"\''
 abbr -a x eza
 abbr -a xal eza -aTlgL1 --git
