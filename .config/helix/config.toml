@@ -20,7 +20,7 @@ other-lines = "hint"
 
 [editor.soft-wrap]
 enable = true
-wrap-indicator = "|--|"
+wrap-indicator = "←→"
 
 [editor.lsp]
 display-inlay-hints = true
