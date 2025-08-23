@@ -8,7 +8,7 @@
   - [License](#license)
 <!--toc:end-->
 
-These are my personal dotfiles I use daily. ~~toby~~
+These are my personal dotfiles I use daily.
 They are tracked in a git repository called ~/.dotfiles.
 Most of these will change daily.
 
