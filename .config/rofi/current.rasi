@@ -3,13 +3,14 @@
  * Rofi version: 1.7.5+wayland3
  **/
 * {
-    fg-color:         rgba(235, 219, 178, 100%);
+    fg-color:         #ebdbb2;
     bg-color:         #282828;
-    lightfg:          rgba(88, 104, 117, 100%);
-    green:            rgba(152, 151, 26, 100%);
-    purple:           rgba(177, 98, 134, 100%);
-    red:              rgba(204, 36, 29, 100%);
-    yellow:           rgba(215, 153, 33, 100%);
+    /* lightfg:          rgba(88, 104, 117, 100%); */
+    /* green:            rgba(152, 151, 26, 100%); */
+    green:            #98971a;
+    purple:           #b16286;
+    red:              #cc241d;
+    yellow:           #d79921;
     spacing:          2;
     background-color: transparent;
 }
@@ -31,7 +32,7 @@ element normal.active {
 }
 element selected.normal {
     background-color: #3c3836;
-    text-color:       var(purple);
+    text-color:       var(green);
 }
 element selected.urgent {
     background-color: var(red);
@@ -65,7 +66,7 @@ window {
     padding:          5;
     background-color: var(bg-color);
     border:           4px;
-    border-color:     var(purple);
+    border-color:     var(green);
     /* border-radius:    12px; */
 }
 mainbox {
@@ -74,7 +75,7 @@ mainbox {
 }
 message {
     padding:      1px;
-    border-color: var(purple);
+    border-color: var(green);
     border:       2px solid 0px 0px;
 }
 textbox {
@@ -83,7 +84,7 @@ textbox {
 listview {
     padding:      2px 0px 0px ;
     scrollbar:    true;
-    border-color: var(purple);
+    border-color: var(green);
     spacing:      2px ;
     fixed-height: 0;
     border:       2px solid 0px 0px ;
@@ -93,10 +94,10 @@ scrollbar {
     padding:      0;
     handle-width: 4px ;
     border:       0;
-    handle-color: var(purple);
+    handle-color: var(green);
 }
 sidebar {
-    border-color: var(purple);
+    border-color: var(green);
     border:       2px solid 0px 0px ;
 }
 button {

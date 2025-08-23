@@ -1,4 +1,5 @@
 # Aliases
+abbr -a at astroterm -cu -f 60 -m -i copenhagen
 abbr -a b bat
 abbr -a btctl bluetoothctl
 abbr -a c clear \;
@@ -11,16 +12,18 @@ abbr -a gic git commit
 abbr -a gicl git clone
 abbr -a gid git diff
 abbr -a gif git fetch
-abbr -a gil git log
+abbr -a gil git log --graph
 abbr -a gips git push
 abbr -a gipl git pull
 abbr -a gir git rm
 abbr -a gis git status
 abbr -a i ip -c
-abbr -a imv imv -b '\#282828'
+abbr -a imv imv -b '\#000000'
 abbr -a kb head -n 42 ~/Documents/keymap.c
 abbr -a objdump objdump -M intel
+abbr -a rman rusty-man
 abbr -a showcolor perl -e '\'print "\e[48;2;".join(";",unpack("C*",pack("H*",$ARGV[0])))."m  \e[49m"\''
+abbr -a wi wiki-tui
 abbr -a x eza
 abbr -a xa eza -aTlgL1 --git
 abbr -a xl eza -TlgL1 --git

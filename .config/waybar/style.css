@@ -3,8 +3,8 @@
     font-family: Berkeley Mono;
     font-size: 20px;
     color: @foreground;
-    background-color: @background;
-    /* background-color: transparent; */
+    /* background-color: @background; */
+    background-color: transparent;
     /* padding: 1px 4px 4px 0px */
     /* padding-top: 1px; */
     /* border-radius: 12px; */
@@ -26,7 +26,7 @@ tooltip {
     /* color: transparent; */
     /* background: @background; */
     border: none;
-    border: 4px solid @purple;
+    border: 4px solid @green;
     border-radius: 0px;
     padding: 0px;
     margin: 0px;
@@ -102,7 +102,7 @@ tooltip label {
 
 #workspaces button.active {
     /* background-color: #ffffff; */
-    box-shadow: inset 0 -4px @purple;
+    box-shadow: inset 0 -4px @green;
 }
 
 #workspaces button.urgent {

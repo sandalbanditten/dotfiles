@@ -2,7 +2,7 @@
 set font 'Berkeley Mono 16'
 
 # Colors
-set default-bg 'rgba(40, 40, 40, 0.75)'
+set default-bg '#282828'
 set default-fg '#ebdbb2'
 
 set inputbar-bg '#282828'
