@@ -19,7 +19,7 @@ SETUVAR --export VISUAL:hx
 SETUVAR --export XDG_CACHE_HOME:/home/notroot/\x2ecache
 SETUVAR --export XDG_DATA_HOME:/home/notroot/\x2elocal/share
 SETUVAR --export XDG_STATE_HOME:/home/notroot/\x2elocal/state
-SETUVAR __fish_initialized:3400
+SETUVAR __fish_initialized:3800
 SETUVAR fish_color_autosuggestion:white
 SETUVAR fish_color_cancel:white\x1e\x2d\x2dbold
 SETUVAR fish_color_command:green\x1e\x2d\x2dbold
