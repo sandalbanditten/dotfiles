@@ -1,0 +1,21 @@
+ /*    __            __  ____            */
+ /*   / /____  _  __/ /_/ __/___  _  __  */
+ /*  / __/ _ \| |/_/ __/ /_/ __ \| |/_/  */
+ /* / /_/  __/>  </ /_/ __/ /_/ />  <    */
+ /* \__/\___/_/|_|\__/_/  \____/_/|_|    */
+
+@import url("content/sidebery.css");
+@import url("content/about.css");
+@import url("content/newtab.css");
+
+/* configurations - DO NOT CHANGE ORDER */
+@import url("defaults.css");
+@import url("config.css");
+
+@-moz-document url("about:newtab") {
+body { background-color: #282828 !important;}
+}
+
+@-moz-document url(chrome://browser/content/browser.xhtml) {
+ browser[type="content-primary"] {background: #282828 !important}
+}
