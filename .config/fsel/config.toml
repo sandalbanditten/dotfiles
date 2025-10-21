@@ -1,0 +1,8 @@
+highlight_color = "Magenta"
+rounded_borders = false
+title_panel_height_percent = 15
+
+cursor = ""
+
+# [app_launcher]
+# pin_color = "Green"

@@ -22,6 +22,7 @@ abbr -a i ips
 abbr -a imv imv -b '\#282828'
 abbr -a kb head -n 42 ~/Documents/keymap.c
 abbr -a objdump objdump -M intel
+abbr -a py python
 abbr -a rman rusty-man
 abbr -a showcolor perl -e '\'print "\e[48;2;".join(";",unpack("C*",pack("H*",$ARGV[0])))."m  \e[49m"\''
 abbr -a wi wiki-tui
