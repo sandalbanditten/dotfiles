@@ -20,7 +20,7 @@ input {
             // from org.freedesktop.locale1. You can control these using
             // localectl set-x11-keymap.
 
-    		options "compose:insert"
+    		options "compose:ins"
         }
 
         // Enable numlock on startup, omitting this setting disables it.
@@ -35,7 +35,7 @@ input {
         tap
         dwt
         // dwtp
-        drag true
+        // drag true
         // drag-lock
         natural-scroll
         accel-speed 0.2
@@ -50,6 +50,8 @@ input {
         // accel-speed 0.2
         // accel-profile "flat"
         // scroll-method "no-scroll"
+        accel-profile "flat"
+        scroll-method "two-finger"
     }
 
     trackpoint {
@@ -68,7 +70,7 @@ input {
 
     // Focus windows and outputs automatically when moving the mouse into them.
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
-    // focus-follows-mouse max-scroll-amount="0%"
+    focus-follows-mouse max-scroll-amount="0%"
 }
 
 // You can configure outputs by their name, which you can find
@@ -87,7 +89,7 @@ output "eDP-1" {
     // for the resolution.
     // If the mode is omitted altogether or is invalid, niri will pick one automatically.
     // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-    mode "2560x1600@165"
+    mode "2560x1600@165.019"
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
     scale 1
@@ -107,8 +109,21 @@ output "eDP-1" {
     // automatically.
     position x=0 y=0
 
+    background-color "transparent"
+    backdrop-color   "transparent"
+}
+
+output "HDMI-A-1" {
+    mode "1920x1080@75.001"
+
     background-color "#282828"
     backdrop-color   "#282828"
+}
+
+overview {
+    workspace-shadow {
+        off
+    }
 }
 
 // Settings that influence how windows are positioned and sized.
@@ -132,7 +147,7 @@ layout {
         // For example, you can perfectly fit four windows sized "proportion 0.25" on an output.
         // The default preset widths are 1/3, 1/2 and 2/3 of the output.
         proportion 0.33333
-        proportion 0.5
+        // proportion 0.5
         proportion 0.66667
 
         // Fixed sets the width in logical pixels exactly.
@@ -143,7 +158,7 @@ layout {
     // preset-window-heights { }
 
     // You can change the default width of the new windows.
-    default-column-width { proportion 0.5; }
+    default-column-width { proportion 0.55; }
     // If you leave the brackets empty, the windows themselves will decide their initial width.
     // default-column-width {}
 
@@ -172,7 +187,7 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
-        active-color "#b16286"
+        active-color "#98971a"
 
         // Color of the ring on inactive monitors.
         //
@@ -265,6 +280,8 @@ layout {
         top    0
         bottom 0
     }
+
+    background-color "transparent"
 }
 
 // Add lines like this to spawn processes at startup.
@@ -273,22 +290,28 @@ layout {
 // See the binds section below for more spawn examples.
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
-spawn-at-startup "wlsunset -l 56.2 -L 10.2 -t 5000"
+spawn-at-startup "wlsunset -l 56.2 -L 10.2 -T 6000 -t 5000"
 spawn-at-startup "tmux start-server"
-spawn-at-startup "alacritty --daemon"
+// spawn-sh-at-startup "alacritty --daemon"
 spawn-at-startup "dunst"
 spawn-at-startup "pulseaudio --start"
-spawn-at-startup "bongocat --config ~/.config/bongocat/bongocat.conf --watch-config"
-spawn-at-startup "SCCACHE_NO_DAEMON=1 sccache --start-server"
-spawn-at-startup "wl-paste --type text --watch cliphist store"
-spawn-at-startup "wl-paste --type image --watch cliphist store"
+spawn-sh-at-startup "bongocat --config ~/.config/bongocat/bongocat.conf --watch-config"
+spawn-sh-at-startup "SCCACHE_NO_DAEMON=1 sccache --start-server"
+spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
+spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
+spawn-at-startup "firefox"
+spawn-sh-at-startup "obsidian --ozone-platform-hint=auto --enable-features=UseOzonePlatform,WaylandWindowDecorations"
+spawn-sh-at-startup "pactl set-sink-volume @DEFAULT_SINK@ 0%"
+// spawn-sh-at-startup "swaybg -c '#282828'" // both need to be here for my fucked-up wallpaper shell script
+spawn-sh-at-startup "swaybg -c '#282828'"
+spawn-sh-at-startup "~/Code/scripts/wallpaper"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
-    // skip-at-startup
+    skip-at-startup
 }
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
@@ -296,7 +319,7 @@ hotkey-overlay {
 // Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
 // This option will also fix border/focus ring drawing behind some semitransparent windows.
 // After enabling or disabling this, you need to restart the apps for this to take effect.
-// prefer-no-csd
+prefer-no-csd
 
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
@@ -332,11 +355,70 @@ window-rule {
 }
 
 // Open the Firefox picture-in-picture player as floating by default.
-window-rule {
+// window-rule {
     // This app-id regular expression will work for both:
     // - host Firefox (app-id is "firefox")
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    // match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    // open-floating true
+// }
+
+layer-rule {
+    // This is for swaybg; change for other wallpaper tools.
+    // Find the right namespace by running niri msg layers.
+    match namespace="^wallpaper$"
+    place-within-backdrop true
+}
+
+window-rule {
+    match app-id=r#"^firefox$"# at-startup=true
+    open-on-workspace "1"
+    open-floating false
+    // open-maximized true
+}
+
+window-rule {
+    match app-id=r#"^firefox$"# at-startup=false
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"obsidian$"#
+    open-on-workspace "2"
+    open-maximized true
+}
+
+window-rule {
+    match title="^launcher$"
+    open-floating true
+}
+
+window-rule {
+    match title="^clipboard$"
+    open-floating true
+}
+
+window-rule {
+    match title="^audio_settings$"
+    open-floating true
+}
+
+// window-rule {
+    // match is-floating=true
+    // baba-is-float true
+// }
+
+window-rule {
+    match title="^spotify$"
+    default-column-width { proportion 0.75; }
+    // default-window-height { proportion 0.60; }
+    // open-floating true
+}
+
+window-rule {
+    match title="^floating_term$"
+    default-column-width { proportion 0.60; }
+    default-window-height { proportion 0.60; }
     open-floating true
 }
 
@@ -375,9 +457,27 @@ binds {
     Super+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Super+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn-sh "alacritty -e tmux"; }
-    Super+R      hotkey-overlay-title="Run an Application: fsel"   { spawn-sh "alacritty -e fsel -d"; }
-    Super+F      hotkey-overlay-title="Open a Brwoser: Firefox"    { spawn "firefox"; }
+    Super+Return       hotkey-overlay-title="Open a terminal: alacritty"          { spawn-sh "alacritty -e tmux";                           }
+    Super+Shift+Return hotkey-overlay-title="Open a floating terminal: alacritty" { spawn-sh "alacritty -T floating_term -e tmux";          }
+    Super+R            hotkey-overlay-title="Run an application: fsel"            { spawn-sh "alacritty -T launcher -e fsel -d";            }
+    Super+X            hotkey-overlay-title="Open clipboard: fsel"                { spawn-sh "alacritty -T clipboard -e cliphist_fsel";     }
+    Super+S            hotkey-overlay-title="Open spotify: spotify_player"        { spawn-sh "alacritty -T spotify -e spotify_player";      }
+    Super+A            hotkey-overlay-title="Open audio settings: alsamixer"      { spawn-sh "alacritty -T audio_settings -e alsamixer";    }
+    Super+E            hotkey-overlay-title="Open file manager: yazi"             { spawn-sh "alacritty -T file_manager -e yazi";           }
+    Super+F            hotkey-overlay-title="Open a browser: Firefox"             { spawn "firefox";                                        }
+    Super+P            hotkey-overlay-title="Show the time"                       { spawn "datedunst";                                      }
+    Super+Q            hotkey-overlay-title="Dencrease volume"                    { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ -5%";    }
+    Super+W            hotkey-overlay-title="Increase volume"                     { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ +5%";    }
+    Super+Shift+Q                                                                 { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ -10%";   }
+    Super+Ctrl+Shift+Q hotkey-overlay-title="Set volume to zero"                  { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ 0%";     }
+    Super+Shift+W                                                                 { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ +10%";   }
+
+    
+    XF86AudioRaiseVolume allow-when-locked=true                                   { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ +5%";    }
+    XF86AudioLowerVolume allow-when-locked=true                                   { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ -5%";    }
+    XF86AudioMute        allow-when-locked=true                                   { spawn-sh "pactl set-sink-mute @DEFAULT_SINK@ toggle";   }
+    XF86AudioMicMute     allow-when-locked=true                                   { spawn-sh "pactl set-sink-mute @DEFAULT_SOURCE@ toggle"; }
+
     // Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
@@ -388,10 +488,6 @@ binds {
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
     // Using spawn-sh allows to pass multiple arguments together with the command.
-    // XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
-    // XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
-    // XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
-    // XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
     // Example media keys mapping using playerctl.
     // This will work with any MPRIS-enabled media player.
@@ -403,8 +499,8 @@ binds {
     // Example brightness key mappings for brightnessctl.
     // You can use regular spawn with multiple arguments too (to avoid going through "sh"),
     // but you need to manually put each argument in separate "" quotes.
-    // XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
-    // XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+    XF86MonBrightnessUp                          { spawn "doas" "brightnessctl" "--class=backlight" "set" "+10%"; }
+    XF86MonBrightnessDown                        { spawn "doas" "brightnessctl" "--class=backlight" "set" "10%-"; }
 
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
@@ -471,12 +567,12 @@ binds {
 
     Super+Page_Down      { focus-workspace-down; }
     Super+Page_Up        { focus-workspace-up; }
-    Super+U              { focus-workspace-down; }
-    Super+I              { focus-workspace-up; }
+    Super+D              { focus-workspace-down; }
+    Super+U              { focus-workspace-up; }
     Super+Ctrl+Page_Down { move-column-to-workspace-down; }
     Super+Ctrl+Page_Up   { move-column-to-workspace-up; }
-    Super+Ctrl+U         { move-column-to-workspace-down; }
-    Super+Ctrl+I         { move-column-to-workspace-up; }
+    Super+Ctrl+D         { move-column-to-workspace-down; }
+    Super+Ctrl+U         { move-column-to-workspace-up; }
 
     // Alternatively, there are commands to move just a single window:
     // Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
@@ -484,8 +580,8 @@ binds {
 
     Super+Shift+Page_Down { move-workspace-down; }
     Super+Shift+Page_Up   { move-workspace-up; }
-    Super+Shift+U         { move-workspace-down; }
-    Super+Shift+I         { move-workspace-up; }
+    Super+Shift+U         { move-workspace-up; }
+    Super+Shift+D         { move-workspace-down; }
 
     // You can bind mouse wheel scroll ticks using the following syntax.
     // These binds will change direction based on the natural-scroll setting.
@@ -536,15 +632,17 @@ binds {
     Super+7 { focus-workspace 7; }
     Super+8 { focus-workspace 8; }
     Super+9 { focus-workspace 9; }
-    Super+Ctrl+1 { move-column-to-workspace 1; }
-    Super+Ctrl+2 { move-column-to-workspace 2; }
-    Super+Ctrl+3 { move-column-to-workspace 3; }
-    Super+Ctrl+4 { move-column-to-workspace 4; }
-    Super+Ctrl+5 { move-column-to-workspace 5; }
-    Super+Ctrl+6 { move-column-to-workspace 6; }
-    Super+Ctrl+7 { move-column-to-workspace 7; }
-    Super+Ctrl+8 { move-column-to-workspace 8; }
-    Super+Ctrl+9 { move-column-to-workspace 9; }
+    Super+0 { focus-workspace 10; }
+    Super+Shift+1 { move-column-to-workspace 1; }
+    Super+Shift+2 { move-column-to-workspace 2; }
+    Super+Shift+3 { move-column-to-workspace 3; }
+    Super+Shift+4 { move-column-to-workspace 4; }
+    Super+Shift+5 { move-column-to-workspace 5; }
+    Super+Shift+6 { move-column-to-workspace 6; }
+    Super+Shift+7 { move-column-to-workspace 7; }
+    Super+Shift+8 { move-column-to-workspace 8; }
+    Super+Shift+9 { move-column-to-workspace 9; }
+    Super+Shift+0 { move-column-to-workspace 10; }
 
     // Alternatively, there are commands to move just a single window:
     // Mod+Ctrl+1 { move-window-to-workspace 1; }
@@ -563,13 +661,13 @@ binds {
     // Expel the bottom window from the focused column to the right.
     Super+Period { expel-window-from-column; }
 
-    // Mod+R { switch-preset-column-width; }
+    Super+Ctrl+Shift+R { switch-preset-column-width; }
     // Cycling through the presets in reverse order is also possible.
-    // Mod+R { switch-preset-column-width-back; }
+    // Super+Control+Shift+R { switch-preset-column-width-back; }
     Super+Shift+R { switch-preset-window-height; }
     Super+Ctrl+R { reset-window-height; }
-    Super+Ctrl+F { maximize-column; }
-    Super+Shift+F { fullscreen-window; }
+    Super+Shift+F { maximize-column; }
+    Super+Ctrl+F { fullscreen-window; }
 
     // Expand the focused column to space not taken up by other fully visible columns.
     // Makes the column "fill the rest of the space".
@@ -588,12 +686,12 @@ binds {
     // * adjust width as a percentage of screen width: "-10%" or "+10%"
     // Pixel sizes use logical, or scaled, pixels. I.e. on an output with scale 2.0,
     // set-column-width "100" will make the column occupy 200 physical screen pixels.
-    Super+Minus { set-column-width "-10%"; }
-    Super+Equal { set-column-width "+10%"; }
+    Super+Ctrl+H { set-column-width "-5%"; }
+    Super+Ctrl+L { set-column-width "+5%"; }
 
     // Finer height adjustments when in column with other windows.
-    Super+Shift+Minus { set-window-height "-10%"; }
-    Super+Shift+Equal { set-window-height "+10%"; }
+    Super+Shift+Minus { set-window-height "-5%"; }
+    Super+Shift+Equal { set-window-height "+5%"; }
 
     // Move the focused window between the floating and the tiling layout.
     Super+T       { toggle-window-floating; }
@@ -602,7 +700,7 @@ binds {
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,
     // rather than stacked on top of each other.
-    Super+W { toggle-column-tabbed-display; }
+    Super+Ctrl+Shift+W { toggle-column-tabbed-display; }
 
     // Actions to switch layouts.
     // Note: if you uncomment these, make sure you do NOT have
@@ -628,7 +726,7 @@ binds {
 
     // The quit action will show a confirmation dialog to avoid accidental exits.
     // Mod+Shift+E { quit; }
-    // Ctrl+Alt+Delete { quit; }
+    Ctrl+Alt+Delete { quit; }
 
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.

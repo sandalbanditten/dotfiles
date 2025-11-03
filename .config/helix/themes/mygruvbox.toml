@@ -2,6 +2,8 @@
 # 
 # The theme uses the gruvbox dark palette with standard contrast: github.com/morhetz/gruvbox
 
+# inherits = "gruvbox"
+
 "annotation" = { fg = "fg1" }
 
 "attribute" = { fg = "aqua1", modifiers = ["italic"] }
@@ -40,19 +42,19 @@
 "function.macro" = { fg = "blue0", modifiers = ["bold"] }
 "function.special" = { fg = "blue0", modifiers = ["bold"] }
 
-"keyword" = { fg = "purple1" }
-"keyword.directive" = { fg = "purple1" }
-"keyword.control" = { fg = "purple1" }
-"keyword.control.conditional" = { fg = "purple1" }
-"keyword.control.repeat" = { fg = "purple1" }
-"keyword.control.import" = { fg = "purple1" }
-"keyword.control.return" = { fg = "purple1" }
-"keyword.control.exception" = { fg = "purple1" }
-"keyword.operator" = { fg = "purple1" }
-"keyword.function" = { fg = "purple1" }
-"keyword.storage" = { fg = "purple1" }
-"keyword.storage.type" = { fg = "purple1" }
-"keyword.storage.modifier" = { fg = "purple1" }
+"keyword" = { fg = "red1" }
+"keyword.directive" = { fg = "red1" }
+"keyword.control" = { fg = "red1" }
+"keyword.control.conditional" = { fg = "red1" }
+"keyword.control.repeat" = { fg = "red1" }
+"keyword.control.import" = { fg = "red1" }
+"keyword.control.return" = { fg = "red1" }
+"keyword.control.exception" = { fg = "red1" }
+"keyword.operator" = { fg = "red1" }
+"keyword.function" = { fg = "red1" }
+"keyword.storage" = { fg = "red1" }
+"keyword.storage.type" = { fg = "red1" }
+"keyword.storage.modifier" = { fg = "red1" }
 
 "label" = "yellow1"
 
@@ -143,7 +145,7 @@
 # "ui.text" = { fg = "fg2", bg = "bg0" }
 # "ui.text.directory" = { fg = "fg2", bg = "bg0" }
 "ui.virtual.inlay-hint" = { fg = "gray" }
-"ui.virtual.jump-label" = { fg = "purple1", modifiers = ["bold"] }
+"ui.virtual.jump-label" = { fg = "green1", modifiers = ["bold"] }
 "ui.virtual.ruler" = { bg = "bg1" }
 "ui.virtual.whitespace" = "gray"
 "ui.virtual.wrap" = { fg = "gray" }

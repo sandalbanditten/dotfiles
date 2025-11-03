@@ -27,13 +27,13 @@ follow = keyboard
 width = 400
 
 # The maximum height of a single notification, excluding the frame.
-height = 300
+height = (0, 300)
 
 # Position the notification in the top right corner
-origin = top-right
+origin = top-left
 
 # Offset from the origin
-offset = 12x12
+offset = (12, 12)
 
 # Scale factor. It is auto-detected if value is 0.
 # scale = 0
@@ -90,7 +90,7 @@ text_icon_padding = 0
 frame_width = 4
 
 # Defines color of the frame around the notification window.
-frame_color = "#b16286"
+frame_color = "#98971a"
 
 # Define a color for the separator.
 # possible values are:

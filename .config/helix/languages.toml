@@ -17,6 +17,10 @@ rust-analyzer.inlayHints.typeHints.hideClosureInitialization = true
 '<' = '>'
 
 [[language]]
+name = "java"
+auto-format = true
+
+[[language]]
 name = "haskell"
 auto-format = true
 formatter = { command = "stylish-haskell" }
