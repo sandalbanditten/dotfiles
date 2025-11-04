@@ -116,8 +116,10 @@ output "eDP-1" {
 output "HDMI-A-1" {
     mode "1920x1080@75.001"
 
-    background-color "#282828"
-    backdrop-color   "#282828"
+    // background-color "#282828"
+    // backdrop-color   "#282828"
+    background-color "transparent"
+    backdrop-color   "transparent"
 }
 
 overview {
@@ -176,7 +178,7 @@ layout {
     // You can change how the focus ring looks.
     focus-ring {
         // Uncomment this line to disable the focus ring.
-        // off
+        off
 
         // How many logical pixels the ring extends out from the windows.
         width 4
@@ -215,14 +217,15 @@ layout {
     border {
         // The settings are the same as for the focus ring.
         // If you enable the border, you probably want to disable the focus ring.
-        off
+        // off
 
         width 4
-        active-color "#ffc87f"
-        inactive-color "#505050"
+        active-color "#98971a"
+        // inactive-color "#282828cc"
+        inactive-color "#28282800"
 
         // Color of the border around windows that request your attention.
-        urgent-color "#9b0000"
+        urgent-color "#cc241d"
 
         // Gradients can use a few different interpolation color spaces.
         // For example, this is a pastel rainbow gradient via in="oklch longer hue".
@@ -290,6 +293,7 @@ layout {
 // See the binds section below for more spawn examples.
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
+spawn-sh-at-startup "swaybg -c '#282828'"
 spawn-at-startup "wlsunset -l 56.2 -L 10.2 -T 6000 -t 5000"
 spawn-at-startup "tmux start-server"
 // spawn-sh-at-startup "alacritty --daemon"
@@ -303,7 +307,6 @@ spawn-at-startup "firefox"
 spawn-sh-at-startup "obsidian --ozone-platform-hint=auto --enable-features=UseOzonePlatform,WaylandWindowDecorations"
 spawn-sh-at-startup "pactl set-sink-volume @DEFAULT_SINK@ 0%"
 // spawn-sh-at-startup "swaybg -c '#282828'" // both need to be here for my fucked-up wallpaper shell script
-spawn-sh-at-startup "swaybg -c '#282828'"
 spawn-sh-at-startup "~/Code/scripts/wallpaper"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
@@ -441,6 +444,12 @@ window-rule {
     clip-to-geometry true
 }
 
+window-rule {
+    draw-border-with-background false
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+
 binds {
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
     // in the end. To find an XKB name for a particular key, you may use a program
@@ -464,6 +473,7 @@ binds {
     Super+S            hotkey-overlay-title="Open spotify: spotify_player"        { spawn-sh "alacritty -T spotify -e spotify_player";      }
     Super+A            hotkey-overlay-title="Open audio settings: alsamixer"      { spawn-sh "alacritty -T audio_settings -e alsamixer";    }
     Super+E            hotkey-overlay-title="Open file manager: yazi"             { spawn-sh "alacritty -T file_manager -e yazi";           }
+    Super+N            hotkey-overlay-title="Open resource manager: btop++"       { spawn-sh "alacritty -T resource_manager -e btop";       }
     Super+F            hotkey-overlay-title="Open a browser: Firefox"             { spawn "firefox";                                        }
     Super+P            hotkey-overlay-title="Show the time"                       { spawn "datedunst";                                      }
     Super+Q            hotkey-overlay-title="Dencrease volume"                    { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ -5%";    }
@@ -539,14 +549,14 @@ binds {
     Super+Ctrl+Home { move-column-to-first; }
     Super+Ctrl+End  { move-column-to-last; }
 
-    // Mod+Shift+Left  { focus-monitor-left; }
-    // Mod+Shift+Down  { focus-monitor-down; }
-    // Mod+Shift+Up    { focus-monitor-up; }
-    // Mod+Shift+Right { focus-monitor-right; }
-    // Mod+Shift+H     { focus-monitor-left; }
-    // Mod+Shift+J     { focus-monitor-down; }
-    // Mod+Shift+K     { focus-monitor-up; }
-    // Mod+Shift+L     { focus-monitor-right; }
+    Super+Shift+Left  { focus-monitor-left; }
+    Super+Shift+Down  { focus-monitor-down; }
+    Super+Shift+Up    { focus-monitor-up; }
+    Super+Shift+Right { focus-monitor-right; }
+    Super+Ctrl+Shift+H     { focus-monitor-left; }
+    Super+Ctrl+Shift+J     { focus-monitor-down; }
+    Super+Ctrl+Shift+K     { focus-monitor-up; }
+    Super+Ctrl+Shift+L     { focus-monitor-right; }
 
     // Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
     // Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }

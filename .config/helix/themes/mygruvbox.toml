@@ -21,10 +21,10 @@
 
 # "diagnostic" = { modifiers = ["underline"] }
 "diagnostic.deprecated" = { modifiers = ["crossed_out"] }
-"diagnostic.error" = { underline = { color = "red0", style = "line" } }
-"diagnostic.hint" = { underline = { color = "blue0", style = "line" } }
-"diagnostic.info" = { underline = { color = "yellow1", style = "line" } }
-"diagnostic.warning" = { underline = { color = "orange1", style = "line" } }
+"diagnostic.error" = { underline = { color = "red0", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "blue0", style = "curl" } }
+"diagnostic.info" = { underline = { color = "yellow1", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "orange1", style = "curl" } }
 # "diagnostic.unnecessary" = { modifiers = ["dim"] }  # do not remove this for future resolving
 
 "error" = { fg = "red0", modifiers = ["bold"] }
@@ -72,16 +72,16 @@
 
 "module" = { fg = "aqua1" }
 
-"namespace" = "fg2"
+"namespace" = "fg1"
 
 "operator" = "fg0"
 
-"punctuation" = "fg2"
+"punctuation" = "fg1"
 "punctuation.delimiter" = "fg3"
 "punctuation.bracket" = "fg3"
 "punctuation.special" = "purple1"
 
-"special" = { fg = "purple1" }
+"special" = { fg = "yellow1", modifiers = ["bold"] }
 
 "string" = "green1"
 "string.regexp" = { fg = "green1", modifiers = ["bold"] }
@@ -122,22 +122,35 @@
 # "ui.gutter" = { bg = "bg0" }
 # "ui.gutter.selected" = { bg = "bg0" }
 
-"ui.help" = { fg = "fg2", bg = "bg0" }
+# "ui.help" = { fg = "fg2", bg = "bg0" }
+# "ui.highlight.frameline" = { fg = "red0" }
+# "ui.linenr" = { fg = "bg4" }
+# "ui.linenr.selected" = { fg = "yellow1", modifiers = ["bold"] }
+# "ui.menu" = { fg = "fg2", bg = "bg0" }
+# "ui.menu.selected" = { fg = "bg1", bg = "purple1", modifiers = ["bold"] }
+# "ui.menu.scroll" = { fg = "fg2", bg = "bg1" }
+# "ui.popup" = { bg = "bg0" }
+# "ui.popup.info" = { bg = "bg0" }
+# "ui.picker.header.column" = { underline.style = "line" }
+# "ui.picker.header.column.active" = { modifiers = ["bold"], underline.style = "line" }
+# "ui.selection" = { bg = "bg1" }
+# "ui.selection.primary" = { bg = "bg1", modifiers = ["bold"] }
+"ui.help" = { fg = "fg1"  }
 "ui.highlight.frameline" = { fg = "red0" }
 "ui.linenr" = { fg = "bg4" }
 "ui.linenr.selected" = { fg = "yellow1", modifiers = ["bold"] }
-"ui.menu" = { fg = "fg2", bg = "bg0" }
-"ui.menu.selected" = { fg = "bg1", bg = "purple1", modifiers = ["bold"] }
-"ui.menu.scroll" = { fg = "fg2", bg = "bg1" }
-"ui.popup" = { bg = "bg0" }
-"ui.popup.info" = { bg = "bg0" }
+"ui.menu" = { fg = "fg1"  }
+"ui.menu.selected" = { fg = "bg1", bg = "green1", modifiers = ["bold"] }
+"ui.menu.scroll" = { fg = "fg1"  }
+"ui.popup" = {  }
+"ui.popup.info" = {  }
 "ui.picker.header.column" = { underline.style = "line" }
 "ui.picker.header.column.active" = { modifiers = ["bold"], underline.style = "line" }
 "ui.selection" = { bg = "bg1" }
-"ui.selection.primary" = { bg = "bg1", modifiers = ["bold"] }
+"ui.selection.primary" = { bg = "bg0", modifiers = ["bold"] }
 
 "ui.statusline" = { fg = "fg0" }
-"ui.statusline.inactive" = { fg = "fg2" }
+"ui.statusline.inactive" = { fg = "fg1" }
 "ui.statusline.insert" = { bg = "blue0", fg = "bg0" }
 "ui.statusline.normal" = { bg = "green1", fg = "bg0" }
 "ui.statusline.select" = { bg = "yellow1", fg = "bg0" }
@@ -152,10 +165,10 @@
 "ui.virtual.indent-guide" = { fg = "bg1" }
 # "ui.window" = { bg = "bg0" }
 
-"variable" = "fg2"
+"variable" = "fg1"
 "variable.builtin" = "yellow1"
-"variable.parameter" = "fg2"
-"variable.other.member" = "fg2"
+"variable.parameter" = "fg1"
+"variable.other.member" = "fg1"
 
 
 [palette]
@@ -166,8 +179,8 @@ bg3 = "#665c54"
 bg4 = "#7c6f64"
 
 fg0 = "#fbf1c7"
-fg1 = "#ebdbb2"
-fg2 = "#d5c4a1" # main foreground
+fg1 = "#ebdbb2" # main foreground
+fg2 = "#d5c4a1"
 fg3 = "#bdae93"
 fg4 = "#a89984"
 

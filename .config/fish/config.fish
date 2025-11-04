@@ -26,6 +26,7 @@ abbr -a py python
 abbr -a rman rusty-man
 abbr -a showcolor perl -e '\'print "\e[48;2;".join(";",unpack("C*",pack("H*",$ARGV[0])))."m  \e[49m"\''
 abbr -a sp PYTHONSTARTUP='/home/notroot/Code/scripts/sympy_start.py' python3.13
+abbr -a weather curl wttr.in/aarhus
 abbr -a wi wiki-tui
 abbr -a x eza
 abbr -a xa eza -aoTlgL1 --git
