@@ -11,11 +11,3 @@
 /* configurations - DO NOT CHANGE ORDER */
 @import url("defaults.css");
 @import url("config.css");
-
-@-moz-document url("about:newtab") {
-body { background-color: #282828 !important;}
-}
-
-@-moz-document url(chrome://browser/content/browser.xhtml) {
- browser[type="content-primary"] {background: #282828 !important}
-}
