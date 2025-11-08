@@ -474,7 +474,7 @@ binds {
     Super+A            hotkey-overlay-title="Open audio settings: alsamixer"      { spawn-sh "alacritty -T audio_settings -e alsamixer";    }
     Super+E            hotkey-overlay-title="Open file manager: yazi"             { spawn-sh "alacritty -T file_manager -e yazi";           }
     Super+N            hotkey-overlay-title="Open resource manager: btop++"       { spawn-sh "alacritty -T resource_manager -e btop";       }
-    Super+F            hotkey-overlay-title="Open a browser: Firefox"             { spawn "firefox";                                        }
+    Super+B            hotkey-overlay-title="Open a browser: Firefox"             { spawn "firefox";                                        }
     Super+P            hotkey-overlay-title="Show the time"                       { spawn "datedunst";                                      }
     Super+Q            hotkey-overlay-title="Dencrease volume"                    { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ -5%";    }
     Super+W            hotkey-overlay-title="Increase volume"                     { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ +5%";    }
@@ -676,12 +676,12 @@ binds {
     // Super+Control+Shift+R { switch-preset-column-width-back; }
     Super+Shift+R { switch-preset-window-height; }
     Super+Ctrl+R { reset-window-height; }
-    Super+Shift+F { maximize-column; }
+    Super+F { maximize-column; }
     Super+Ctrl+F { fullscreen-window; }
 
     // Expand the focused column to space not taken up by other fully visible columns.
     // Makes the column "fill the rest of the space".
-    Super+Ctrl+Shift+F { expand-column-to-available-width; }
+    Super+Shift+F { expand-column-to-available-width; }
 
     Super+Shift+C { center-column; }
 
@@ -698,6 +698,9 @@ binds {
     // set-column-width "100" will make the column occupy 200 physical screen pixels.
     Super+Ctrl+H { set-column-width "-5%"; }
     Super+Ctrl+L { set-column-width "+5%"; }
+
+    Super+Alt+H { set-column-width "-2%"; }
+    Super+Alt+L { set-column-width "+2%"; }
 
     // Finer height adjustments when in column with other windows.
     Super+Shift+Minus { set-window-height "-5%"; }

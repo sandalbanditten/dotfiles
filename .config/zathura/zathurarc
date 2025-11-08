@@ -2,22 +2,31 @@
 set font 'Berkeley Mono 16'
 
 # Colors
-set default-bg '#282828'
+set completion-bg 'rgba(40, 40, 40, 0.0)'
+set completion-fg '#ebdbb2'
+
+set completion-group-bg '#0000ff'
+set completion-group-fg '#ff0000'
+
+set completion-highlight-bg '#98971a'
+set completion-highlight-fg '#282828'
+
+set default-bg 'rgba(40, 40, 40, 0.9)'
 set default-fg '#ebdbb2'
 
-set inputbar-bg '#282828'
+set inputbar-bg 'rgba(40, 40, 40, 0.0)'
 set inputbar-fg '#ebdbb2'
 
-set statusbar-bg '#282828'
+set statusbar-bg 'rgba(40, 40, 40, 0.0)'
 set statusbar-fg '#ebdbb2'
 
-set notification-bg '#282828'
+set notification-bg 'rgba(40, 40, 40, 0.9)'
 set notification-fg '#ebdbb2'
 
-set notification-error-bg '#282828'
+set notification-error-bg 'rgba(40, 40, 40, 0.9)'
 set notification-error-fg '#cc241d'
 
-set notification-warning-bg '#282828'
+set notification-warning-bg 'rgba(40, 40, 40, 0.9)'
 set notification-warning-fg '#d79921'
 
 set recolor-darkcolor '#ebdbb2'
@@ -26,15 +35,27 @@ set recolor-lightcolor '#282828'
 set highlight-color 'rgba(168, 153, 132, 0.5)'
 set highlight-active-color 'rgba(250, 189, 47, 0.5)'
 
+set index-active-bg '#98971a'
+set index-active-fg '#282828'
+
+set index-bg 'rgba(40, 40, 40, 0.0)'
+set index-fg '#ebdbb2'
+
 # Transparency not supported here
 set render-loading-bg '#282828'
 set render-loading-fg '#ebdbb2'
 
 # Page padding
-set page-padding 12
+set page-h-padding 12
+set page-v-padding 12
+
+set statusbar-h-padding 12
+set statusbar-v-padding 12
 
 # Dark mode
 set recolor true
+
+set selection-clipboard 'clipboard'
 
 # Filenames
 set statusbar-basename true

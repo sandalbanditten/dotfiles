@@ -24,6 +24,7 @@ abbr -a kb head -n 42 ~/Documents/keymap.c
 abbr -a objdump objdump -M intel
 abbr -a py python
 abbr -a rman rusty-man
+abbr -a rust-lldb rust-lldb -Q
 abbr -a showcolor perl -e '\'print "\e[48;2;".join(";",unpack("C*",pack("H*",$ARGV[0])))."m  \e[49m"\''
 abbr -a sp PYTHONSTARTUP='/home/notroot/Code/scripts/sympy_start.py' python3.13
 abbr -a weather curl wttr.in/aarhus

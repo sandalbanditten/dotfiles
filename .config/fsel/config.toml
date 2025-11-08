@@ -4,5 +4,9 @@ title_panel_height_percent = 15
 
 cursor = ""
 
+[cclip]
+image_preview = true
+hide_inline_image_message = false
+
 # [app_launcher]
 # pin_color = "Green"
