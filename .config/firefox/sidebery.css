@@ -1,0 +1,17 @@
+#root.root {--nav-btn-active-shadow: inset 0 0 0 1px #98971a, 0 1px 3px 0 rgba(0,0,0,0.212);}
+#root.root {--nav-btn-accent: #98971aff;}
+#root.root {--nav-btn-border-radius: 6px;}
+#root.root {--tabs-border-radius: 4px;}
+#root.root {--toolbar-el-overlay-selected-border: #98971a;}
+#root.root {--accent: #98971a;}
+#root.root {--status-ok: #98971a;}
+#root.root {--bookmarks-bookmark-font: "Berkeley Mono", monospace;}
+#root.root {--bookmarks-folder-font: "Berkeley Mono", monospace;}
+#root.root {--tabs-font: "Berkeley Mono", monospace;}
+#root.root {--tabs-count-font: "Berkeley Mono", monospace;}
+#root.root {--tf-font-family: "Berkeley Mono", monospace;}
+#root.root {--ctx-menu-font: Berkeley Mono;}
+
+#root.root {--frame-el-overlay-selected-border: #98971aff;}
+#root.root {--frame-fg: #ebdbb2;}
+#root.root {--frame-bg: #282828;}
