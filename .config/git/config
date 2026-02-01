@@ -4,7 +4,7 @@
 [diff]
 	external = difft
 [core]
-	pager = bat
+	pager = "bat --style plain"
 	editor = hx
 [credential]
 	helper = store
