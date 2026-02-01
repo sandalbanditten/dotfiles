@@ -18,6 +18,20 @@
 @import url("defaults.css");
 @import url("config.css");
 
+tabbrowser tabpanels { background-color: #282828 !important; }
+browser { background-color: #282828 !important; }
+
+@-moz-document url-prefix(about:blank) {
+    html > body:empty {
+        background-color: #282828 !important;
+    }
+}
+@-moz-document url(about:blank) {
+    html > body:empty {
+        background-color: #282828 !important;
+    }
+}
+
 * {
   font-family: var(--tf-font-family);
   font-size: var(--tf-font-size);
