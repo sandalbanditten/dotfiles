@@ -21,6 +21,11 @@
 tabbrowser tabpanels { background-color: #282828 !important; }
 browser { background-color: #282828 !important; }
 
+#browser vbox#appcontent tabbrowser, #content, #tabbrowser-tabpanels, 
+browser[type=content-primary],browser[type=content] > html {
+    background: #282828 !important
+}
+
 @-moz-document url-prefix(about:blank) {
     html > body:empty {
         background-color: #282828 !important;
@@ -29,6 +34,12 @@ browser { background-color: #282828 !important; }
 @-moz-document url(about:blank) {
     html > body:empty {
         background-color: #282828 !important;
+    }
+}
+
+@-moz-document url(about:blank), url(about:newtab) {
+    #newtab-window, html:not(#ublock0-epicker) {
+        background: #282828 !important;
     }
 }
 

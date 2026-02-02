@@ -98,7 +98,7 @@
 
 # "ui.background" = { bg = "bg0" }
 # "ui.bufferline" = { fg = "fg1", bg = "bg1" }
-# "ui.bufferline.active" = { fg = "bg0", bg = "yellow0" }
+"ui.bufferline.active" = { fg = "green1" }
 # "ui.bufferline.background" = { bg = "bg2" }
 
 "ui.cursor" = { bg = "bg1" }
@@ -140,7 +140,7 @@
 "ui.linenr" = { fg = "bg4" }
 "ui.linenr.selected" = { fg = "yellow1", modifiers = ["bold"] }
 "ui.menu" = { fg = "fg1"  }
-"ui.menu.selected" = { fg = "bg1", bg = "green1", modifiers = ["bold"] }
+"ui.menu.selected" = { fg = "green1", modifiers = ["bold"] }
 "ui.menu.scroll" = { fg = "fg1"  }
 "ui.popup" = {  }
 "ui.popup.info" = {  }

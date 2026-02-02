@@ -21,6 +21,10 @@ name = "java"
 auto-format = true
 
 [[language]]
+name = "scala"
+auto-format = true
+
+[[language]]
 name = "haskell"
 auto-format = true
 formatter = { command = "stylish-haskell" }

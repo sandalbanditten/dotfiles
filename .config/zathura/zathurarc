@@ -30,7 +30,7 @@ set notification-warning-bg 'rgba(40, 40, 40, 0.9)'
 set notification-warning-fg '#d79921'
 
 set recolor-darkcolor '#ebdbb2'
-set recolor-lightcolor '#282828'
+set recolor-lightcolor 'rgba(40, 40, 40, 0.0)'
 
 set highlight-color 'rgba(168, 153, 132, 0.5)'
 set highlight-active-color 'rgba(250, 189, 47, 0.5)'

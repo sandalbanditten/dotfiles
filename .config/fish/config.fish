@@ -26,12 +26,12 @@ abbr -a py python
 abbr -a rman rusty-man
 abbr -a rust-lldb rust-lldb -Q
 abbr -a showcolor perl -e '\'print "\e[48;2;".join(";",unpack("C*",pack("H*",$ARGV[0])))."m  \e[49m"\''
-abbr -a sp PYTHONSTARTUP='/home/notroot/Code/scripts/sympy_start.py' python3.13
+abbr -a sp PYTHONSTARTUP='/home/notroot/Code/scripts/sympy_start.py' ipython
 abbr -a weather curl wttr.in/aarhus
 abbr -a wi wiki-tui
 abbr -a x eza
-abbr -a xa eza -aoTlgL1 --git
-abbr -a xl eza -oTlgL1 --git
+abbr -a xa eza --git -aoTlgL1
+abbr -a xl eza --git -oTlgL1
 abbr -a yt yt-dlp -o \'%\(title\)s.%\(ext\)s\'
 abbr -a za zathura
 abbr -a zaf zathura --fork

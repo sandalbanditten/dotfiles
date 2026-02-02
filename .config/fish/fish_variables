@@ -10,7 +10,6 @@ SETUVAR --export HELIX_RUNTIME:/home/notroot/\x2econfig/helix/runtime
 SETUVAR --export PAGER:bat
 SETUVAR --export PASTEL_COLOR_MODE:24bit
 SETUVAR --path PATH:/home/notroot/\x2ecargo/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/home/notroot/\x2econfig/nvim/plugged/vim\x2dsuperman/bin\x1e/home/notroot/\x2elocal/bin\x1e/home/notroot/Code/scripts\x1e/usr/lib/jvm/default/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/home/notroot/Code/Scripts\x1e/home/notroot/Code/Scripts
-SETUVAR RUSTC_WRAPPER:/usr/bin/sccache
 SETUVAR --export RUSTUP_HOME:/home/notroot/\x2elocal/share/rustup
 SETUVAR --export TERM:xterm\x2dkitty
 SETUVAR --export TERMINAL:xterm\x2dkitty
@@ -19,29 +18,7 @@ SETUVAR --export VISUAL:hx
 SETUVAR --export XDG_CACHE_HOME:/home/notroot/\x2ecache
 SETUVAR --export XDG_DATA_HOME:/home/notroot/\x2elocal/share
 SETUVAR --export XDG_STATE_HOME:/home/notroot/\x2elocal/state
-SETUVAR __fish_initialized:3800
-SETUVAR fish_color_autosuggestion:white
-SETUVAR fish_color_cancel:white\x1e\x2d\x2dbold
-SETUVAR fish_color_command:green\x1e\x2d\x2dbold
-SETUVAR fish_color_comment:white
-SETUVAR fish_color_cwd:blue\x1e\x2d\x2dbold
-SETUVAR fish_color_cwd_root:white\x1e\x2d\x2dbold
-SETUVAR fish_color_end:white
-SETUVAR fish_color_error:\x23ff0000\x1e\x2d\x2dbold
-SETUVAR fish_color_escape:yellow\x1e\x2d\x2dbold
-SETUVAR fish_color_history_current:yellow\x1e\x2d\x2dbold
-SETUVAR fish_color_host:white
-SETUVAR fish_color_host_remote:white\x1e\x2d\x2dunderline
-SETUVAR fish_color_normal:yellow\x1e\x2d\x2dbold
-SETUVAR fish_color_operator:blue
-SETUVAR fish_color_param:brwhite
-SETUVAR fish_color_quote:green
-SETUVAR fish_color_redirection:yellow
-SETUVAR fish_color_search_match:yellow\x1e\x2d\x2dbold
-SETUVAR fish_color_selection:yellow
-SETUVAR fish_color_status:red\x1e\x2d\x2dbold
-SETUVAR fish_color_user:green
-SETUVAR fish_color_valid_path:blue\x1e\x2d\x2dbold
+SETUVAR __fish_initialized:4300
 SETUVAR fish_cursor_default:block
 SETUVAR fish_cursor_external:line
 SETUVAR fish_cursor_insert:line
@@ -49,10 +26,4 @@ SETUVAR fish_cursor_replace:underscore
 SETUVAR fish_cursor_replace_one:underscore
 SETUVAR fish_cursor_visual:underscore
 SETUVAR fish_greeting:\x1d
-SETUVAR fish_key_bindings:fish_default_key_bindings
-SETUVAR fish_pager_color_completion:white
-SETUVAR fish_pager_color_description:white
-SETUVAR fish_pager_color_prefix:green\x1e\x2d\x2dbold
-SETUVAR fish_pager_color_progress:yellow\x1e\x2d\x2dbold
-SETUVAR fish_pager_color_selected_background:\x2d\x2dbackground\x3dblack
 SETUVAR fish_user_paths:/home/notroot/\x2elocal/bin\x1e/home/notroot/\x2elocal/share/cargo/bin

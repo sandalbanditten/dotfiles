@@ -1,4 +1,4 @@
-// This config is in the KDL format: https://kdl.dev
+// / This config is in the KDL format: https://kdl.dev
 // "/-" comments out the following node.
 // Check the wiki for a full description of the configuration:
 // https://yalter.github.io/niri/Configuration:-Introduction
@@ -20,7 +20,7 @@ input {
             // from org.freedesktop.locale1. You can control these using
             // localectl set-x11-keymap.
 
-    		options "compose:ins"
+    		options "compose:ins,compose:caps,mod_led:compose"
         }
 
         // Enable numlock on startup, omitting this setting disables it.
@@ -30,38 +30,39 @@ input {
     // Next sections include libinput settings.
     // Omitting settings disables them, or leaves them at their default values.
     // All commented-out settings here are examples, not defaults.
-    touchpad {
-        // off
-        tap
-        dwt
-        // dwtp
-        // drag true
-        // drag-lock
-        natural-scroll
-        accel-speed 0.2
-        accel-profile "flat"
-        scroll-method "two-finger"
-        // disabled-on-external-mouse
-    }
+    // touchpad {
+    //     // off
+    //     tap
+    //     // dwt
+    //     // dwtp
+    //     // drag false
+    //     // drag-lock
+    //     natural-scroll
+    //     // accel-speed 0.2
+    //     // accel-profile "flat"
+    //     // scroll-factor 1.0
+    //     // scroll-factor vertical=1.0 horizontal=-2.0
+    //     // scroll-method "two-finger"
+    //     // scroll-button 273
+    //     // scroll-button-lock
+    //     // tap-button-map "left-middle-right"
+    //     // click-method "clickfinger"
+    //     // left-handed
+    //     // disabled-on-external-mouse
+    //     // middle-emulation
+    // }
 
     mouse {
         // off
-        natural-scroll
+        // natural-scroll
         // accel-speed 0.2
         // accel-profile "flat"
+        // scroll-factor 1.0
+        // scroll-factor vertical=1.0 horizontal=-2.0
         // scroll-method "no-scroll"
-        accel-profile "flat"
-        scroll-method "two-finger"
-    }
-
-    trackpoint {
-        // off
-        natural-scroll
-        // accel-speed 0.2
-        // accel-profile "flat"
-        // scroll-method "on-button-down"
         // scroll-button 273
         // scroll-button-lock
+        // left-handed
         // middle-emulation
     }
 
@@ -92,7 +93,7 @@ output "eDP-1" {
     mode "2560x1600@165.019"
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
-    scale 1
+    scale 1.0
 
     // Transform allows to rotate the output counter-clockwise, valid values are:
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
@@ -107,7 +108,74 @@ output "eDP-1" {
     // so to put another output directly adjacent to it on the right, set its x to 1920.
     // If the position is unset or results in an overlap, the output is instead placed
     // automatically.
+    position x=1720 y=1440
+    background-color "transparent"
+    backdrop-color   "transparent"
+}
+
+output "DP-1" {
+    // Uncomment this line to disable this output.
+    // off
+
+    // Resolution and, optionally, refresh rate of the output.
+    // The format is "<width>x<height>" or "<width>x<height>@<refresh rate>".
+    // If the refresh rate is omitted, niri will pick the highest refresh rate
+    // for the resolution.
+    // If the mode is omitted altogether or is invalid, niri will pick one automatically.
+    // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
+    mode "3440x1440@99.982"
+
+    // you can use integer or fractional scale, for example use 1.5 for 150% scale.
+    scale 1.0
+
+    // transform allows to rotate the output counter-clockwise, valid values are:
+    // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
+    transform "normal"
+
+    // position of the output in the global coordinate space.
+    // this affects directional monitor actions like "focus-monitor-left", and cursor movement.
+    // the cursor can only move between directly adjacent outputs.
+    // output scale and rotation has to be taken into account for positioning:
+    // outputs are sized in logical, or scaled, pixels.
+    // for example, a 3840×2160 output with scale 2.0 will have a logical size of 1920×1080,
+    // so to put another output directly adjacent to it on the right, set its x to 1920.
+    // If the position is unset or results in an overlap, the output is instead placed
+    // automatically.
     position x=0 y=0
+
+    background-color "transparent"
+    backdrop-color   "transparent"
+}
+
+output "DP-2" {
+    // Uncomment this line to disable this output.
+    // off
+
+    // Resolution and, optionally, refresh rate of the output.
+    // The format is "<width>x<height>" or "<width>x<height>@<refresh rate>".
+    // If the refresh rate is omitted, niri will pick the highest refresh rate
+    // for the resolution.
+    // If the mode is omitted altogether or is invalid, niri will pick one automatically.
+    // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
+    mode "2560x1440@143.995"
+
+    // You can use integer or fractional scale, for example use 1.5 for 150% scale.
+    scale 1.0
+
+    // Transform allows to rotate the output counter-clockwise, valid values are:
+    // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
+    transform "270"
+
+    // Position of the output in the global coordinate space.
+    // This affects directional monitor actions like "focus-monitor-left", and cursor movement.
+    // The cursor can only move between directly adjacent outputs.
+    // Output scale and rotation has to be taken into account for positioning:
+    // outputs are sized in logical, or scaled, pixels.
+    // For example, a 3840×2160 output with scale 2.0 will have a logical size of 1920×1080,
+    // so to put another output directly adjacent to it on the right, set its x to 1920.
+    // If the position is unset or results in an overlap, the output is instead placed
+    // automatically.
+    position x=-1440 y=0
 
     background-color "transparent"
     backdrop-color   "transparent"
@@ -160,7 +228,7 @@ layout {
     // preset-window-heights { }
 
     // You can change the default width of the new windows.
-    default-column-width { proportion 0.55; }
+    default-column-width { proportion 0.48; }
     // If you leave the brackets empty, the windows themselves will decide their initial width.
     // default-column-width {}
 
@@ -294,20 +362,21 @@ layout {
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-sh-at-startup "swaybg -c '#282828'"
-spawn-at-startup "wlsunset -l 56.2 -L 10.2 -T 6000 -t 5000"
-spawn-at-startup "tmux start-server"
-// spawn-sh-at-startup "alacritty --daemon"
+spawn-sh-at-startup "wlsunset -l 56.2 -L 10.2 -T 6000 -t 5000"
+spawn-sh-at-startup "tmux start-server"
+spawn-sh-at-startup "alacritty --daemon"
 spawn-at-startup "dunst"
-spawn-at-startup "pulseaudio --start"
+spawn-sh-at-startup "pulseaudio --start"
 spawn-sh-at-startup "bongocat --config ~/.config/bongocat/bongocat.conf --watch-config"
-spawn-sh-at-startup "SCCACHE_NO_DAEMON=1 sccache --start-server"
 spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
 spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
-spawn-at-startup "firefox"
+spawn-sh-at-startup "MOZ_USE_XINPUT2=\"1\" firefox"
 spawn-sh-at-startup "obsidian --ozone-platform-hint=auto --enable-features=UseOzonePlatform,WaylandWindowDecorations"
 spawn-sh-at-startup "pactl set-sink-volume @DEFAULT_SINK@ 0%"
 // spawn-sh-at-startup "swaybg -c '#282828'" // both need to be here for my fucked-up wallpaper shell script
 spawn-sh-at-startup "~/Code/scripts/wallpaper"
+spawn-at-startup    "libinput-gestures"
+spawn-sh-at-startup "rfkill unblock all"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -340,7 +409,7 @@ animations {
     // off
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
-    // slowdown 3.0
+    slowdown 0.9
 }
 
 // Window rules let you adjust behavior for individual windows.
@@ -376,19 +445,20 @@ layer-rule {
 window-rule {
     match app-id=r#"^firefox$"# at-startup=true
     open-on-workspace "1"
-    open-floating false
     // open-maximized true
 }
-
 window-rule {
-    match app-id=r#"^firefox$"# at-startup=false
+    match title="^calculator$"
     open-floating true
+    default-column-width { proportion 0.30; }
+    default-window-height { proportion 0.45; }
 }
 
 window-rule {
-    match app-id=r#"obsidian$"#
+    match app-id="obsidian"
     open-on-workspace "2"
-    open-maximized true
+    default-column-width { proportion 0.85; }
+    // open-maximized true
 }
 
 window-rule {
@@ -474,13 +544,17 @@ binds {
     Super+A            hotkey-overlay-title="Open audio settings: alsamixer"      { spawn-sh "alacritty -T audio_settings -e alsamixer";    }
     Super+E            hotkey-overlay-title="Open file manager: yazi"             { spawn-sh "alacritty -T file_manager -e yazi";           }
     Super+N            hotkey-overlay-title="Open resource manager: btop++"       { spawn-sh "alacritty -T resource_manager -e btop";       }
+    Super+M            hotkey-overlay-title="Open calculator: sage"               { spawn-sh "alacritty -T calculator -e sage";             }
     Super+B            hotkey-overlay-title="Open a browser: Firefox"             { spawn "firefox";                                        }
     Super+P            hotkey-overlay-title="Show the time"                       { spawn "datedunst";                                      }
+    Super+Shift+P                                                                 { spawn-sh "dunstctl close-all";                                      }
     Super+Q            hotkey-overlay-title="Dencrease volume"                    { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ -5%";    }
     Super+W            hotkey-overlay-title="Increase volume"                     { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ +5%";    }
     Super+Shift+Q                                                                 { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ -10%";   }
     Super+Ctrl+Shift+Q hotkey-overlay-title="Set volume to zero"                  { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ 0%";     }
     Super+Shift+W                                                                 { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ +10%";   }
+    Alt+Q              hotkey-overlay-title="Decrease brightness"                { spawn-sh "brightnessctl set 5-";    }
+    Alt+W              hotkey-overlay-title="Increase brightness"                 { spawn-sh "brightnessctl set 5+";    }
 
     
     XF86AudioRaiseVolume allow-when-locked=true                                   { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ +5%";    }
@@ -509,8 +583,8 @@ binds {
     // Example brightness key mappings for brightnessctl.
     // You can use regular spawn with multiple arguments too (to avoid going through "sh"),
     // but you need to manually put each argument in separate "" quotes.
-    XF86MonBrightnessUp                          { spawn "doas" "brightnessctl" "--class=backlight" "set" "+10%"; }
-    XF86MonBrightnessDown                        { spawn "doas" "brightnessctl" "--class=backlight" "set" "10%-"; }
+    XF86MonBrightnessUp                          { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
+    XF86MonBrightnessDown                        { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
@@ -549,14 +623,18 @@ binds {
     Super+Ctrl+Home { move-column-to-first; }
     Super+Ctrl+End  { move-column-to-last; }
 
-    Super+Shift+Left  { focus-monitor-left; }
-    Super+Shift+Down  { focus-monitor-down; }
-    Super+Shift+Up    { focus-monitor-up; }
-    Super+Shift+Right { focus-monitor-right; }
-    Super+Ctrl+Shift+H     { focus-monitor-left; }
-    Super+Ctrl+Shift+J     { focus-monitor-down; }
-    Super+Ctrl+Shift+K     { focus-monitor-up; }
-    Super+Ctrl+Shift+L     { focus-monitor-right; }
+    Super+Shift+Left    { focus-monitor-left;  }
+    Super+Shift+Down    { focus-monitor-down;  }
+    Super+Shift+Up      { focus-monitor-up;    }
+    Super+Shift+Right   { focus-monitor-right; }
+    Super+Ctrl+Shift+H  { focus-monitor-left;  }
+    Super+Ctrl+Shift+J  { focus-monitor-down;  }
+    Super+Ctrl+Shift+K  { focus-monitor-up;    }
+    Super+Ctrl+Shift+L  { focus-monitor-right; }
+    Super+Alt+H         { move-column-to-monitor-left;  }
+    Super+Alt+J         { move-column-to-monitor-down;  }
+    Super+Alt+K         { move-column-to-monitor-up;    }
+    Super+Alt+L         { move-column-to-monitor-right; }
 
     // Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
     // Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
@@ -579,19 +657,19 @@ binds {
     Super+Page_Up        { focus-workspace-up; }
     Super+D              { focus-workspace-down; }
     Super+U              { focus-workspace-up; }
-    Super+Ctrl+Page_Down { move-column-to-workspace-down; }
-    Super+Ctrl+Page_Up   { move-column-to-workspace-up; }
-    Super+Ctrl+D         { move-column-to-workspace-down; }
-    Super+Ctrl+U         { move-column-to-workspace-up; }
+    Super+Shift+Page_Down { move-column-to-workspace-down; }
+    Super+Shift+Page_Up   { move-column-to-workspace-up; }
+    Super+Shift+D         { move-column-to-workspace-down; }
+    Super+Shift+U         { move-column-to-workspace-up; }
 
     // Alternatively, there are commands to move just a single window:
     // Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
     // ...
 
-    Super+Shift+Page_Down { move-workspace-down; }
-    Super+Shift+Page_Up   { move-workspace-up; }
-    Super+Shift+U         { move-workspace-up; }
-    Super+Shift+D         { move-workspace-down; }
+    Super+Ctrl+Page_Up   { move-workspace-up; }
+    Super+Ctrl+Page_Down { move-workspace-down; }
+    Super+Ctrl+U         { move-workspace-up; }
+    Super+Ctrl+D         { move-workspace-down; }
 
     // You can bind mouse wheel scroll ticks using the following syntax.
     // These binds will change direction based on the natural-scroll setting.
@@ -699,16 +777,16 @@ binds {
     Super+Ctrl+H { set-column-width "-5%"; }
     Super+Ctrl+L { set-column-width "+5%"; }
 
-    Super+Alt+H { set-column-width "-2%"; }
-    Super+Alt+L { set-column-width "+2%"; }
+    // Super+Alt+H { set-column-width "-1%"; }
+    // Super+Alt+L { set-column-width "+1%"; }
 
     // Finer height adjustments when in column with other windows.
     Super+Shift+Minus { set-window-height "-5%"; }
     Super+Shift+Equal { set-window-height "+5%"; }
 
     // Move the focused window between the floating and the tiling layout.
-    Super+T       { toggle-window-floating; }
-    Super+Shift+T { switch-focus-between-floating-and-tiling; }
+    Super+Ctrl+T  { toggle-window-floating; }
+    Super+T       { switch-focus-between-floating-and-tiling; }
 
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,
@@ -743,5 +821,5 @@ binds {
 
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
-    Super+Shift+P { power-off-monitors; }
+    Super+Ctrl+Shift+P { power-off-monitors; }
 }
