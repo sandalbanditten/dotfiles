@@ -7,6 +7,11 @@ rust-analyzer.inlayHints.closureReturnTypeHints.enable = "always"
 rust-analyzer.inlayHints.closureStyle = "rust_analyzer"
 rust-analyzer.inlayHints.discriminantHints.enable = "always"
 rust-analyzer.inlayHints.typeHints.hideClosureInitialization = true
+rust-analyzer.inlayHints.lifetimeElisionHints.enable = "always"
+rust-analyzer.inlayHints.lifetimeElisionHints.useParameterNames = true
+rust-analyzer.inlayHints.parameterHints.enable = true
+rust-analyzer.inlayHints.parameterHints.missingArguments.enable = true
+rust-analyzer.inlayHints.rangeExclusiveHints.enable = true
 
 [language.auto-pairs]
 '(' = ')'
@@ -22,6 +27,10 @@ auto-format = true
 
 [[language]]
 name = "scala"
+auto-format = true
+
+[[language]]
+name = "c"
 auto-format = true
 
 [[language]]

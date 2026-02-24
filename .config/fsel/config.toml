@@ -1,5 +1,5 @@
-highlight_color = "green"
-rounded_borders = false
+highlight_color = "cyan"
+rounded_borders = true
 title_panel_height_percent = 15
 
 cursor = ""

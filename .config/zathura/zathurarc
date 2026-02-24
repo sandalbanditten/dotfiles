@@ -1,49 +1,51 @@
+# Nord
+
 # Font
 set font 'Berkeley Mono 16'
 
 # Colors
-set completion-bg 'rgba(40, 40, 40, 0.0)'
-set completion-fg '#ebdbb2'
+set completion-bg 'rgba(46, 52, 64, 0.0)'
+set completion-fg '#d8dee9'
 
 set completion-group-bg '#0000ff'
 set completion-group-fg '#ff0000'
 
-set completion-highlight-bg '#98971a'
-set completion-highlight-fg '#282828'
+set completion-highlight-bg '#88c0d0'
+set completion-highlight-fg '#2e3440'
 
-set default-bg 'rgba(40, 40, 40, 0.9)'
-set default-fg '#ebdbb2'
+set default-bg 'rgba(46, 52, 64, 0.9)'
+set default-fg '#d8dee9'
 
-set inputbar-bg 'rgba(40, 40, 40, 0.0)'
-set inputbar-fg '#ebdbb2'
+set inputbar-bg 'rgba(46, 52, 64, 0.0)'
+set inputbar-fg '#d8dee9'
 
-set statusbar-bg 'rgba(40, 40, 40, 0.0)'
-set statusbar-fg '#ebdbb2'
+set statusbar-bg 'rgba(46, 52, 64, 0.0)'
+set statusbar-fg '#d8dee9'
 
-set notification-bg 'rgba(40, 40, 40, 0.9)'
-set notification-fg '#ebdbb2'
+set notification-bg 'rgba(46, 52, 64, 0.9)'
+set notification-fg '#d8dee9'
 
-set notification-error-bg 'rgba(40, 40, 40, 0.9)'
-set notification-error-fg '#cc241d'
+set notification-error-bg 'rgba(46, 52, 64, 0.9)'
+set notification-error-fg '#bf616a'
 
-set notification-warning-bg 'rgba(40, 40, 40, 0.9)'
+set notification-warning-bg 'rgba(46, 52, 64, 0.9)'
 set notification-warning-fg '#d79921'
 
-set recolor-darkcolor '#ebdbb2'
-set recolor-lightcolor 'rgba(40, 40, 40, 0.0)'
+set recolor-darkcolor '#d8dee9'
+set recolor-lightcolor 'rgba(46, 52, 64, 0.0)'
 
-set highlight-color 'rgba(168, 153, 132, 0.5)'
-set highlight-active-color 'rgba(250, 189, 47, 0.5)'
+set highlight-color 'rgba(136, 192, 208, 0.5)'
+set highlight-active-color 'rgba(0, 255, 255, 0.5)'
 
-set index-active-bg '#98971a'
-set index-active-fg '#282828'
+set index-active-bg '#88c0d0'
+set index-active-fg '#2e3440'
 
-set index-bg 'rgba(40, 40, 40, 0.0)'
-set index-fg '#ebdbb2'
+set index-bg 'rgba(46, 52, 64, 0.0)'
+set index-fg '#d8dee9'
 
 # Transparency not supported here
-set render-loading-bg '#282828'
-set render-loading-fg '#ebdbb2'
+set render-loading-bg '#2e3440'
+set render-loading-fg '#d8dee9'
 
 # Page padding
 set page-h-padding 12

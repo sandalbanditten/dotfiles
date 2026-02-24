@@ -1,4 +1,5 @@
-theme = "mygruvbox"
+# theme = "mygruvbox"
+theme = "mynord"
 
 [editor]
 true-color = true
@@ -21,7 +22,7 @@ other-lines = "hint"
 
 [editor.soft-wrap]
 enable = true
-wrap-indicator = "←→"
+# wrap-indicator = "←→"
 
 [editor.lsp]
 display-inlay-hints = true

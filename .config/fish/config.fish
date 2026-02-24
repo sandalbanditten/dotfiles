@@ -4,7 +4,7 @@ abbr -a b bat
 abbr -a btctl bluetoothctl
 abbr -a c clear \;
 abbr -a cg cargo
-abbr -a config git --git-dir=/home/notroot/.cfg/ --work-tree=/home/notroot
+abbr -a co git --git-dir=/home/notroot/.cfg/ --work-tree=/home/notroot
 abbr -a dust dust -r
 abbr -a dym dym -v
 abbr -a e hx
@@ -19,7 +19,7 @@ abbr -a gipl git pull
 abbr -a gir git rm
 abbr -a gis git status
 abbr -a i ips
-abbr -a imv imv -b '\#282828'
+abbr -a imv imv -b '\#2e3440'
 abbr -a kb head -n 42 ~/Documents/keymap.c
 abbr -a objdump objdump -M intel
 abbr -a py python
@@ -36,8 +36,11 @@ abbr -a yt yt-dlp -o \'%\(title\)s.%\(ext\)s\'
 abbr -a za zathura
 abbr -a zaf zathura --fork
 
+bind -M insert ctrl-r history-pager
+
 # eza colors
-set EXA_COLORS (vivid generate gruvbox-dark)
+# set EXA_COLORS (vivid generate gruvbox-dark)
+set EXA_COLORS (vivid generate nord)
 set LS_COLORS $EXA_COLORS
 
 # Vi mode

@@ -43,45 +43,23 @@
 "function.special" = { fg = "blue0", modifiers = ["bold"] }
 
 "keyword" = { fg = "red1" }
-"keyword.directive" = { fg = "red1" }
 "keyword.control" = { fg = "red1" }
 "keyword.control.conditional" = { fg = "red1" }
-"keyword.control.repeat" = { fg = "red1" }
-"keyword.control.import" = { fg = "red1" }
-"keyword.control.return" = { fg = "red1" }
 "keyword.control.exception" = { fg = "red1" }
-"keyword.operator" = { fg = "red1" }
+"keyword.control.import" = { fg = "red1" }
+"keyword.control.repeat" = { fg = "red1" }
+"keyword.control.return" = { fg = "red1" }
+"keyword.directive" = { fg = "red1" }
 "keyword.function" = { fg = "red1" }
+"keyword.operator" = { fg = "red1" }
 "keyword.storage" = { fg = "red1" }
-"keyword.storage.type" = { fg = "red1" }
 "keyword.storage.modifier" = { fg = "red1" }
-
-"label" = "yellow1"
-
-"markup" = "fg1"
-"markup.bold" = { modifiers = ["bold"] }
-"markup.heading" = "fg1"
-"markup.heading.marker" = "fg3"
-"markup.italic" = { modifiers = ["italic"] }
-"markup.link.text" = "purple1"
-"markup.link.url" = { fg = "purple1", modifiers = ["underlined"] }
-"markup.link.label" = { fg = "purple1", modifiers = ["underlined"] }
-"markup.raw" = "yellow1"
-"markup.strikethrough" = { modifiers = ["crossed_out"] }
-"markup.quote" = "green1"
-
-"module" = { fg = "aqua1" }
-
-"namespace" = "fg1"
-
-"operator" = "fg0"
+"keyword.storage.type" = { fg = "red1" }
 
 "punctuation" = "fg1"
 "punctuation.delimiter" = "fg3"
 "punctuation.bracket" = "fg3"
 "punctuation.special" = "purple1"
-
-"special" = { fg = "yellow1", modifiers = ["bold"] }
 
 "string" = "green1"
 "string.regexp" = { fg = "green1", modifiers = ["bold"] }
@@ -90,11 +68,24 @@
 "string.special.url" = { fg = "green1", modifiers = ["underlined"] }
 "string.special.symbol" = { fg = "green1", modifiers = ["bold"] }
 
-"tag" = "fg3"
+"type" = { fg = "yellow1" }
 
+"variable" = "fg1"
+"variable.builtin" = "yellow1"
+"variable.parameter" = "fg1"
+"variable.other.member" = "fg1"
+
+"label" = "yellow1"
+"module" = { fg = "aqua1" }
+"namespace" = "fg1"
+"operator" = "fg0"
+"tag" = "fg3"
 "tabstop" = { bg = "bg1" }
 
-"type" = { fg = "yellow1" }
+"special" = { fg = "yellow1", modifiers = ["bold"] }
+
+# "ui.text" = { fg = "fg2", bg = "bg0" }
+# "ui.text.directory" = { fg = "fg2", bg = "bg0" }
 
 # "ui.background" = { bg = "bg0" }
 # "ui.bufferline" = { fg = "fg1", bg = "bg1" }
@@ -155,8 +146,6 @@
 "ui.statusline.normal" = { bg = "green1", fg = "bg0" }
 "ui.statusline.select" = { bg = "yellow1", fg = "bg0" }
 
-# "ui.text" = { fg = "fg2", bg = "bg0" }
-# "ui.text.directory" = { fg = "fg2", bg = "bg0" }
 "ui.virtual.inlay-hint" = { fg = "gray" }
 "ui.virtual.jump-label" = { fg = "green1", modifiers = ["bold"] }
 "ui.virtual.ruler" = { bg = "bg1" }
@@ -165,11 +154,17 @@
 "ui.virtual.indent-guide" = { fg = "bg1" }
 # "ui.window" = { bg = "bg0" }
 
-"variable" = "fg1"
-"variable.builtin" = "yellow1"
-"variable.parameter" = "fg1"
-"variable.other.member" = "fg1"
-
+"markup" = "fg1"
+"markup.bold" = { modifiers = ["bold"] }
+"markup.heading" = "fg1"
+"markup.heading.marker" = "fg3"
+"markup.italic" = { modifiers = ["italic"] }
+"markup.link.text" = "purple1"
+"markup.link.url" = { fg = "purple1", modifiers = ["underlined"] }
+"markup.link.label" = { fg = "purple1", modifiers = ["underlined"] }
+"markup.raw" = "yellow1"
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.quote" = "green1"
 
 [palette]
 bg0 = "#282828" # main background
