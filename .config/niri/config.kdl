@@ -3,6 +3,12 @@
 // Check the wiki for a full description of the configuration:
 // https://yalter.github.io/niri/Configuration:-Introduction
 
+cursor {
+    hide-when-typing
+
+    hide-after-inactive-ms 3000
+}
+
 // Input device configuration.
 // Find the full list of options on the wiki:
 // https://yalter.github.io/niri/Configuration:-Input
@@ -26,35 +32,36 @@ input {
         // Enable numlock on startup, omitting this setting disables it.
         // numlock
     }
+    
 
     // Next sections include libinput settings.
     // Omitting settings disables them, or leaves them at their default values.
     // All commented-out settings here are examples, not defaults.
-    // touchpad {
-    //     // off
-    //     tap
-    //     // dwt
-    //     // dwtp
-    //     // drag false
-    //     // drag-lock
-    //     natural-scroll
-    //     // accel-speed 0.2
-    //     // accel-profile "flat"
-    //     // scroll-factor 1.0
-    //     // scroll-factor vertical=1.0 horizontal=-2.0
-    //     // scroll-method "two-finger"
-    //     // scroll-button 273
-    //     // scroll-button-lock
-    //     // tap-button-map "left-middle-right"
-    //     // click-method "clickfinger"
-    //     // left-handed
-    //     // disabled-on-external-mouse
-    //     // middle-emulation
-    // }
+    touchpad {
+        // off
+        tap
+        // dwt
+        // dwtp
+        // drag false
+        // drag-lock
+        natural-scroll
+        accel-speed 0.2
+        // accel-profile "flat"
+        // scroll-factor 1.0
+        // scroll-factor vertical=1.0 horizontal=-2.0
+        // scroll-method "two-finger"
+        // scroll-button 273
+        // scroll-button-lock
+        // tap-button-map "left-middle-right"
+        // click-method "clickfinger"
+        // left-handed
+        // disabled-on-external-mouse
+        // middle-emulation
+    }
 
     mouse {
-        // off
-        // natural-scroll
+        // off // DO NOT ENABLE WILL LOCK YOU OUT OF COMPUTER
+        // natural-scroll // Inverted for Toucan
         // accel-speed 0.2
         // accel-profile "flat"
         // scroll-factor 1.0
@@ -200,6 +207,9 @@ overview {
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
+    // Self-documenting
+    empty-workspace-above-first
+    
     // Set gaps around windows in logical pixels.
     gaps 16
 
@@ -228,7 +238,7 @@ layout {
     // preset-window-heights { }
 
     // You can change the default width of the new windows.
-    default-column-width { proportion 0.48; }
+    default-column-width { proportion 0.44; }
     // If you leave the brackets empty, the windows themselves will decide their initial width.
     // default-column-width {}
 
@@ -360,6 +370,13 @@ layout {
     background-color "transparent"
 }
 
+blur {
+    passes 2
+    offset 1.0
+    noise 0.1
+    // saturation 1.0
+}
+
 // Add lines like this to spawn processes at startup.
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
@@ -422,16 +439,6 @@ animations {
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Window-Rules
 
-// Work around WezTerm's initial configure bug
-// by setting an empty default-column-width.
-window-rule {
-    // This regular expression is intentionally made as specific as possible,
-    // since this is the default config, and we want no false positives.
-    // You can get away with just app-id="wezterm" if you want.
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
-}
-
 // Open the Firefox picture-in-picture player as floating by default.
 // window-rule {
     // This app-id regular expression will work for both:
@@ -446,6 +453,26 @@ layer-rule {
     // Find the right namespace by running niri msg layers.
     match namespace="^wallpaper$"
     place-within-backdrop true
+}
+
+// Enable blur behind the Alacritty terminal.
+window-rule {
+    match app-id="^Alacritty$"
+
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+// Enable blur behind zathura
+window-rule {
+    match app-id="^org.pwmt.zathura$"
+
+    background-effect {
+        blur true
+        xray false
+    }
 }
 
 window-rule {
@@ -547,50 +574,39 @@ binds {
     Super+R            hotkey-overlay-title="Run an application: fsel"            { spawn-sh "alacritty -T launcher -e fsel -d";            }
     Super+X            hotkey-overlay-title="Open clipboard: fsel"                { spawn-sh "alacritty -T clipboard -e cliphist_fsel";     }
     Super+S            hotkey-overlay-title="Open spotify: spotify_player"        { spawn-sh "alacritty -T spotify -e spotify_player";      }
-    Super+A            hotkey-overlay-title="Open audio settings: alsamixer"      { spawn-sh "alacritty -T audio_settings -e alsamixer";    }
+    Super+A            hotkey-overlay-title="Open audio settings: pulsemixer"     { spawn-sh "alacritty -T audio_settings -e pulsemixer";   }
     Super+E            hotkey-overlay-title="Open file manager: yazi"             { spawn-sh "alacritty -T file_manager -e yazi";           }
     Super+N            hotkey-overlay-title="Open resource manager: btop++"       { spawn-sh "alacritty -T resource_manager -e btop";       }
     Super+M            hotkey-overlay-title="Open calculator: sage"               { spawn-sh "alacritty -T calculator -e sage";             }
     Super+B            hotkey-overlay-title="Open a browser: Firefox"             { spawn "firefox";                                        }
     Super+P            hotkey-overlay-title="Show the time"                       { spawn "datedunst";                                      }
-    Super+Shift+P                                                                 { spawn-sh "dunstctl close-all";                                      }
-    Super+Q            hotkey-overlay-title="Dencrease volume"                    { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ -5%";    }
-    Super+W            hotkey-overlay-title="Increase volume"                     { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ +5%";    }
-    Super+Shift+Q                                                                 { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ -10%";   }
-    Super+Ctrl+Shift+Q hotkey-overlay-title="Set volume to zero"                  { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ 0%";     }
-    Super+Shift+W                                                                 { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ +10%";   }
-    Alt+Q              hotkey-overlay-title="Decrease brightness"                { spawn-sh "brightnessctl set 5-";    }
-    Alt+W              hotkey-overlay-title="Increase brightness"                 { spawn-sh "brightnessctl set 5+";    }
-
+    Super+Shift+P                                                                 { spawn-sh "dunstctl close-all";                          }
+    // Super+Q            hotkey-overlay-title="Decrease volume"                     { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ -5%";    }
+    // Super+W            hotkey-overlay-title="Increase volume"                     { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ +5%";    }
+    // Super+Shift+Q                                                                 { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ -10%";   }
+    // Super+Ctrl+Shift+Q hotkey-overlay-title="Set volume to zero"                  { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ 0%";     }
+    // Super+Shift+W                                                                 { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ +10%";   }
+    // Alt+Q              hotkey-overlay-title="Decrease brightness"                 { spawn-sh "brightnessctl set 5-";    }
+    // Alt+W              hotkey-overlay-title="Increase brightness"                 { spawn-sh "brightnessctl set 5+";    }
     
     XF86AudioRaiseVolume allow-when-locked=true                                   { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ +5%";    }
     XF86AudioLowerVolume allow-when-locked=true                                   { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ -5%";    }
     XF86AudioMute        allow-when-locked=true                                   { spawn-sh "pactl set-sink-mute @DEFAULT_SINK@ toggle";   }
-    XF86AudioMicMute     allow-when-locked=true                                   { spawn-sh "pactl set-sink-mute @DEFAULT_SOURCE@ toggle"; }
-
-    // Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
-
-    // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
-    // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
-    // For example, this is a standard bind to toggle the screen reader (orca).
-    // Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
-
-    // Example volume keys mappings for PipeWire & WirePlumber.
-    // The allow-when-locked=true property makes them work even when the session is locked.
-    // Using spawn-sh allows to pass multiple arguments together with the command.
 
     // Example media keys mapping using playerctl.
     // This will work with any MPRIS-enabled media player.
-    // XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
-    // XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
-    // XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
-    // XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
+    XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl play-pause";   }
+    XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop";         }
+    XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next";         }
+    XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous";     }
+    XF86AudioForward     allow-when-locked=true { spawn-sh "playerctl position 10+"; }
+    XF86AudioRewind      allow-when-locked=true { spawn-sh "playerctl position 10-"; }
 
     // Example brightness key mappings for brightnessctl.
     // You can use regular spawn with multiple arguments too (to avoid going through "sh"),
     // but you need to manually put each argument in separate "" quotes.
-    XF86MonBrightnessUp                          { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
-    XF86MonBrightnessDown                        { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+    XF86MonBrightnessUp                          { spawn "brightnessctl" "--class=backlight" "set" "+5%"; }
+    XF86MonBrightnessDown                        { spawn "brightnessctl" "--class=backlight" "set" "5%-"; }
 
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
