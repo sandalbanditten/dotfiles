@@ -9,7 +9,9 @@ abbr -a dust dust -r
 abbr -a dym dym -v
 abbr -a e hx
 abbr -a gia git add
+abbr -a gib git branch
 abbr -a gic git commit
+abbr -a gich git checkout
 abbr -a gicl git clone
 abbr -a gid git diff
 abbr -a gif git fetch
