@@ -48,7 +48,9 @@
   }
 }
 
-#navigator-toolbox {
+#navigator-toolbox,
+#navigator-toolbox > * {
+  background: var(--tf-bg) !important;
   border-bottom: var(--border-width) !important;
 }
 
@@ -124,7 +126,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 .browser-toolbar {
   &:not(.titlebar-color) {
-    background-color: transparent !important;
+    background-color: #282828 !important;
   }
 }
 

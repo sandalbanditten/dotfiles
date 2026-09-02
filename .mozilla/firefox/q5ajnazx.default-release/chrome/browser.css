@@ -40,9 +40,7 @@ browser {
   }
 }
 
-#browser:not(.browser-toolbox-background) {
-  :root[lwtheme] & {
-    background-color: var(--lwt-accent-color) !important;
-    background-image: var(--lwt-accent-color) !important;
-  }
+:root[lwtheme] #browser:not(.browser-toolbox-background) {
+  background-color: #282828 !important;
+  background-image: none !important;
 }

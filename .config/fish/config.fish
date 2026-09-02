@@ -21,7 +21,8 @@ abbr -a gipl git pull
 abbr -a gir git rm
 abbr -a gis git status
 abbr -a i ips
-abbr -a imv imv -b '\#2e3440'
+abbr -a imv imv -b '\#282828'
+abbr -a k kalker
 abbr -a kb head -n 42 ~/Documents/keymap.c
 abbr -a objdump objdump -M intel
 abbr -a py python
@@ -41,8 +42,8 @@ abbr -a zaf zathura --fork
 bind -M insert ctrl-r history-pager
 
 # eza colors
-# set EXA_COLORS (vivid generate gruvbox-dark)
-set EXA_COLORS (vivid generate nord)
+set EXA_COLORS (vivid generate gruvbox-dark)
+# set EXA_COLORS (vivid generate nord)
 set LS_COLORS $EXA_COLORS
 
 # Vi mode

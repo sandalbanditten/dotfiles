@@ -2,6 +2,7 @@
 name = "rust"
 
 [language-server.rust-analyzer.config]
+rust-analyzer.cargo.autoreload = true
 rust-analyzer.inlayHints.bindingModeHints.enable = true
 rust-analyzer.inlayHints.closureReturnTypeHints.enable = "always"
 rust-analyzer.inlayHints.closureStyle = "rust_analyzer"

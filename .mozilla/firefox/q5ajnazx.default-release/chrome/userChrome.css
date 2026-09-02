@@ -18,38 +18,51 @@
 @import url("defaults.css");
 @import url("config.css");
 
-tabbrowser tabpanels { background-color: #2e3440 !important; }
-browser { background-color: #2e3440 !important; }
+#browser,
+#appcontent,
+#tabbrowser-tabpanels {
+  background-color: #282828 !important;
+}
+
+tabbrowser tabpanels { background-color: #282828 !important; }
+browser {
+  background-color: #282828 !important;
+}
 
 #browser vbox#appcontent tabbrowser, #content, #tabbrowser-tabpanels, 
 browser[type=content-primary],browser[type=content] > html {
-    background: #2e3440 !important
+    background: #282828 !important
 }
 
 @-moz-document url-prefix(about:blank) {
     html > body:empty {
-        background-color: #2e3440 !important;
+        background-color: #282828 !important;
     }
 }
 @-moz-document url(about:blank) {
     html > body:empty {
-        background-color: #2e3440 !important;
+        background-color: #282828 !important;
     }
 }
 
 @-moz-document url(about:blank), url(about:newtab) {
     #newtab-window, html:not(#ublock0-epicker) {
-        background: #2e3440 !important;
+        background: #282828 !important;
     }
 }
 
 * {
   font-family: var(--tf-font-family);
   font-size: var(--tf-font-size);
+  /* background-color: #282828 !important; */
+  background-image: none !important;
 }
 
+:root,
+html,
 body {
-  background-color: var(--tf-bg);
+  background-color: var(--tf-bg) !important;
+  background-image: none !important;
 }
 
 ::placeholder {

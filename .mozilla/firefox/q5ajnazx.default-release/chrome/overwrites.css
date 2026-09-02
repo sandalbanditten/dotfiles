@@ -5,6 +5,8 @@
     --toolbar-field-background-color
   ) !important;
   --toolbox-non-lwt-bgcolor: var(--tf-bg) !important;
+  --lwt-accent-color: #00ff00 !important;
+  --lwt-accent-color-inactive: #00ff00 !important;
 
   /* borders */
   --border-width: var(--tf-border-width) !important;
@@ -14,7 +16,7 @@
   --tab-border-radius: var(--tf-rounding) !important;
 
   /* tabs */
-  --tab-selected-outline-color: transparent !important;
+  --tab-selected-outline-color: #ff0000 !important;
   --tab-selected-bgcolor: color-mix(
     in hsl,
     var(--toolbar-field-color) 8%,
@@ -38,21 +40,21 @@
   /* containers */
   [data-color="yellow"],
   .identity-color-yellow {
-    --color: #f6c177 !important;
-    --identity-tab-color: #f6c177 !important;
-    --identity-icon-color: #f6c177 !important;
+    --color: #d79921 !important;
+    --identity-tab-color: #d79921 !important;
+    --identity-icon-color: #d79921 !important;
   }
   [data-color="purple"],
   .identity-color-purple {
-    --color: #c4a7e7 !important;
-    --identity-tab-color: #c4a7e7 !important;
-    --identity-icon-color: #c4a7e7 !important;
+    --color: #b16286 !important;
+    --identity-tab-color: #b16286 !important;
+    --identity-icon-color: #b16286 !important;
   }
   [data-color="blue"],
   .identity-color-blue {
-    --color: #9ccfd8 !important;
-    --identity-tab-color: #9ccfd8 !important;
-    --identity-icon-color: #9ccfd8 !important;
+    --color: #458588 !important;
+    --identity-tab-color: #458588 !important;
+    --identity-icon-color: #458588 !important;
   }
   [data-color="turquoise"],
   .identity-color-turquoise {
@@ -62,15 +64,15 @@
   }
   [data-color="green"],
   .identity-color-green {
-    --color: #3e8fb0 !important;
-    --identity-tab-color: #3e8fb0 !important;
-    --identity-icon-color: #3e8fb0 !important;
+    --color: #98971a !important;
+    --identity-tab-color: #98971a !important;
+    --identity-icon-color: #98971a !important;
   }
   [data-color="orange"],
   .identity-color-orange {
-    --color: #f6c177 !important;
-    --identity-tab-color: #f6c177 !important;
-    --identity-icon-color: #f6c177 !important;
+    --color: #d65d0e !important;
+    --identity-tab-color: #d65d0e !important;
+    --identity-icon-color: #d65d0e !important;
   }
   [data-color="red"],
   .identity-color-red {

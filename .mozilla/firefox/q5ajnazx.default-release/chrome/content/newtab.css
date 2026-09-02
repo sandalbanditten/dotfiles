@@ -1,16 +1,12 @@
 @-moz-document url("about:home"), url("about:newtab") {
   body {
     &.lightWallpaper {
-      color-scheme: light !important;
+      color-scheme: dark !important;
     }
     &.darkWallpaper {
       color-scheme: dark !important;
     }
-    --newtab-background-color-secondary: color-mix(
-      in srgb,
-      var(--newtab-wallpaper-color) 90%,
-      var(--newtab-contextual-text-primary-color)
-    ) !important;
+    --newtab-background-color-secondary: #ff0000 !important;
     --newtab-border-color: color-mix(
       in srgb,
       var(--newtab-wallpaper-color) 50%,
@@ -22,7 +18,7 @@
       var(--newtab-contextual-text-primary-color)
     ) !important;
 
-    --newtab-weather-background-color: transparent !important;
+    --newtab-weather-background-color: #ff0000 !important;
   }
 
   /* replace firefox logo */
@@ -52,7 +48,7 @@
       border-radius: var(--tf-rounding) !important;
       box-shadow: none !important;
       &:hover {
-        background-color: var(--newtab-element-hover-color) !important;
+        background-color: #ff0000 !important;
       }
     }
   }
@@ -64,15 +60,16 @@
       border-radius: var(--tf-rounding) !important;
       border: var(--border-width) solid var(--newtab-border-color) !important;
       &:hover {
-        background-color: var(--newtab-element-hover-color) !important;
+        background-color: #ff0000 !important;
       }
     }
     .top-site-icon {
-      background-color: transparent !important;
+      background-color: #ff0000 !important;
     }
   }
   .context-menu {
     box-shadow: none !important;
+    background-color: #ff0000 !important;
     border-radius: var(--tf-rounding) !important;
     border: var(--border-width) solid var(--newtab-border-color) !important;
   }

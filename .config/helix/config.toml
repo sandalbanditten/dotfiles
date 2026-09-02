@@ -1,5 +1,5 @@
-# theme = "mygruvbox"
-theme = "mynord"
+theme = "mygruvbox"
+# theme = "mynord"
 
 [editor]
 true-color = true

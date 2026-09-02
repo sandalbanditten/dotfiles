@@ -71,7 +71,7 @@ function fish_mode_prompt --description 'Write out the prompt'
             echo -n "Λ "
             # echo -n ">_ "
         case insert
-            set_color --bold cyan
+            set_color --bold blue
             echo -n "λ "
             # echo -n ">_ "
         case replace_one

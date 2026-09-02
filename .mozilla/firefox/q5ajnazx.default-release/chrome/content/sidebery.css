@@ -89,7 +89,7 @@ Styles for Sidebery extension
 
   /* audio icon */
   .Tab[data-pin="true"] > .body > .audio {
-    background: transparent !important;
+    background: #282828 !important;
     box-shadow: none !important;
     right: var(--audio-btn-round-margin) !important;
     top: var(--audio-btn-round-margin) !important;
@@ -130,7 +130,7 @@ Styles for Sidebery extension
   .Tab .body {
     text-transform: var(--tf-text-transform);
     & .title {
-      color: color-mix(in hsl, var(--s-popup-fg) 50%, transparent) !important;
+      color: color-mix(in hsl, var(--s-popup-fg) 50%, #282828) !important;
     }
   }
 
@@ -140,7 +140,7 @@ Styles for Sidebery extension
 
   /* consistent navbar background */
   #nav_bar {
-    background-color: transparent !important;
+    background-color: #282828 !important;
   }
 
   /* padding */
@@ -158,7 +158,7 @@ Styles for Sidebery extension
     margin: var(--tabs-margin) !important;
   }
   .popup-container {
-    background-color: transparent !important;
+    background-color: #282828 !important;
   }
 
   /* search */
@@ -181,7 +181,7 @@ Styles for Sidebery extension
     background: color-mix(
       in hsl,
       var(--s-toolbar-fg) 20%,
-      transparent
+      #282828
     ) !important;
   }
 

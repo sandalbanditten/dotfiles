@@ -1,4 +1,4 @@
-// / This config is in the KDL format: https://kdl.dev
+// This config is in the KDL format: https://kdl.dev
 
 // https://yalter.github.io/niri/Configuration:-Introduction
 
@@ -147,13 +147,13 @@ recent-windows {
     }
 
     binds {
-        Alt+Tab         { next-window; }
-        Alt+Shift+Tab   { previous-window; }
+        Alt+Tab         { next-window;                     }
+        Alt+Shift+Tab   { previous-window;                 }
         Alt+grave       { next-window     filter="app-id"; }
         Alt+Shift+grave { previous-window filter="app-id"; }
 
-        Mod+Tab         { next-window; }
-        Mod+Shift+Tab   { previous-window; }
+        Mod+Tab         { next-window;                     }
+        Mod+Shift+Tab   { previous-window;                 }
         Mod+grave       { next-window     filter="app-id"; }
         Mod+Shift+grave { previous-window filter="app-id"; }
     }
@@ -189,17 +189,18 @@ layout {
 
     border {
         width 4
-        // active-color "#98971a"
+        active-color "#98971a"
         // active-color "#88c0d0"
+        // active-color "#c0fe04"
         // inactive-color "#282828cc"
-        // inactive-color "#28282800"
-        inactive-color "#d8dee900"
+        inactive-color "#28282800"
+        // inactive-color "#d8dee900"
 
         // Color of the border around windows that request your attention.
-        // urgent-color "#cc241d"
-        urgent-color "#bf616a"
+        urgent-color "#cc241d"
+        // urgent-color "#bf616a"
 
-        active-gradient from="#e5989b" to="#ffb4a2" angle=45 relative-to="workspace-view" in="oklch longer hue"
+        // active-gradient from="#e5989b" to="#ffb4a2" angle=45 relative-to="workspace-view" in="oklch longer hue"
 
         // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
     }
@@ -242,7 +243,7 @@ blur {
     // saturation 1.0
 }
 
-spawn-at-startup "swaybg" "-c" "'#2e3440'"
+spawn-at-startup "swaybg" "-c" "'#282828'"
 spawn-at-startup "wlsunset" "-l" "56.2" "-L" "10.2" "-T" "6000" "-t" "5000"
 spawn-at-startup "tmux" "start-server"
 spawn-at-startup "alacritty" "--daemon"
@@ -284,8 +285,35 @@ layer-rule {
     place-within-backdrop true
 }
 
+layer-rule {
+    match namespace="^notifications$"
+
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
 window-rule {
     match app-id="^Alacritty$"
+
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+window-rule {
+    match app-id="^Ratty$"
+
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+window-rule {
+    match app-id="^firefox$"
 
     background-effect {
         blur true
@@ -369,118 +397,119 @@ window-rule {
 binds {
     Super+Shift+Slash { show-hotkey-overlay; }
 
-    Super+Return       hotkey-overlay-title="Open a terminal: alacritty"          { spawn "alacritty" "-e" "tmux";                             }
-    Super+Shift+Return hotkey-overlay-title="Open a floating terminal: alacritty" { spawn "alacritty" "-T" "floating_term" "-e" "tmux";        }
-    Super+R            hotkey-overlay-title="Run an application: fsel"            { spawn "alacritty" "-T" "launcher" "-e" "fsel" "-d";        }
-    Super+X            hotkey-overlay-title="Open clipboard: fsel"                { spawn "alacritty" "-T" "clipboard" "-e" "cliphist_fsel";   }
-    Super+S            hotkey-overlay-title="Open spotify: spotify_player"        { spawn "alacritty" "-T" "spotify" "-e" "spotify_player";    }
-    Super+A            hotkey-overlay-title="Open audio settings: pulsemixer"     { spawn "alacritty" "-T" "audio_settings" "-e" "pulsemixer"; }
-    Super+E            hotkey-overlay-title="Open file manager: yazi"             { spawn "alacritty" "-T" "file_manager" "-e" "yazi";         }
-    Super+N            hotkey-overlay-title="Open resource manager: btop++"       { spawn "alacritty" "-T" "resource_manager" "-e" "btop";     }
-    Super+M            hotkey-overlay-title="Open calculator: sage"               { spawn "alacritty" "-T" "calculator" "-e" "sage";           }
-    Super+B            hotkey-overlay-title="Open a browser: Firefox"             { spawn "firefox";                                           }
-    Super+P            hotkey-overlay-title="Show the time"                       { spawn "datedunst";                                         }
-    Super+Shift+P      hotkey-overlay-title="Close notifications"                 { spawn "dunstctl" "close-all";                              }
+    Super+Return         hotkey-overlay-title="Open a terminal: alacritty"          { spawn "alacritty" "-e" "tmux";                             }
+    Super+Control+Return hotkey-overlay-title="Open a terminal: ratty"              { spawn "ratty" "-e" "tmux";                                 }
+    Super+Shift+Return   hotkey-overlay-title="Open a floating terminal: alacritty" { spawn "alacritty" "-T" "floating_term" "-e" "tmux";        }
+    Super+R              hotkey-overlay-title="Run an application: fsel"            { spawn "alacritty" "-T" "launcher" "-e" "fsel" "-d";        }
+    Super+X              hotkey-overlay-title="Open clipboard: fsel"                { spawn "alacritty" "-T" "clipboard" "-e" "cliphist_fsel";   }
+    Super+S              hotkey-overlay-title="Open spotify: spotify_player"        { spawn "alacritty" "-T" "spotify" "-e" "spotify_player";    }
+    Super+A              hotkey-overlay-title="Open audio settings: pulsemixer"     { spawn "alacritty" "-T" "audio_settings" "-e" "pulsemixer"; }
+    Super+E              hotkey-overlay-title="Open file manager: yazi"             { spawn "alacritty" "-T" "file_manager" "-e" "yazi";         }
+    Super+N              hotkey-overlay-title="Open resource manager: btop++"       { spawn "alacritty" "-T" "resource_manager" "-e" "btop";     }
+    Super+M              hotkey-overlay-title="Open calculator: sage"               { spawn "alacritty" "-T" "calculator" "-e" "sage";           }
+    Super+B              hotkey-overlay-title="Open a browser: Firefox"             { spawn "firefox";                                           }
+    Super+P              hotkey-overlay-title="Show the time"                       { spawn "datedunst";                                         }
+    Super+Shift+P        hotkey-overlay-title="Close notifications"                 { spawn "dunstctl" "close-all";                              }
 
     XF86AudioRaiseVolume allow-when-locked=true                                   { spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "+5%";    }
     XF86AudioLowerVolume allow-when-locked=true                                   { spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "-5%";    }
     XF86AudioMute        allow-when-locked=true                                   { spawn "pactl" "set-sink-mute" "@DEFAULT_SINK@" "toggle";   }
-    XF86AudioPlay        allow-when-locked=true                                   { spawn "playerctl" "play-pause";   }
-    XF86AudioStop        allow-when-locked=true                                   { spawn "playerctl" "stop";         }
-    XF86AudioNext        allow-when-locked=true                                   { spawn "playerctl" "next";         }
-    XF86AudioPrev        allow-when-locked=true                                   { spawn "playerctl" "previous";     }
-    XF86AudioForward     allow-when-locked=true                                   { spawn "playerctl" "position" "10+"; }
-    XF86AudioRewind      allow-when-locked=true                                   { spawn "playerctl" "position" "10-"; }
+    XF86AudioPlay        allow-when-locked=true                                   { spawn "playerctl" "play-pause";                            }
+    XF86AudioStop        allow-when-locked=true                                   { spawn "playerctl" "stop";                                  }
+    XF86AudioNext        allow-when-locked=true                                   { spawn "playerctl" "next";                                  }
+    XF86AudioPrev        allow-when-locked=true                                   { spawn "playerctl" "previous";                              }
+    XF86AudioForward     allow-when-locked=true                                   { spawn "playerctl" "position" "10+";                        }
+    XF86AudioRewind      allow-when-locked=true                                   { spawn "playerctl" "position" "10-";                        }
 
-    XF86MonBrightnessUp                                                           { spawn "brightnessctl" "--class=backlight" "set" "+5%"; }
-    XF86MonBrightnessDown                                                         { spawn "brightnessctl" "--class=backlight" "set" "5%-"; }
+    XF86MonBrightnessUp                                                           { spawn "brightnessctl" "--class=backlight" "set" "+5%";     }
+    XF86MonBrightnessDown                                                         { spawn "brightnessctl" "--class=backlight" "set" "5%-";     }
 
-    Super+O repeat=false                                                          { toggle-overview; }
+    Super+O repeat=false                                                          { toggle-overview;               }
 
-    Super+C repeat=false                                                          { close-window; }
+    Super+C repeat=false                                                          { close-window;                  }
 
-    Super+H                                                                       { focus-column-left; }
-    Super+J                                                                       { focus-window-down; }
-    Super+K                                                                       { focus-window-up; }
-    Super+L                                                                       { focus-column-right; }
+    Super+H                                                                       { focus-column-left;             }
+    Super+J                                                                       { focus-window-down;             }
+    Super+K                                                                       { focus-window-up;               }
+    Super+L                                                                       { focus-column-right;            }
 
-    Super+Shift+H                                                                 { move-column-left; }
-    Super+Shift+J                                                                 { move-window-down; }
-    Super+Shift+K                                                                 { move-window-up; }
-    Super+Shift+L                                                                 { move-column-right; }
+    Super+Shift+H                                                                 { move-column-left;              }
+    Super+Shift+J                                                                 { move-window-down;              }
+    Super+Shift+K                                                                 { move-window-up;                }
+    Super+Shift+L                                                                 { move-column-right;             }
 
-    Super+Home                                                                    { focus-column-first; }
-    Super+End                                                                     { focus-column-last; }
-    Super+Ctrl+Home                                                               { move-column-to-first; }
-    Super+Ctrl+End                                                                { move-column-to-last; }
+    Super+Home                                                                    { focus-column-first;            }
+    Super+End                                                                     { focus-column-last;             }
+    Super+Ctrl+Home                                                               { move-column-to-first;          }
+    Super+Ctrl+End                                                                { move-column-to-last;           }
 
-    Super+Shift+Left                                                              { focus-monitor-left;  }
-    Super+Shift+Down                                                              { focus-monitor-down;  }
-    Super+Shift+Up                                                                { focus-monitor-up;    }
-    Super+Shift+Right                                                             { focus-monitor-right; }
-    Super+Ctrl+Shift+H                                                            { focus-monitor-left;  }
-    Super+Ctrl+Shift+J                                                            { focus-monitor-down;  }
-    Super+Ctrl+Shift+K                                                            { focus-monitor-up;    }
-    Super+Ctrl+Shift+L                                                            { focus-monitor-right; }
-    Super+Alt+H                                                                   { move-column-to-monitor-left;  }
-    Super+Alt+J                                                                   { move-column-to-monitor-down;  }
-    Super+Alt+K                                                                   { move-column-to-monitor-up;    }
-    Super+Alt+L                                                                   { move-column-to-monitor-right; }
+    Super+Shift+Left                                                              { focus-monitor-left;            }
+    Super+Shift+Down                                                              { focus-monitor-down;            }
+    Super+Shift+Up                                                                { focus-monitor-up;              }
+    Super+Shift+Right                                                             { focus-monitor-right;           }
+    Super+Ctrl+Shift+H                                                            { focus-monitor-left;            }
+    Super+Ctrl+Shift+J                                                            { focus-monitor-down;            }
+    Super+Ctrl+Shift+K                                                            { focus-monitor-up;              }
+    Super+Ctrl+Shift+L                                                            { focus-monitor-right;           }
+    Super+Alt+H                                                                   { move-column-to-monitor-left;   }
+    Super+Alt+J                                                                   { move-column-to-monitor-down;   }
+    Super+Alt+K                                                                   { move-column-to-monitor-up;     }
+    Super+Alt+L                                                                   { move-column-to-monitor-right;  }
 
-    Super+D                                                                       { focus-workspace-down; }
-    Super+U                                                                       { focus-workspace-up; }
+    Super+D                                                                       { focus-workspace-down;          }
+    Super+U                                                                       { focus-workspace-up;            }
     Super+Shift+D                                                                 { move-column-to-workspace-down; }
-    Super+Shift+U                                                                 { move-column-to-workspace-up; }
+    Super+Shift+U                                                                 { move-column-to-workspace-up;   }
 
-    Super+Ctrl+U                                                                  { move-workspace-up; }
-    Super+Ctrl+D                                                                  { move-workspace-down; }
+    Super+Ctrl+U                                                                  { move-workspace-up;             }
+    Super+Ctrl+D                                                                  { move-workspace-down;           }
 
-    Super+1                                                                       { focus-workspace 2; }
-    Super+2                                                                       { focus-workspace 3; }
-    Super+3                                                                       { focus-workspace 4; }
-    Super+4                                                                       { focus-workspace 5; }
-    Super+5                                                                       { focus-workspace 6; }
-    Super+6                                                                       { focus-workspace 7; }
-    Super+7                                                                       { focus-workspace 8; }
-    Super+8                                                                       { focus-workspace 9; }
-    Super+9                                                                       { focus-workspace 10; }
-    Super+0                                                                       { focus-workspace 1; }
-    Super+Shift+1                                                                 { move-column-to-workspace 2; }
-    Super+Shift+2                                                                 { move-column-to-workspace 3; }
-    Super+Shift+3                                                                 { move-column-to-workspace 4; }
-    Super+Shift+4                                                                 { move-column-to-workspace 5; }
-    Super+Shift+5                                                                 { move-column-to-workspace 6; }
-    Super+Shift+6                                                                 { move-column-to-workspace 7; }
-    Super+Shift+7                                                                 { move-column-to-workspace 8; }
-    Super+Shift+8                                                                 { move-column-to-workspace 9; }
-    Super+Shift+9                                                                 { move-column-to-workspace 10; }
-    Super+Shift+0                                                                 { move-column-to-workspace 1; }
+    Super+1                                                                       { focus-workspace 2;             }
+    Super+2                                                                       { focus-workspace 3;             }
+    Super+3                                                                       { focus-workspace 4;             }
+    Super+4                                                                       { focus-workspace 5;             }
+    Super+5                                                                       { focus-workspace 6;             }
+    Super+6                                                                       { focus-workspace 7;             }
+    Super+7                                                                       { focus-workspace 8;             }
+    Super+8                                                                       { focus-workspace 9;             }
+    Super+9                                                                       { focus-workspace 10;            }
+    Super+0                                                                       { focus-workspace 1;             }
+    Super+Shift+1                                                                 { move-column-to-workspace 2;    }
+    Super+Shift+2                                                                 { move-column-to-workspace 3;    }
+    Super+Shift+3                                                                 { move-column-to-workspace 4;    }
+    Super+Shift+4                                                                 { move-column-to-workspace 5;    }
+    Super+Shift+5                                                                 { move-column-to-workspace 6;    }
+    Super+Shift+6                                                                 { move-column-to-workspace 7;    }
+    Super+Shift+7                                                                 { move-column-to-workspace 8;    }
+    Super+Shift+8                                                                 { move-column-to-workspace 9;    }
+    Super+Shift+9                                                                 { move-column-to-workspace 10;   }
+    Super+Shift+0                                                                 { move-column-to-workspace 1;    }
 
-    Super+BracketLeft                                                             { consume-or-expel-window-left; }
-    Super+BracketRight                                                            { consume-or-expel-window-right; }
+    Super+BracketLeft                                                             { consume-or-expel-window-left;  }
+    Super+BracketRight                                                            { consume-or-expel-window-right;    }
 
-    Super+Comma                                                                   { consume-window-into-column; }
-    Super+Period                                                                  { expel-window-from-column; }
+    Super+Comma                                                                   { consume-window-into-column;       }
+    Super+Period                                                                  { expel-window-from-column;         }
 
-    Super+Ctrl+Shift+R                                                            { switch-preset-column-width; }
-    Super+Shift+R                                                                 { switch-preset-window-height; }
-    Super+Ctrl+R                                                                  { reset-window-height; }
-    Super+F                                                                       { maximize-column; }
-    Super+Ctrl+F                                                                  { fullscreen-window; }
+    Super+Ctrl+Shift+R                                                            { switch-preset-column-width;       }
+    Super+Shift+R                                                                 { switch-preset-window-height;      }
+    Super+Ctrl+R                                                                  { reset-window-height;              }
+    Super+F                                                                       { maximize-column;                  }
+    Super+Ctrl+F                                                                  { fullscreen-window;                }
 
     Super+Shift+F                                                                 { expand-column-to-available-width; }
 
-    Super+Shift+C                                                                 { center-column; }
+    Super+Shift+C                                                                 { center-column;                    }
 
-    Super+Ctrl+C                                                                  { center-visible-columns; }
+    Super+Ctrl+C                                                                  { center-visible-columns;           }
 
-    Super+Ctrl+H                                                                  { set-column-width "-5%"; }
-    Super+Ctrl+L                                                                  { set-column-width "+5%"; }
+    Super+Ctrl+H                                                                  { set-column-width "-5%";           }
+    Super+Ctrl+L                                                                  { set-column-width "+5%";           }
 
-    Super+Shift+Minus                                                             { set-window-height "-5%"; }
-    Super+Shift+Equal                                                             { set-window-height "+5%"; }
+    Super+Shift+Minus                                                             { set-window-height "-5%";          }
+    Super+Shift+Equal                                                             { set-window-height "+5%";          }
 
-    Super+Ctrl+T                                                                  { toggle-window-floating; }
+    Super+Ctrl+T                                                                  { toggle-window-floating;           }
     Super+T                                                                       { switch-focus-between-floating-and-tiling; }
 
     Super+Ctrl+Shift+W                                                            { toggle-column-tabbed-display; }
